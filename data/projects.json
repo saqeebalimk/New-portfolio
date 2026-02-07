@@ -1,0 +1,566 @@
+[
+    {
+        "id": "7chats",
+        "title": "7Chats - Real-Time Chat Application",
+        "description": "A real-time chat application designed for secure and private communication with end-to-end encryption, group chat support, and multimedia sharing.",
+        "shortDescription": "Secure real-time chat with end-to-end encryption and group support.",
+        "fullDescription": "7Chats is a modern, security-focused real-time messaging platform built for private and group communication. The application prioritizes user privacy through end-to-end encryption while delivering a seamless chat experience with support for multimedia sharing, real-time notifications, and group conversations.\n\nKey Features:\n• End-to-End Encryption: All messages are encrypted client-side, ensuring complete privacy.\n• Real-Time Communication: Built with WebSocket technology for instant message delivery.\n• Group Chat Support: Create and manage group conversations with multiple participants.\n• Multimedia Sharing: Share images, videos, and files securely within conversations.\n• Cross-Platform: Accessible via web with responsive design for mobile and desktop.\n\nThe platform is engineered with modern web technologies, focusing on performance, security, and user experience.",
+        "category": "Full Stack",
+        "tech": [
+            "React",
+            "Redux",
+            "Node.js",
+            "Socket.io",
+            "Encryption"
+        ],
+        "tags": [
+            "React",
+            "Redux",
+            "Node.js",
+            "Socket.io",
+            "Real-time",
+            "Chat"
+        ],
+        "github": "",
+        "live": "https://7chats.com/",
+        "image": "/images/projects/7chats-main.png",
+        "features": [
+            "End-to-End Encrypted Messaging",
+            "Real-Time Communication via WebSockets",
+            "Group Chat & Private Messaging",
+            "Multimedia File Sharing (Images, Videos, Documents)",
+            "Push Notifications & Real-Time Updates",
+            "Responsive Cross-Platform Design",
+            "User Authentication & Profile Management"
+        ],
+        "techStack": {
+            "frontend": [
+                "React",
+                "Redux",
+                "Socket.io Client"
+            ],
+            "backend": [
+                "Node.js",
+                "Socket.io",
+                "Express"
+            ],
+            "database": [
+                "MongoDB"
+            ],
+            "other": [
+                "WebSockets",
+                "Encryption Libraries",
+                "AWS"
+            ]
+        },
+        "roles": [
+            "Full Stack Developer",
+            "Real-Time Systems Engineer"
+        ],
+        "images": {
+            "main": "/images/projects/7chats-main.png",
+            "gallery": []
+        }
+    },
+    {
+        "id": "mentorsity",
+        "title": "Mentorsity - Mentorship Platform",
+        "description": "A platform connecting mentors and mentees, enabling mentorship programs, progress tracking, scheduling, and interactive sessions.",
+        "shortDescription": "Mentorship platform with progress tracking and interactive sessions.",
+        "fullDescription": "Mentorsity is a comprehensive mentorship platform designed to bridge the gap between experienced professionals and aspiring learners. The platform facilitates meaningful mentor-mentee relationships through structured programs, progress tracking, and interactive session management.\n\nCore Capabilities:\n• Mentor-Mentee Matching: Intelligent matching system connecting mentors with mentees based on skills, interests, and goals.\n• Program Management: Create and manage structured mentorship programs with defined milestones and objectives.\n• Progress Tracking: Visual dashboards for both mentors and mentees to track learning progress and achievements.\n• Session Scheduling: Integrated calendar system for booking and managing one-on-one or group mentorship sessions.\n• Interactive Sessions: Built-in video calling and screen sharing for remote mentorship.\n• Resource Sharing: Share documents, links, and learning materials within the platform.\n\nThe platform is built with scalability in mind, supporting educational institutions, corporate training programs, and individual mentorship relationships.",
+        "category": "Full Stack",
+        "tech": [
+            "Next.js",
+            "TypeScript",
+            "PostgreSQL",
+            "Video Calling",
+            "Scheduling"
+        ],
+        "tags": [
+            "Next.js",
+            "TypeScript",
+            "PostgreSQL",
+            "Mentorship",
+            "Education"
+        ],
+        "github": "",
+        "live": "https://www.mentorsity.com/",
+        "image": "/images/projects/mentorsity-main.png",
+        "features": [
+            "Intelligent Mentor-Mentee Matching Algorithm",
+            "Structured Mentorship Program Management",
+            "Visual Progress Tracking & Analytics Dashboard",
+            "Integrated Session Scheduling & Calendar",
+            "Video Calling & Screen Sharing Integration",
+            "Resource Library & Document Sharing",
+            "Goal Setting & Milestone Tracking",
+            "Feedback & Rating System"
+        ],
+        "techStack": {
+            "frontend": [
+                "Next.js",
+                "React",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "backend": [
+                "Node.js",
+                "REST APIs",
+                "WebRTC"
+            ],
+            "database": [
+                "PostgreSQL"
+            ],
+            "other": [
+                "Video SDK",
+                "Calendar APIs",
+                "AWS",
+                "Vercel"
+            ]
+        },
+        "roles": [
+            "Full Stack Developer",
+            "Platform Architect"
+        ],
+        "images": {
+            "main": "/images/projects/mentorsity-main.png",
+            "gallery": []
+        }
+    },
+    {
+        "id": "ninja-park",
+        "title": "Booking & Management System",
+        "description": "Built systems for session and party bookings, digital waivers, admin dashboards, analytics, and CMS-driven content.",
+        "shortDescription": "Built systems for session and party bookings, digital waivers, admin dashboards, analytics, and CMS-driven content.",
+        "fullDescription": "Ninja Inflatable Park is a comprehensive, production-grade booking and management platform designed for a large indoor amusement center. This full-stack application serves as the operational backbone of the business, unifying public-facing services with internal administration tools.\n\nThe platform solves complex operational challenges by digitizing the entire customer journey—from session booking and waiver signing to check-in and payments. It replaces manual paperwork with a streamlined digital workflow, significantly reducing queue times and administrative overhead.\n\nKey architectural features include:\n• Session Booking Engine: Intelligent logic handling capacity management, time-slot allocation, and automated pricing based on guest counts and peak hours.\n• Digital Waiver System: A legally compliant waiver module allowing guests to sign digitally, with support for group waivers, age validation, and kiosk mode for on-site tablets.\n• Admin Operations Portal: A powerful dashboard providing real-time visibility into bookings, revenue metrics, and facility capacity. Staff can manage check-ins, verify waivers, and handle refunds instantly.\n• Content Management System (CMS): A custom-built CMS allowing non-technical managers to update pricing plans, safety guidelines, and marketing banners without developer intervention.\n\nThe system is built on a robust tech stack featuring a React frontend for a dynamic user experience and a Django/PostgreSQL backend for secure, reliable data processing. Integration with Razorpay ensures seamless transactions, while Azure cloud hosting provides scalability for high traffic during peak seasons schedules.",
+        "category": "Full Stack",
+        "tech": [
+            "React",
+            "Django",
+            "PostgreSQL",
+            "Azure",
+            "Razorpay"
+        ],
+        "tags": [
+            "React",
+            "Django",
+            "PostgreSQL",
+            "Azure",
+            "Razorpay"
+        ],
+        "github": "",
+        "live": "https://ninjapark-frontend.azurewebsites.net/",
+        "image": "/images/projects/ninja-park-cms.png",
+        "features": [
+            "Advanced Session & Party Booking Engine with Capacity Management",
+            "Legally Compliant Digital Waiver System with Kiosk Mode",
+            "Real-time Admin Dashboard for Operations & Revenue Tracking",
+            "Custom CMS for Dynamic Content & Pricing Management",
+            "Role-Based Access Control (Admin, Manager, Staff, Customer)",
+            "Secure Payment Processing via Razorpay",
+            "Automated Email Notifications & Marketing Module"
+        ],
+        "techStack": {
+            "frontend": [
+                "React.js",
+                "Tailwind CSS",
+                "JavaScript"
+            ],
+            "backend": [
+                "Node.js",
+                "Django",
+                "RESTful APIs"
+            ],
+            "database": [
+                "PostgreSQL"
+            ],
+            "other": [
+                "Azure App Services",
+                "Razorpay",
+                "JWT Auth"
+            ]
+        },
+        "roles": [
+            "Full Stack Developer",
+            "Database Architect",
+            "Deployment Engineer"
+        ],
+        "images": {
+            "main": "/images/projects/ninja-park-main.png",
+            "gallery": [
+                "/images/projects/ninja-park-1.png",
+                "/images/projects/ninja-park-2.png",
+                "/images/projects/ninja-park-3.png",
+                "/images/projects/ninja-park-4.png",
+                "/images/projects/ninja-park-5.png",
+                "/images/projects/ninja-park-6.png",
+                "/images/projects/ninja-park-7.png",
+                "/images/projects/ninja-park-8.png",
+                "/images/projects/ninja-park-9.png",
+                "/images/projects/ninja-park-10.png",
+                "/images/projects/ninja-park-11.png"
+            ]
+        }
+    },
+    {
+        "id": "bsm-platform",
+        "title": "Business Management System",
+        "description": "BSM Platform is a full-scale customer experience and service management system designed to help organizations handle customer support operations, system monitoring, service quality tracking, and SLA performance from a single unified interface.",
+        "shortDescription": "BSM Platform is a full-scale customer experience and service management system designed to help organizations handle customer support operations, system monitoring, service quality tracking, and SLA performance from a single unified interface. Centralizes scattered support tools into one clean, scalable application with role-based ticket lifecycle management.",
+        "fullDescription": "The Business Service Management (BSM) Platform is an enterprise-grade customer experience system designed to unify support operations, service monitoring, and performance tracking. It serves as a central nerve center for support teams, replacing disjointed tools with a cohesive, API-driven workflow.\n\nSolving Business Problems:\nOrganizations often struggle with visibility into support tickets and real-time service health. BSM addresses this by integrating ticket lifecycle management directly with SLA (Service Level Agreement) performance tracking. This ensures that no customer request slips through the cracks and that support teams are held accountable to response time targets.\n\nTechnical Implementation:\n• Customer Portal: A dedicated Next.js frontend where clients can submit tickets, view real-time status updates, and rate their service experience.\n• Admin Command Center: A comprehensive dashboard for support agents to manage incidents, view prioritized ticket queues, and analyze performance metrics.\n• SLA Engine: A background logic layer that automatically calculates compliance rates, flagging tickets that are at risk of breaching service agreements.\n• System Health Monitoring: Integrated status pages that display real-time operational health of various services, building trust with transparency.\n\nThe platform architecture emphasizes scalability and data integrity, using a Django REST Framework backend to enforce strict role-based access control and business logic validation.",
+        "category": "Full Stack",
+        "tech": [
+            "Next.js",
+            "Django",
+            "Enterprise",
+            "SLA",
+            "Support"
+        ],
+        "tags": [
+            "Next.js",
+            "Django",
+            "Enterprise",
+            "SLA",
+            "Support"
+        ],
+        "github": "",
+        "live": "https://deployed-project-e7a7.vercel.app/",
+        "image": "/images/projects/bsm-platform-dashboard.png",
+        "features": [
+            "Unified Customer Support Portal & Admin Command Center",
+            "Automated SLA Performance Tracking & Compliance Reporting",
+            "Full Ticket Lifecycle Management (Open, In Progress, Resolved)",
+            "Real-time Service Health & Status Monitoring System",
+            "Integrated Customer Satisfaction (CSAT) Rating Module",
+            "Role-Based Access Control (Customer, Support Agent, Admin)",
+            "Incident Management & Root Cause Logging"
+        ],
+        "techStack": {
+            "frontend": [
+                "React",
+                "Next.js"
+            ],
+            "backend": [
+                "Node.js",
+                "Django",
+                "REST Framework"
+            ],
+            "database": [
+                "PostgreSQL"
+            ],
+            "other": [
+                "AWS",
+                "Vercel",
+                "Postman"
+            ]
+        },
+        "roles": [
+            "Full Stack Developer",
+            "System Architect"
+        ],
+        "images": {
+            "main": "/images/projects/bsm-platform-main.png",
+            "gallery": [
+                "/images/projects/bsm-platform-1.png",
+                "/images/projects/bsm-platform-2.png",
+                "/images/projects/bsm-platform-3.png",
+                "/images/projects/bsm-platform-4.png",
+                "/images/projects/bsm-platform-5.png",
+                "/images/projects/bsm-platform-6.png",
+                "/images/projects/bsm-platform-7.png",
+                "/images/projects/bsm-platform-8.png",
+                "/images/projects/bsm-platform-9.png",
+                "/images/projects/bsm-platform-10.png",
+                "/images/projects/bsm-platform-11.png",
+                "/images/projects/bsm-platform-12.png",
+                "/images/projects/bsm-platform-13.png",
+                "/images/projects/bsm-platform-14.png",
+                "/images/projects/bsm-platform-15.png",
+                "/images/projects/bsm-platform-16.png"
+            ]
+        }
+    },
+    {
+        "id": "mbs-logistics",
+        "title": "Logistics & Billing Platform",
+        "description": "Implemented billing workflows with tax calculation, invoice generation, and reporting.",
+        "shortDescription": "Implemented billing workflows with tax calculation, invoice generation, and reporting.",
+        "fullDescription": "MBS Logistics is a specialized web-based solution developed to modernize the operations of a transport and logistics contractor. The project focuses on digitizing the traditional paper-heavy workflows of billing, vehicle management, and financial reporting into a streamlined, error-free digital system.\n\nOperational Transformation:\nPrior to this system, operations relied on manual bill writing and fragmented record-keeping. MBS Logistics introduces a structured data environment where every Lorry Receipt (LR) and invoice is digitally generated, stored, and tracked. This eliminates calculation errors in freight and GST, ensuring financial accuracy.\n\nKey Functional Modules:\n• Smart Billing Engine: An intuitive form-based interface that auto-calculates taxes (GST), freight charges, and grand totals, generating professional invoices instantly.\n• Fleet Management: A digital registry for vehicle records, tracking insurance expiry, ownership details, and maintenance schedules.\n• Financial Intelligence: Automated generation of daily and monthly revenue reports, giving business owners instant insight into cash flow and profitability.\n• Customer Database: A reusable repository of client details to speed up repeat billing and maintain accurate contact history.\n\nThe system is designed with a 'backend-ready' data structure, using MySQL schemas that allow for easy migration to a full cloud-based SaaS architecture in the future.",
+        "category": "Full Stack",
+        "tech": [
+            "HTML/CSS",
+            "MySQL",
+            "Billing",
+            "Logistics",
+            "GST"
+        ],
+        "tags": [
+            "HTML/CSS",
+            "MySQL",
+            "Billing",
+            "Logistics",
+            "GST"
+        ],
+        "github": "",
+        "live": "https://mbslogisticsind.github.io/logistics/MySQL/home%20and%20login/Home.html",
+        "image": "/images/projects/mbs-logistics-main.jpeg",
+        "features": [
+            "Automated Invoice Generation with Accurate GST Calculation",
+            "Digital Fleet & Vehicle Record Management System",
+            "Centralized Customer Database for Rapid Billing",
+            "Financial Analytics: Daily & Monthly Revenue Reports",
+            "Readiness for E-Way Bill System Integration",
+            "Integrated Workflow Utilities (Calculator, Notepad)",
+            "Digitized Lorry Receipt (LR) Management"
+        ],
+        "techStack": {
+            "frontend": [
+                "HTML5",
+                "CSS3",
+                "JavaScript"
+            ],
+            "database": [
+                "MySQL (Designed Schema)"
+            ],
+            "other": [
+                "GitHub Pages",
+                "Component Architecture"
+            ]
+        },
+        "roles": [
+            "Full Stack Developer",
+            "UI/UX Designer"
+        ],
+        "images": {
+            "main": "/images/projects/mbs-logistics-main.png",
+            "gallery": [
+                "/images/projects/mbs-logistics-1.png"
+            ]
+        }
+    },
+    {
+        "id": "physio-care",
+        "title": "Healthcare Service Application",
+        "description": "A mobile-first healthcare platform designed to deliver professional physiotherapy services directly to patients' homes.",
+        "shortDescription": "A mobile-first healthcare platform designed to deliver professional physiotherapy services directly to patients' homes.",
+        "fullDescription": "PhysioCare is a transformative mobile-first healthcare platform that redefines how physiotherapy services are delivered. By connecting patients with certified physiotherapists for home visits, it bridges the gap between clinical care and patient convenience. The application is built to handle the sensitive and complex workflows of medical appointment scheduling and record-keeping.\n\nPatient-Centric Architecture:\nThe app provides patients with a clean, accessible interface to browse specialists, book home sessions, and track their recovery progress. It abstracts the complexity of coordination, allowing users to focus on their health.\n\nProfessional Tools for Doctors:\nFor practitioners, PhysioCare serves as a mobile office. Doctors can view their daily schedule, navigate to patient locations, log session notes, and generate professional medical reports directly from their device.\n\nTechnical Excellence:\nBuilt with React Native and Expo, the app delivers a native-grade experience on both iOS and Android. The backend, powered by Supabase (PostgreSQL), ensures HIPAA-compliant data security, real-time synchronization of appointment status, and robust role-based access control. The system is future-proofed with an architecture ready to support AI-driven diagnostic chat assistance.",
+        "category": "Mobile",
+        "tech": [
+            "React Native",
+            "Expo",
+            "Supabase",
+            "TypeScript",
+            "Healthcare"
+        ],
+        "tags": [
+            "React Native",
+            "Expo",
+            "Supabase",
+            "TypeScript",
+            "Healthcare"
+        ],
+        "github": "",
+        "image": "/images/projects/physio-care-main.png",
+        "features": [
+            "Secure Role-Based Ecosystem (Patient, Doctor, Admin)",
+            "Seamless Home Appointment Booking & Scheduling",
+            "Digital Medical Reports & Treatment History Tracking",
+            "Doctor's Dashboard for Session & Patient Management",
+            "Real-time Notification & Reminder System",
+            "Admin Panel for System-Wide Analytics & Oversight",
+            "Scalable Architecture Ready for AI Integration"
+        ],
+        "techStack": {
+            "frontend": [
+                "React Native",
+                "Expo",
+                "TypeScript"
+            ],
+            "backend": [
+                "Supabase",
+                "PostgreSQL"
+            ],
+            "other": [
+                "TanStack Query",
+                "React Native Paper",
+                "Expo Router"
+            ]
+        },
+        "roles": [
+            "Mobile Developer",
+            "System Architect"
+        ],
+        "images": {
+            "main": "/images/projects/physio-care-main.png",
+            "gallery": [
+                "/images/projects/physio-care-1.png"
+            ]
+        }
+    },
+    {
+        "id": "blink-wash",
+        "title": "On-Demand Service Application",
+        "description": "Cross-platform mobile application for on-demand car wash and vehicle service booking.",
+        "shortDescription": "Cross-platform mobile application for on-demand car wash and vehicle service booking.",
+        "fullDescription": "On-Demand Service Application (formerly Blink-Wash) is a sophisticated cross-platform mobile solution designed to streamline the vehicle service industry. It functions as an Uber-like marketplace for car wash and detailing services, connecting vehicle owners with high-quality local service providers.\n\nSeamless User Experience:\nThe application solves the friction of traditional booking by allowing users to create profiles for multiple vehicles, select specific service packages, and schedule appointments with just a few taps. The intuitive UI ensures that even complex bookings are handled effortlessly.\n\nRobust Infrastructure:\nAt its core, the app utilizes Flutter to maintain a single, high-fidelity codebase that deploys natively to both iOS and Android. The backend services are managed by Supabase, providing enterprise-grade authentication, real-time database subscriptions for booking status updates, and secure user data storage.\n\nScalable Data Design:\nThe system's data model is architected for growth, supporting complex relationships between users, multiple vehicles, provider listings, and service history. This structure is ready to scale for payment gateway integration and GPS-based provider tracking.",
+        "category": "Mobile",
+        "tech": [
+            "Flutter",
+            "Supabase",
+            "Mobile",
+            "PostgreSQL"
+        ],
+        "tags": [
+            "Flutter",
+            "Supabase",
+            "Mobile",
+            "PostgreSQL"
+        ],
+        "github": "",
+        "image": "/images/projects/blink-wash-main.png",
+        "features": [
+            "Cross-Platform Native Experience (iOS & Android via Flutter)",
+            "Secure User Authentication & Profile Management",
+            "Multi-Vehicle Registry & Management System",
+            "Service Provider Marketplace with Detailed Listings",
+            "Real-Time Booking Status Tracking & Updates",
+            "Scalable Backend Architecture on Supabase",
+            "Optimized for Future Payment & GPS Integration"
+        ],
+        "techStack": {
+            "frontend": [
+                "Flutter",
+                "Dart"
+            ],
+            "backend": [
+                "Supabase",
+                "PostgreSQL"
+            ],
+            "other": [
+                "Android",
+                "iOS",
+                "JSON Serialization"
+            ]
+        },
+        "roles": [
+            "Mobile Developer",
+            "Full Stack Developer"
+        ],
+        "images": {
+            "main": "/images/projects/blink-wash-main.png",
+            "gallery": []
+        }
+    },
+    {
+        "id": "flexi-pdf",
+        "title": "Document Automation Tool",
+        "description": "Built backend utilities for automated PDF generation and file processing.",
+        "shortDescription": "Built backend utilities for automated PDF generation and file processing.",
+        "fullDescription": "FlexiPDF is a powerful, all-in-one web-based utility platform that brings desktop-grade PDF manipulation tools directly to the browser. Designed for professionals and students, it eliminates the need for expensive software by offering a comprehensive suite of tools for converting, editing, and securing documents.\n\nFeature-Rich Ecosystem:\nThe platform is not just a converter; it's a complete workspace. Users can perform complex operations such as merging multiple files, splitting documents, rotating specific pages, and even editing text/annotations directly within the PDF. Security features like password protection, unlocking, and redaction ensure that sensitive documents are handled safely.\n\nHybrid Processing Architecture:\nFlexiPDF leverages a smart hybrid architecture. Lightweight operations are handled client-side for instant feedback, while heavy-duty processing (like complex format conversions) is offloaded to a Node.js server pipeline. This ensures optimal performance without bogging down the user's device.\n\nSecurity First:\nRecognizing the sensitivity of uploaded documents, the system is built with a 'zero-retention' policy. Files are processed in robust temporary storage and are strictly deleted immediately after the user downloads their result, ensuring absolute data privacy.",
+        "category": "Full Stack",
+        "tech": [
+            "PDF Tools",
+            "Web App",
+            "Utility",
+            "File Processing"
+        ],
+        "tags": [
+            "PDF Tools",
+            "Web App",
+            "Utility",
+            "File Processing"
+        ],
+        "github": "",
+        "live": "https://flexipdf-9frt.onrender.com/",
+        "image": "/images/projects/flexi-pdf-dashboard.png",
+        "features": [
+            "Universal PDF Conversion Suite (Word, Excel, JPG, HTML)",
+            "Advanced Document Organization (Merge, Split, Rotate, Reorder)",
+            "Full-Featured Browser Editor with Annotation Capabilities",
+            "Enterprise-Grade Security (Password Protect, Unlock, Redact)",
+            "Smart Compression & Optimization Engine",
+            "Hybrid Client-Side / Server-Side Processing Pipeline",
+            "Zero-Retention Privacy Policy for User Data"
+        ],
+        "techStack": {
+            "frontend": [
+                "React",
+                "Component Architecture"
+            ],
+            "backend": [
+                "Node.js",
+                "Server-side PDF Processing"
+            ],
+            "other": [
+                "File Handling Pipelines",
+                "Render",
+                "Security Protocols"
+            ]
+        },
+        "roles": [
+            "Full Stack Developer"
+        ],
+        "images": {
+            "main": "/images/projects/flexi-pdf-main.png",
+            "gallery": [
+                "/images/projects/flexi-pdf-1.png",
+                "/images/projects/flexi-pdf-2.png",
+                "/images/projects/flexi-pdf-3.png",
+                "/images/projects/flexi-pdf-4.png",
+                "/images/projects/flexi-pdf-5.png",
+                "/images/projects/flexi-pdf-6.png",
+                "/images/projects/flexi-pdf-7.png",
+                "/images/projects/flexi-pdf-8.png"
+            ]
+        }
+    },
+    {
+        "id": "ma-electricals",
+        "title": "MA Electricals Website",
+        "description": "Professional business website for electrical services company with service showcase and contact system.",
+        "shortDescription": "Professional business website for electrical services company with service showcase and contact system.",
+        "fullDescription": "MA Electricals is a professional digital presence for an established electrical services provider, designed to convert site visitors into business leads. The website serves as a comprehensive digital portfolio, showcasing the company's expertise, project history, and service capabilities to potential residential and commercial clients.\n\nBusiness-Focused Design:\nThe site structure is engineered for trust and clarity. It features dedicated service pages detailing capabilities, a portfolio section highlighting past successful projects, and clear calls-to-action (CTAs) that guide users toward the contact system.\n\nPerformance & Accessibility:\nDeveloped with clean, semantic HTML5, modern CSS3, and JavaScript, the site is optimized for speed and search engine visibility (SEO). It ensures a flawless experience across all devices, acknowledging that many customers search for emergency electrical services via mobile. The implementation of a functional contact form system streamlines the inquiry process, directly connecting customers with the service team.",
+        "category": "Frontend",
+        "tech": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Business Website"
+        ],
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Business Website"
+        ],
+        "github": "",
+        "live": "https://saksaud7.github.io/maelectricals/",
+        "image": "/images/projects/ma-electricals-main.png",
+        "features": [
+            "Professional Corporate Identity & Design",
+            "Comprehensive Service Showcase & Portfolio",
+            "Lead-Generating Contact Form System",
+            "Fully Responsive Mobile-First Layout",
+            "SEO-Optimized Semantic Structure",
+            "High-Performance Static Asset Delivery"
+        ],
+        "techStack": {
+            "frontend": [
+                "HTML5",
+                "CSS3",
+                "JavaScript"
+            ],
+            "other": [
+                "GitHub Pages"
+            ]
+        },
+        "roles": [
+            "Frontend Developer",
+            "UI/UX Designer"
+        ],
+        "images": {
+            "main": "/images/projects/ma-electricals-main.png",
+            "gallery": []
+        }
+    }
+]
