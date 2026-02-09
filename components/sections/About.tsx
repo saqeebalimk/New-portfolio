@@ -28,7 +28,6 @@ export function About() {
                 { name: "Next.js 14", level: 78 },
                 { name: "React Native", level: 85 },
                 { name: "Tailwind CSS", level: 95 },
-                { name: "Framer Motion", level: 75 },
                 { name: "Redux / Zustand", level: 78 },
             ]
         },
@@ -42,7 +41,6 @@ export function About() {
                 { name: "Node.js", level: 85 },
                 { name: "Express.js", level: 85 },
                 { name: "FastAPI", level: 80 },
-                { name: "GraphQL", level: 75 },
             ]
         },
         {
@@ -53,9 +51,7 @@ export function About() {
                 { name: "PostgreSQL", level: 90 },
                 { name: "MySQL", level: 85 },
                 { name: "Supabase", level: 90 },
-                { name: "AWS", level: 75 },
                 { name: "Azure", level: 80 },
-                { name: "Redis", level: 70 },
             ]
         },
         {
@@ -78,7 +74,6 @@ export function About() {
             skills: [
                 { name: "API Testing & Debugging", level: 95 },
                 { name: "Web App Testing", level: 90 },
-                { name: "Game Testing", level: 85 },
                 { name: "Data Integrity Checks", level: 90 },
                 { name: "System Validation", level: 85 },
                 { name: "Performance Profiling", level: 80 },
@@ -145,7 +140,7 @@ export function About() {
                                 <Layout size={32} />
                             </div>
                             <h3 className="text-xl font-bold text-white">Frontend</h3>
-                            <p className="text-gray-400 text-sm">React, Next.js, Tailwind, Framer Motion</p>
+                            <p className="text-gray-400 text-sm">React, Next.js, Tailwind, Redux</p>
                         </Card>
 
                         <Card className="flex flex-col items-center text-center space-y-4 border-secondary/20 bg-secondary/5">
@@ -161,7 +156,7 @@ export function About() {
                                 <Database size={32} />
                             </div>
                             <h3 className="text-xl font-bold text-white">Database</h3>
-                            <p className="text-gray-400 text-sm">PostgreSQL, MySQL, Supabase, Redis</p>
+                            <p className="text-gray-400 text-sm">PostgreSQL, MySQL, Supabase</p>
                         </Card>
 
                         <Card className="flex flex-col items-center text-center space-y-4 border-yellow-500/20 bg-yellow-500/5">

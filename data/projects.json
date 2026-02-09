@@ -281,64 +281,6 @@
         }
     },
     {
-        "id": "mbs-logistics",
-        "title": "Logistics & Billing Platform",
-        "description": "Implemented billing workflows with tax calculation, invoice generation, and reporting.",
-        "shortDescription": "Implemented billing workflows with tax calculation, invoice generation, and reporting.",
-        "fullDescription": "MBS Logistics is a specialized web-based solution developed to modernize the operations of a transport and logistics contractor. The project focuses on digitizing the traditional paper-heavy workflows of billing, vehicle management, and financial reporting into a streamlined, error-free digital system.\n\nOperational Transformation:\nPrior to this system, operations relied on manual bill writing and fragmented record-keeping. MBS Logistics introduces a structured data environment where every Lorry Receipt (LR) and invoice is digitally generated, stored, and tracked. This eliminates calculation errors in freight and GST, ensuring financial accuracy.\n\nKey Functional Modules:\n• Smart Billing Engine: An intuitive form-based interface that auto-calculates taxes (GST), freight charges, and grand totals, generating professional invoices instantly.\n• Fleet Management: A digital registry for vehicle records, tracking insurance expiry, ownership details, and maintenance schedules.\n• Financial Intelligence: Automated generation of daily and monthly revenue reports, giving business owners instant insight into cash flow and profitability.\n• Customer Database: A reusable repository of client details to speed up repeat billing and maintain accurate contact history.\n\nThe system is designed with a 'backend-ready' data structure, using MySQL schemas that allow for easy migration to a full cloud-based SaaS architecture in the future.",
-        "category": "Full Stack",
-        "tech": [
-            "HTML/CSS",
-            "MySQL",
-            "Billing",
-            "Logistics",
-            "GST"
-        ],
-        "tags": [
-            "HTML/CSS",
-            "MySQL",
-            "Billing",
-            "Logistics",
-            "GST"
-        ],
-        "github": "",
-        "live": "https://mbslogisticsind.github.io/logistics/MySQL/home%20and%20login/Home.html",
-        "image": "/images/projects/mbs-logistics-main.jpeg",
-        "features": [
-            "Automated Invoice Generation with Accurate GST Calculation",
-            "Digital Fleet & Vehicle Record Management System",
-            "Centralized Customer Database for Rapid Billing",
-            "Financial Analytics: Daily & Monthly Revenue Reports",
-            "Readiness for E-Way Bill System Integration",
-            "Integrated Workflow Utilities (Calculator, Notepad)",
-            "Digitized Lorry Receipt (LR) Management"
-        ],
-        "techStack": {
-            "frontend": [
-                "HTML5",
-                "CSS3",
-                "JavaScript"
-            ],
-            "database": [
-                "MySQL (Designed Schema)"
-            ],
-            "other": [
-                "GitHub Pages",
-                "Component Architecture"
-            ]
-        },
-        "roles": [
-            "Full Stack Developer",
-            "UI/UX Designer"
-        ],
-        "images": {
-            "main": "/images/projects/mbs-logistics-main.png",
-            "gallery": [
-                "/images/projects/mbs-logistics-1.png"
-            ]
-        }
-    },
-    {
         "id": "physio-care",
         "title": "Healthcare Service Application",
         "description": "A mobile-first healthcare platform designed to deliver professional physiotherapy services directly to patients' homes.",
@@ -392,62 +334,6 @@
         ],
         "images": {
             "main": "/images/projects/physio-care-main.png",
-            "gallery": [
-                "/images/projects/physio-care-1.png"
-            ]
-        }
-    },
-    {
-        "id": "blink-wash",
-        "title": "On-Demand Service Application",
-        "description": "Cross-platform mobile application for on-demand car wash and vehicle service booking.",
-        "shortDescription": "Cross-platform mobile application for on-demand car wash and vehicle service booking.",
-        "fullDescription": "On-Demand Service Application (formerly Blink-Wash) is a sophisticated cross-platform mobile solution designed to streamline the vehicle service industry. It functions as an Uber-like marketplace for car wash and detailing services, connecting vehicle owners with high-quality local service providers.\n\nSeamless User Experience:\nThe application solves the friction of traditional booking by allowing users to create profiles for multiple vehicles, select specific service packages, and schedule appointments with just a few taps. The intuitive UI ensures that even complex bookings are handled effortlessly.\n\nRobust Infrastructure:\nAt its core, the app utilizes Flutter to maintain a single, high-fidelity codebase that deploys natively to both iOS and Android. The backend services are managed by Supabase, providing enterprise-grade authentication, real-time database subscriptions for booking status updates, and secure user data storage.\n\nScalable Data Design:\nThe system's data model is architected for growth, supporting complex relationships between users, multiple vehicles, provider listings, and service history. This structure is ready to scale for payment gateway integration and GPS-based provider tracking.",
-        "category": "Mobile",
-        "tech": [
-            "Flutter",
-            "Supabase",
-            "Mobile",
-            "PostgreSQL"
-        ],
-        "tags": [
-            "Flutter",
-            "Supabase",
-            "Mobile",
-            "PostgreSQL"
-        ],
-        "github": "",
-        "image": "/images/projects/blink-wash-main.png",
-        "features": [
-            "Cross-Platform Native Experience (iOS & Android via Flutter)",
-            "Secure User Authentication & Profile Management",
-            "Multi-Vehicle Registry & Management System",
-            "Service Provider Marketplace with Detailed Listings",
-            "Real-Time Booking Status Tracking & Updates",
-            "Scalable Backend Architecture on Supabase",
-            "Optimized for Future Payment & GPS Integration"
-        ],
-        "techStack": {
-            "frontend": [
-                "Flutter",
-                "Dart"
-            ],
-            "backend": [
-                "Supabase",
-                "PostgreSQL"
-            ],
-            "other": [
-                "Android",
-                "iOS",
-                "JSON Serialization"
-            ]
-        },
-        "roles": [
-            "Mobile Developer",
-            "Full Stack Developer"
-        ],
-        "images": {
-            "main": "/images/projects/blink-wash-main.png",
             "gallery": []
         }
     },
@@ -512,55 +398,6 @@
                 "/images/projects/flexi-pdf-7.png",
                 "/images/projects/flexi-pdf-8.png"
             ]
-        }
-    },
-    {
-        "id": "ma-electricals",
-        "title": "MA Electricals Website",
-        "description": "Professional business website for electrical services company with service showcase and contact system.",
-        "shortDescription": "Professional business website for electrical services company with service showcase and contact system.",
-        "fullDescription": "MA Electricals is a professional digital presence for an established electrical services provider, designed to convert site visitors into business leads. The website serves as a comprehensive digital portfolio, showcasing the company's expertise, project history, and service capabilities to potential residential and commercial clients.\n\nBusiness-Focused Design:\nThe site structure is engineered for trust and clarity. It features dedicated service pages detailing capabilities, a portfolio section highlighting past successful projects, and clear calls-to-action (CTAs) that guide users toward the contact system.\n\nPerformance & Accessibility:\nDeveloped with clean, semantic HTML5, modern CSS3, and JavaScript, the site is optimized for speed and search engine visibility (SEO). It ensures a flawless experience across all devices, acknowledging that many customers search for emergency electrical services via mobile. The implementation of a functional contact form system streamlines the inquiry process, directly connecting customers with the service team.",
-        "category": "Frontend",
-        "tech": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Business Website"
-        ],
-        "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Business Website"
-        ],
-        "github": "",
-        "live": "https://saksaud7.github.io/maelectricals/",
-        "image": "/images/projects/ma-electricals-main.png",
-        "features": [
-            "Professional Corporate Identity & Design",
-            "Comprehensive Service Showcase & Portfolio",
-            "Lead-Generating Contact Form System",
-            "Fully Responsive Mobile-First Layout",
-            "SEO-Optimized Semantic Structure",
-            "High-Performance Static Asset Delivery"
-        ],
-        "techStack": {
-            "frontend": [
-                "HTML5",
-                "CSS3",
-                "JavaScript"
-            ],
-            "other": [
-                "GitHub Pages"
-            ]
-        },
-        "roles": [
-            "Frontend Developer",
-            "UI/UX Designer"
-        ],
-        "images": {
-            "main": "/images/projects/ma-electricals-main.png",
-            "gallery": []
         }
     }
 ]
