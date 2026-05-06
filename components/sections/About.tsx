@@ -85,7 +85,7 @@ export function About() {
         {
             company: "ARN Systems",
             role: "Software Developer",
-            period: "Dec 2024 – Present",
+            period: "Dec 2024 – March 31st 2026",
             description: [
                 "Improved performance by 30% through optimization techniques",
                 "Delivered end-to-end features for enterprise clients",
