@@ -13,7 +13,7 @@ const experiences = [
 "Collaborated with cross-functional teams to deliver end-to-end features improving user satisfaction by 20%",
 "Streamlined the software development lifecycle using modern tools, reducing deployment time by 25%",
 "Leveraged AI-driven automation tools to streamline data processing workflows reducing manual intervention by 32% and improving accuracy in enterprise operations",
-"Implemented intelligent monitoring and alerting systems using basic AI algorithmsfor predictive maintenance, preventing system downtime and enhancing reliability.
+"Implemented intelligent monitoring and alerting systems using basic AI algorithmsfor predictive maintenance, preventing system downtime and enhancing reliability"
         ]
     },
     {
