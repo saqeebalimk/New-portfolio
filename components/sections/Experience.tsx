@@ -9,9 +9,11 @@ const experiences = [
         role: "Software Developer",
         period: "Dec 2024 – Present",
         description: [
-            "Improved performance by 30% through optimization techniques",
-            "Delivered end-to-end features for enterprise clients",
-            "Reduced deployment time by 25% via CI/CD improvements"
+            "Optimized algorithms and refactored code, enhancing application performance by 30%",
+"Collaborated with cross-functional teams to deliver end-to-end features improving user satisfaction by 20%",
+"Streamlined the software development lifecycle using modern tools, reducing deployment time by 25%",
+"Leveraged AI-driven automation tools to streamline data processing workflows reducing manual intervention by 32% and improving accuracy in enterprise operations",
+"Implemented intelligent monitoring and alerting systems using basic AI algorithmsfor predictive maintenance, preventing system downtime and enhancing reliability.
         ]
     },
     {
