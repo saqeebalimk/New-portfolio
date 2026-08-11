@@ -1,5 +1,171 @@
 [
     {
+        "id": "jynm",
+        "title": "JYNM — Junkyards Near Me",
+        "description": "An enterprise automotive salvage marketplace connecting users with junkyards and auto-part vendors. Focused on lead generation, SEO engineering, and seamless digital interaction.",
+        "shortDescription": "Full Stack Automotive Marketplace & SEO Engineering",
+        "fullDescription": "Junkyards Near Me (JYNM) is a full-stack automotive marketplace designed to generate qualified leads and connect users with local junkyards and auto-part vendors. The platform handles complex automotive parts and vehicle data, vendor management, and quote requests.\n\nBeyond application development, this project involved deep SEO engineering. Features include a 301 redirect strategy for legacy URLs, backlink preservation, and technical SEO architecture ensuring maximum search engine visibility for automotive salvage queries.",
+        "category": "Full Stack",
+        "tech": [
+            "React",
+            "Django",
+            "PostgreSQL",
+            "SEO"
+        ],
+        "tags": [
+            "React",
+            "Vite",
+            "Django Framework",
+            "PostgreSQL",
+            "Tailwind CSS",
+            "SEO",
+            "JWT",
+            "Redis",
+            "Nginx"
+        ],
+        "github": "",
+        "live": "",
+        "image": "/images/projects/jynm-main.png",
+        "features": [
+            "Automotive Parts & Vehicle Data Management",
+            "Technical SEO & SEO-Friendly Architecture",
+            "Backlink Preservation & 301 Redirect Strategy",
+            "High-Performance Database Migration"
+        ],
+        "techStack": {
+            "frontend": [
+                "React",
+                "Vite",
+                "Tailwind CSS"
+            ],
+            "backend": [
+                "Django",
+                "Django REST Framework",
+                "Python"
+            ],
+            "database": [
+                "PostgreSQL",
+                "Redis"
+            ],
+            "other": [
+                "SEO",
+                "Nginx",
+                "Gunicorn"
+            ]
+        },
+        "roles": [
+            "Full Stack Developer",
+            "SEO Engineer"
+        ],
+        "images": {
+            "main": "/images/projects/jynm-main.png",
+            "gallery": []
+        }
+    },
+    {
+        "id": "aha-technologies",
+        "title": "AHA Technologies — AI-Powered Service Platform",
+        "description": "AI-Powered Service Platform featuring business-specific conversational flows and WhatsApp booking integration for electronics diagnosis.",
+        "shortDescription": "AI-Powered Service Platform with business conversational flows.",
+        "fullDescription": "AHA Technologies is an AI-powered service platform facilitating electronics and PCB diagnosis through a conversational interface (AHA Tech Advisor). It streamlines the lead/service booking workflow by integrating WhatsApp booking directly into the user experience.\n\nThe platform combines a robust Django backend with AI capabilities for image upload and analysis workflows, providing knowledge-based intent handling.",
+        "category": "AI / Automation",
+        "tech": [
+            "Django",
+            "AI Integration",
+            "Python",
+            "WhatsApp API"
+        ],
+        "tags": [
+            "Django",
+            "Python",
+            "AI",
+            "Chatbot",
+            "WhatsApp",
+            "Backend"
+        ],
+        "github": "",
+        "live": "",
+        "image": "/images/projects/aha-main.png",
+        "features": [
+            "AI-Powered Chatbot (AHA Tech Advisor)",
+            "WhatsApp Booking Integration",
+            "Image Upload and AI-Assisted PCB Diagnosis",
+            "Knowledge-Based Intent Handling"
+        ],
+        "techStack": {
+            "frontend": [
+                "Web Interface"
+            ],
+            "backend": [
+                "Django",
+                "Python",
+                "REST APIs"
+            ],
+            "database": [
+                "PostgreSQL"
+            ],
+            "other": [
+                "AI Models",
+                "WhatsApp API"
+            ]
+        },
+        "roles": [
+            "AI Integration Developer",
+            "Backend Developer"
+        ],
+        "images": {
+            "main": "/images/projects/aha-main.png",
+            "gallery": []
+        }
+    },
+    {
+        "id": "transmission-project",
+        "title": "Transmission",
+        "description": "A completed professional software project delivered with high-quality engineering standards.",
+        "shortDescription": "Completed Professional Software Project",
+        "fullDescription": "Transmission is a completed professional software project showcasing robust engineering, clean architecture, and reliable production deployment.",
+        "category": "Enterprise",
+        "tech": [
+            "Full Stack",
+            "Enterprise",
+            "Deployment"
+        ],
+        "tags": [
+            "Software Engineering",
+            "Full Stack",
+            "Production"
+        ],
+        "github": "",
+        "live": "",
+        "image": "/images/projects/transmission-main.png",
+        "features": [
+            "Professional Software Architecture",
+            "Clean Code and Maintainability",
+            "Reliable Production Deployment"
+        ],
+        "techStack": {
+            "frontend": [
+                "Modern JS Framework"
+            ],
+            "backend": [
+                "REST API"
+            ],
+            "database": [
+                "SQL"
+            ],
+            "other": [
+                "Cloud Infrastructure"
+            ]
+        },
+        "roles": [
+            "Software Engineer"
+        ],
+        "images": {
+            "main": "/images/projects/transmission-main.png",
+            "gallery": []
+        }
+    },
+    {
         "id": "7chats",
         "title": "7Chats - Real-Time Chat Application",
         "description": "A real-time chat application designed for secure and private communication with end-to-end encryption, group chat support, and multimedia sharing.",

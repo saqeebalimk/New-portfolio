@@ -22,7 +22,7 @@ export function Hero() {
                         Hi, I'm <span className="text-white">Mohammed Saqeeb Khan</span>
                     </h1>
                     <h2 className="text-2xl md:text-5xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                        Full Stack Developer
+                        Full Stack Software Engineer
                     </h2>
                 </motion.div>
 
@@ -32,8 +32,7 @@ export function Hero() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed"
                 >
-                    Full Stack Developer with 3+ years of experience building scalable web applications
-                    using React, Node.js, Django, and SQL.
+                    4 Years of Professional Experience building scalable web applications, backend systems, AI-powered solutions, and modern digital products.
                 </motion.p>
 
                 <motion.div
@@ -47,7 +46,7 @@ export function Hero() {
                             View Projects <ArrowRight size={20} />
                         </Button>
                     </Link>
-                    <a href="https://drive.google.com/file/d/15a7fWKsylBLA4dfPNMa4SOd7Mh1LsTkG/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                    <a href="/Mohammed_Saqeeb_Khan_Resume.pdf" target="_blank" rel="noopener noreferrer" download>
                         <Button variant="outline" size="lg" className="w-full sm:w-auto">
                             Download Resume <Download size={20} />
                         </Button>

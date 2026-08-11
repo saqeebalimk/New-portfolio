@@ -6,24 +6,27 @@ import { Briefcase, Calendar, ChevronRight } from "lucide-react";
 const experiences = [
     {
         company: "ARN Systems",
-        role: "Software Developer",
-        period: "Dec 2024 – Present",
+        role: "Full Stack Software Engineer",
+        period: "Dec 2024 – July 31 2026",
         description: [
-            "Optimized algorithms and refactored code, enhancing application performance by 30%",
-"Collaborated with cross-functional teams to deliver end-to-end features improving user satisfaction by 20%",
-"Streamlined the software development lifecycle using modern tools, reducing deployment time by 25%",
-"Leveraged AI-driven automation tools to streamline data processing workflows reducing manual intervention by 32% and improving accuracy in enterprise operations",
-"Implemented intelligent monitoring and alerting systems using basic AI algorithmsfor predictive maintenance, preventing system downtime and enhancing reliability"
+            "Architected and delivered the JYNM automotive marketplace (React + Django + PostgreSQL), driving lead generation for 100+ vendor locations across the region",
+            "Engineered a comprehensive SEO strategy including 301 redirects, canonical URLs, and structured data, significantly boosting organic search visibility",
+            "Built an AI-powered service platform (AHA Technologies) integrating OpenAI APIs and WhatsApp Business for automated electronics diagnosis workflows",
+            "Optimized application performance and database query execution time by 30% through indexing strategies and query refactoring",
+            "Led deployment and DevOps setup on Linux/Nginx with Docker, ensuring 99.9% uptime in production environments",
+            "Integrated AI-driven automation features reducing manual intervention by 32% in enterprise data processing pipelines"
         ]
     },
     {
-        company: "Seven Chats Pvt Ltd",
-        role: "Software Developer",
+        company: "SevenChats Pvt Ltd",
+        role: "Software Engineer",
         period: "Oct 2022 – Nov 2024",
         description: [
-            "Developed robust React + Redux applications used by thousands of users",
-            "Optimized REST APIs reducing latency by 40%",
-            "Increased user engagement by 20% through UI/UX enhancements"
+            "Developed and maintained core product features for a social networking platform serving thousands of active users using React.js and Redux",
+            "Optimized RESTful API response times by 40% through payload compression, caching strategies, and query optimization",
+            "Engineered reusable component library reducing UI development time by 25% across the product team",
+            "Drove a 20% improvement in user engagement by rearchitecting key interaction flows and implementing performance best practices",
+            "Collaborated with backend and design teams in an Agile environment, consistently delivering production-ready features on schedule"
         ]
     }
 ];

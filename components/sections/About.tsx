@@ -15,8 +15,10 @@ export function About() {
                 { name: "JavaScript", level: 95 },
                 { name: "TypeScript", level: 90 },
                 { name: "Python", level: 90 },
+                { name: "Java", level: 80 },
                 { name: "SQL", level: 85 },
-                { name: "HTML5 / CSS3", level: 95 },
+                { name: "HTML5", level: 95 },
+                { name: "CSS3", level: 95 },
             ]
         },
         {
@@ -25,10 +27,16 @@ export function About() {
             progressColor: "bg-gradient-to-r from-blue-500 to-cyan-400",
             skills: [
                 { name: "React.js", level: 95 },
-                { name: "Next.js 14", level: 78 },
-                { name: "React Native", level: 85 },
+                { name: "Next.js", level: 90 },
+                { name: "Redux", level: 90 },
                 { name: "Tailwind CSS", level: 95 },
-                { name: "Redux / Zustand", level: 78 },
+                { name: "Bootstrap", level: 90 },
+                { name: "Material UI", level: 85 },
+                { name: "SCSS", level: 85 },
+                { name: "Responsive Design", level: 95 },
+                { name: "Framer Motion", level: 80 },
+                { name: "React Router", level: 90 },
+                { name: "GSAP", level: 75 },
             ]
         },
         {
@@ -36,47 +44,58 @@ export function About() {
             color: "border-cyan-500/30",
             progressColor: "bg-gradient-to-r from-cyan-500 to-teal-400",
             skills: [
+                { name: "Node.js", level: 90 },
+                { name: "Express.js", level: 90 },
                 { name: "Django", level: 90 },
-                { name: "Django REST", level: 90 },
-                { name: "Node.js", level: 85 },
-                { name: "Express.js", level: 85 },
-                { name: "FastAPI", level: 80 },
+                { name: "Django REST Framework", level: 85 },
+                { name: "REST APIs", level: 95 },
+                { name: "JWT", level: 90 },
+                { name: "Authentication", level: 95 },
+                { name: "Role Based Access", level: 90 },
+                { name: "Microservices", level: 85 },
             ]
         },
         {
-            title: "Database & Cloud",
+            title: "Database",
             color: "border-green-500/30",
             progressColor: "bg-gradient-to-r from-green-500 to-emerald-400",
             skills: [
-                { name: "PostgreSQL", level: 90 },
-                { name: "MySQL", level: 85 },
-                { name: "Supabase", level: 90 },
-                { name: "Azure", level: 80 },
+                { name: "PostgreSQL", level: 95 },
+                { name: "MongoDB", level: 90 },
+                { name: "MySQL", level: 90 },
+                { name: "Redis", level: 85 },
+                { name: "SQLite", level: 80 },
             ]
         },
         {
-            title: "Tools & DevOps",
+            title: "DevOps & Cloud",
             color: "border-purple-500/30",
             progressColor: "bg-gradient-to-r from-violet-500 to-purple-400",
             skills: [
-                { name: "Git / GitHub", level: 95 },
-                { name: "Docker", level: 80 },
-                { name: "Postman", level: 90 },
-                { name: "Figma", level: 75 },
-                { name: "Vercel", level: 90 },
-                { name: "VS Code", level: 95 },
+                { name: "Git", level: 95 },
+                { name: "GitHub", level: 95 },
+                { name: "Docker", level: 85 },
+                { name: "Linux", level: 90 },
+                { name: "Nginx", level: 85 },
+                { name: "CI/CD", level: 85 },
+                { name: "Hostinger VPS", level: 80 },
+                { name: "Cloud Deployment", level: 85 },
             ]
         },
         {
-            title: "Testing & QA",
+            title: "AI & Automation",
             color: "border-pink-500/30",
             progressColor: "bg-gradient-to-r from-pink-500 to-rose-400",
             skills: [
-                { name: "API Testing & Debugging", level: 95 },
-                { name: "Web App Testing", level: 90 },
-                { name: "Data Integrity Checks", level: 90 },
-                { name: "System Validation", level: 85 },
-                { name: "Performance Profiling", level: 80 },
+                { name: "OpenAI API", level: 90 },
+                { name: "Google Gemini", level: 85 },
+                { name: "Gemini API", level: 85 },
+                { name: "LLMs", level: 90 },
+                { name: "Prompt Engineering", level: 95 },
+                { name: "RAG", level: 85 },
+                { name: "LangChain", level: 80 },
+                { name: "Vector Databases", level: 85 },
+                { name: "Automation", level: 90 },
             ]
         },
     ];
@@ -84,22 +103,27 @@ export function About() {
     const experiences = [
         {
             company: "ARN Systems",
-            role: "Software Developer",
-            period: "Dec 2024 – March 31st 2026",
+            role: "Full Stack Software Engineer",
+            period: "Dec 2024 – July 31 2026",
             description: [
-                "Improved performance by 30% through optimization techniques",
-                "Delivered end-to-end features for enterprise clients",
-                "Reduced deployment time by 25% via CI/CD improvements"
+                "Architected and delivered the JYNM automotive marketplace (React + Django + PostgreSQL), driving lead generation for 100+ vendor locations.",
+                "Engineered technical SEO strategy with 301 redirects, canonical URLs, and structured data, boosting organic search visibility.",
+                "Built AI-powered service platform (AHA Technologies) integrating OpenAI APIs and WhatsApp Business for electronics diagnosis workflows.",
+                "Optimized database query execution time by 30% through indexing strategies and query refactoring.",
+                "Led DevOps setup on Linux/Nginx with Docker, ensuring 99.9% uptime in production environments.",
+                "Integrated AI-driven automation reducing manual intervention by 32% in enterprise data processing pipelines."
             ]
         },
         {
-            company: "Seven Chats Pvt Ltd",
-            role: "Software Developer",
+            company: "SevenChats Pvt Ltd",
+            role: "Software Engineer",
             period: "Oct 2022 – Nov 2024",
             description: [
-                "Developed robust React + Redux applications used by thousands of users",
-                "Optimized REST APIs reducing latency by 40%",
-                "Increased user engagement by 20% through UI/UX enhancements"
+                "Developed and maintained core product features for a social networking platform serving thousands of active users.",
+                "Optimized RESTful API response times by 40% through payload compression and caching strategies.",
+                "Engineered reusable component library reducing UI development time by 25% across the product team.",
+                "Drove 20% improvement in user engagement by rearchitecting key interaction flows.",
+                "Delivered production-ready features consistently in an Agile cross-functional environment."
             ]
         }
     ];
@@ -127,10 +151,13 @@ export function About() {
                         className="space-y-6 text-lg text-gray-300 leading-relaxed"
                     >
                         <p>
-                            <strong className="text-white">Full Stack Developer</strong> with 3+ years of hands-on experience designing, developing, testing, and maintaining end-to-end web applications and backend systems. And Have worked at <span className="text-primary">Sevenchats Private Limited</span> working at <span className="text-primary">ARN & Co</span>.
+                            <strong className="text-white">Full Stack Software Engineer</strong> with 4 years of professional experience in agile software development. I specialize in building highly scalable web applications, REST APIs, and full stack development utilizing modern technologies to deliver robust production-ready products.
                         </p>
                         <p>
-                            I specialize in developing robust, end-to-end solutions using <span className="text-primary">React.js, Node.js, JavaScript, TypeScript, SQL, MySQL, and Django</span>. With a strong foundation in frontend–backend integration, UI/UX design, REST API development, and performance optimization, I focus on creating clean, maintainable code that delivers seamless user experiences.
+                            Proficient in <span className="text-primary">React.js, Next.js, JavaScript, TypeScript, Tailwind CSS, Bootstrap,</span> and <span className="text-primary">Material UI</span> for building highly interactive UIs. On the backend, I leverage <span className="text-primary">Node.js, Express.js, Python, Django,</span> and <span className="text-primary">Django REST Framework</span> along with API integration, JWT Authentication, and databases like <span className="text-primary">PostgreSQL, MongoDB, MySQL,</span> and <span className="text-primary">Redis</span>.
+                        </p>
+                        <p>
+                            I have deep expertise in <span className="text-primary">AI Integration</span> (OpenAI API, Gemini API, LLM, LangChain, Prompt Engineering), and streamline my workflows using <span className="text-primary">Docker, Git, GitHub, Linux,</span> and <span className="text-primary">Nginx</span>. I enjoy solving real-world challenges through clean code and reliable deployments.
                         </p>
                     </motion.div>
 

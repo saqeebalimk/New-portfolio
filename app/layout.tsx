@@ -7,9 +7,11 @@ import { MobileNav } from "@/components/layout/MobileNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
+import config from "@/data/config.json";
+
 export const metadata: Metadata = {
-  title: "Mohammed Saqeeb Khan | Full Stack Developer",
-  description: "Full Stack Developer specializing in React, Next.js, and Node.js",
+  title: "Mohammed Saqeeb Khan | Full Stack Software Engineer | React, Node.js, Django & Python",
+  description: "Mohammed Saqeeb Khan is a Full Stack Software Engineer with 4 years of experience building scalable web applications using React.js, Node.js, Django, Python, TypeScript, PostgreSQL and AI integrations.",
 };
 
 export default function RootLayout({
@@ -20,6 +22,26 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-background text-foreground antialiased selection:bg-primary/30 selection:text-white`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": config.name,
+              "url": config.portfolio,
+              "sameAs": [
+                config.linkedin,
+                config.github
+              ],
+              "jobTitle": config.title,
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Self-Employed"
+              }
+            })
+          }}
+        />
         <Navbar />
         <MobileNav />
         <main className="min-h-screen relative overflow-hidden flex flex-col pb-20 md:pb-0">

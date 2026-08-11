@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { Github, Linkedin, Download } from "lucide-react";
+import { motion } from "framer-motion";
+import config from "@/data/config.json";
 
 const navLinks = [
     { name: "About", href: "#about" },
@@ -52,6 +53,41 @@ export function Navbar() {
                                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
                             </Link>
                         ))}
+
+                        {/* Divider */}
+                        <div className="w-px h-5 bg-white/20" />
+
+                        {/* Social Icons */}
+                        <a
+                            href={config.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-primary transition-colors"
+                            aria-label="GitHub"
+                        >
+                            <Github size={18} />
+                        </a>
+                        <a
+                            href={config.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-secondary transition-colors"
+                            aria-label="LinkedIn"
+                        >
+                            <Linkedin size={18} />
+                        </a>
+
+                        {/* Resume Button */}
+                        <a
+                            href={config.resume}
+                            download
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg bg-primary/10 border border-primary/30 text-primary hover:bg-primary/20 hover:border-primary/60 transition-all duration-200"
+                        >
+                            <Download size={14} />
+                            Resume
+                        </a>
                     </div>
 
                 </div>
