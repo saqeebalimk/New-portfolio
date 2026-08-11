@@ -27,11 +27,11 @@ doc.font('Helvetica').fontSize(10).fillColor(textColor).text(
 doc.font('Helvetica-Bold').fontSize(14).fillColor(primaryColor).text('Technical Skills');
 doc.moveTo(50, doc.y).lineTo(550, doc.y).strokeColor(primaryColor).stroke().moveDown(0.5);
 const skills = [
-  'Languages: JavaScript, TypeScript, Python, Java, SQL, HTML5, CSS3',
-  'Frontend: React.js, Next.js, Redux, React Router, Tailwind CSS, Bootstrap, Material UI, SCSS, Framer Motion, GSAP',
-  'Backend: Node.js, Express.js, Django, Django REST Framework, REST APIs, JWT, Authentication, Microservices',
+  'Languages: JavaScript, TypeScript, Python, Java, J2EE, SQL, HTML5, CSS3',
+  'Frontend: React.js, Next.js, Angular 7/8+, Redux, React Router, Tailwind CSS, Bootstrap, Material UI, SCSS, Framer Motion, GSAP',
+  'Backend: Node.js, Express.js, Django, Django REST Framework, Spring Boot, Spring MVC, Hibernate, JSP, Servlets, RESTful Web Services, SOAP Web Services, WS-Security, JWT, Authentication, Microservices',
   'Databases: PostgreSQL, MongoDB, MySQL, Redis, SQLite',
-  'DevOps & Cloud: Git, GitHub, Docker, Linux, Nginx, Hostinger VPS, CI/CD, Cloud Deployment',
+  'DevOps & Cloud: Git, GitHub, Docker, Linux, Nginx, Hostinger VPS, CI/CD, WebLogic, Tomcat, JBoss, Cloud Deployment',
   'AI & Automation: OpenAI API, Google Gemini, Gemini API, LLMs, Prompt Engineering, RAG, LangChain, Vector Databases, Automation'
 ];
 doc.font('Helvetica').fontSize(10).fillColor(textColor);

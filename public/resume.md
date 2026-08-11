@@ -6,11 +6,11 @@ Bengaluru, India | [LinkedIn](https://www.linkedin.com/in/mohammed-1-24b81a278) 
 Full Stack Software Engineer with 4 years of professional experience building scalable web applications and production-ready software solutions across frontend, backend, and database layers. Experienced with React.js, Next.js, TypeScript, Node.js, Python, Django, REST APIs, and PostgreSQL. Expert in AI integrations, performance optimization, clean architecture, and technical SEO.
 
 ## Technical Skills
-- **Languages:** JavaScript, TypeScript, Python, Java, SQL, HTML5, CSS3
-- **Frontend:** React.js, Next.js, Redux, React Router, Tailwind CSS, Bootstrap, Material UI, SCSS, Framer Motion, GSAP, Responsive Design
-- **Backend:** Node.js, Express.js, Django, Django REST Framework, REST APIs, JWT, Authentication, Role Based Access, Microservices
+- **Languages:** JavaScript, TypeScript, Python, Java, J2EE, SQL, HTML5, CSS3
+- **Frontend:** React.js, Next.js, Angular 7/8+, Redux, React Router, Tailwind CSS, Bootstrap, Material UI, SCSS, Framer Motion, GSAP, Responsive Design
+- **Backend:** Node.js, Express.js, Django, Django REST Framework, Spring Boot, Spring MVC, Hibernate, JSP, Servlets, RESTful Web Services, SOAP Web Services, WS-Security, JWT, Authentication, Role Based Access, Microservices
 - **Databases:** PostgreSQL, MongoDB, MySQL, Redis, SQLite
-- **DevOps & Cloud:** Git, GitHub, Docker, Linux, Nginx, Hostinger VPS, CI/CD, Cloud Deployment
+- **DevOps & Cloud / App Servers:** Git, GitHub, Docker, Linux, Nginx, Hostinger VPS, CI/CD, WebLogic, Tomcat, JBoss, Cloud Deployment
 - **AI & Automation:** OpenAI API, Google Gemini, Gemini API, LLMs, Prompt Engineering, RAG, LangChain, Vector Databases, Automation
 
 ## Professional Experience
