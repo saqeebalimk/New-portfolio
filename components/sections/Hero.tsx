@@ -46,7 +46,7 @@ export function Hero() {
                             View Projects <ArrowRight size={20} />
                         </Button>
                     </Link>
-                    <a href="/Mohammed_Saqeeb_Khan_Resume.pdf" target="_blank" rel="noopener noreferrer" download>
+                    <a href="https://drive.google.com/file/d/1gKUMJI77rPqYj3ia3ZbLeRcXzID_wA_E/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                         <Button variant="outline" size="lg" className="w-full sm:w-auto">
                             Download Resume <Download size={20} />
                         </Button>
