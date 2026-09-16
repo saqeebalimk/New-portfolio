@@ -61,7 +61,7 @@ export function AIEngineering() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900">
-                        AI-Assisted <span className="text-violet-600">Engineering</span>
+                        AI-Assisted <span className="text-violet-600">Software Engineering</span>
                     </h2>
                     <div className="w-24 h-1 bg-violet-600 mx-auto rounded-full mb-6"></div>
                     <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed font-medium">

@@ -1,252 +1,306 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { MapPin, Mail, LayoutTemplate, Sparkles, Lightbulb, Code2, Rocket, BookOpen, Clock, Calendar } from "lucide-react";
 import { Card } from "@/components/ui/Card";
-import { Briefcase, Calendar, MapPin, Mail, User, Clock, CheckCircle2 } from "lucide-react";
-
-const skillCategories = [
-    {
-        title: "AI & Modern Engineering",
-        badgeStyle: "bg-violet-50 text-violet-700 border-violet-100 hover:bg-violet-100 hover:border-violet-200",
-        skills: ["AI Pair Programming", "Agentic AI Workflows", "LLM Integration", "Prompt Engineering", "RAG", "OpenAI API", "Gemini API", "AI Automation", "Claude Code"],
-    },
-    {
-        title: "Programming Languages",
-        badgeStyle: "bg-blue-50 text-blue-700 border-blue-100 hover:bg-blue-100 hover:border-blue-200",
-        skills: ["JavaScript", "TypeScript", "Python", "Go / Golang", "Java", "SQL", "HTML5", "CSS3"],
-    },
-    {
-        title: "Frontend Engineering",
-        badgeStyle: "bg-sky-50 text-sky-700 border-sky-100 hover:bg-sky-100 hover:border-sky-200",
-        skills: ["React.js", "Next.js", "Redux", "React Router", "Tailwind CSS", "Material UI", "SCSS", "Framer Motion", "GSAP"],
-    },
-    {
-        title: "Backend & Architecture",
-        badgeStyle: "bg-teal-50 text-teal-700 border-teal-100 hover:bg-teal-100 hover:border-teal-200",
-        skills: ["Node.js", "Express.js", "Django", "Django REST Framework", "Go REST APIs", "Spring Boot", "Spring MVC", "RESTful APIs", "Microservices"],
-    },
-    {
-        title: "Databases & Storage",
-        badgeStyle: "bg-emerald-50 text-emerald-700 border-emerald-100 hover:bg-emerald-100 hover:border-emerald-200",
-        skills: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "SQLite"],
-    },
-    {
-        title: "DevOps & Cloud",
-        badgeStyle: "bg-orange-50 text-orange-700 border-orange-100 hover:bg-orange-100 hover:border-orange-200",
-        skills: ["Git", "GitHub", "Docker", "Linux", "Nginx", "CI/CD", "AWS", "Azure"],
-    },
-];
-
-const experiences = [
-    {
-        company: "ARN Systems Pvt Ltd",
-        role: "Software Developer",
-        period: "Dec 2024 – 31 Aug 2026",
-        isLatest: true,
-        logoContent: (
-            <div className="flex items-center justify-center font-black italic text-[#E53935] tracking-tighter text-[1.1rem] leading-none w-full h-full relative">
-                <span className="z-10">ARN</span>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full border-t border-l border-red-500 rotate-45 opacity-20"></div>
-            </div>
-        ),
-        description: [
-            "Worked on full-stack development using React.js, Python, Go and PostgreSQL.",
-            "Leveraged AI-assisted development workflows for faster delivery and code optimization.",
-            "Integrated modern services with existing enterprise architecture.",
-            "Contributed to scalable, production-ready applications.",
-        ],
-    },
-    {
-        company: "SevenChats Private Limited",
-        role: "Software Developer (Front End)",
-        period: "Oct 2022 – Nov 2024",
-        isLatest: false,
-        logoContent: (
-            <div className="flex items-center justify-center font-black text-[1.4rem] leading-none w-full h-full">
-                <span className="text-black">7</span><span className="text-[#00BCD4]">C</span>
-            </div>
-        ),
-        description: [
-            "Developed high-performance web applications using React.js and Redux.",
-            "Integrated LLM/AI features for real-time chatbot and messaging functionality.",
-            "Managed state, API integrations and performance optimizations.",
-            "Automated testing and deployment workflows.",
-        ],
-    },
-];
 
 export function About() {
     return (
         <section id="about" className="py-24 relative bg-slate-50/50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
                 
-                {/* About Me Section: Two Column Layout */}
-                <div className="grid lg:grid-cols-12 gap-12 items-start mb-32">
-                    {/* Left Column: Bio */}
+                {/* ---------------- ROW 1: ABOUT ME & CORE STRENGTHS ---------------- */}
+                <div className="grid lg:grid-cols-12 gap-16 lg:gap-12 items-start">
+                    
+                    {/* Left Column: About Me (7 cols) */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         className="lg:col-span-7 space-y-6"
                     >
-                        <h2 className="text-3xl font-bold text-slate-900 mb-6">About <span className="text-primary">Me</span></h2>
-                        <div className="h-1 w-12 bg-primary rounded-full mb-8" />
+                        <div className="inline-block px-3 py-1 bg-blue-50 text-blue-600 font-bold text-[10px] uppercase tracking-widest rounded-full mb-3 border border-blue-100">
+                            ABOUT
+                        </div>
+                        <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 tracking-tight">About Me</h2>
                         
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                            <strong className="text-slate-900 font-bold">Full Stack Software Engineer</strong> with 4 years of professional experience delivering complete, production-ready web applications. I bridge the gap between traditional enterprise architecture (Java/J2EE, Go, Spring Boot) and modern full-stack development (React, Node.js, Django).
-                        </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                            For the past 3 years, I have extensively integrated AI Pair-Programming and Agentic AI workflows into my daily engineering process. I use AI-assisted and agentic engineering workflows to accelerate development while maintaining strong architectural, testing and code-quality practices, enabling me to write scalable code and deliver reliable, intelligent products. 
-                        </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                            My core strength lies in combining deep foundational language expertise with modern tooling to execute end-to-end solutions efficiently.
-                        </p>
+                        <div className="space-y-4">
+                            <p className="text-[17px] text-slate-600 leading-relaxed">
+                                Full Stack Software Engineer with 4 years of professional experience delivering complete, production-ready web applications. I bridge the gap between traditional enterprise architecture (Java/J2EE, Go, Spring Boot) and modern full-stack development (React, Node.js, Django).
+                            </p>
+                            <p className="text-[17px] text-slate-600 leading-relaxed">
+                                For the past 3 years, I have extensively integrated AI Pair-Programming and Agentic AI workflows into my daily engineering process. I use AI-assisted and agentic engineering workflows to accelerate development while maintaining strong architectural, testing and code-quality practices, enabling me to write scalable code and deliver reliable, intelligent products.
+                            </p>
+                            <p className="text-[17px] text-slate-600 leading-relaxed">
+                                My core strength lies in combining deep foundational language knowledge with modern full-stack and AI capabilities to build real-world solutions.
+                            </p>
+                        </div>
+                        
+                        {/* Compact Info Badges */}
+                        <div className="flex flex-wrap gap-4 pt-4 mt-8 border-t border-slate-200/60">
+                            <div className="flex items-center gap-2 text-sm font-semibold text-slate-600">
+                                <MapPin size={16} className="text-blue-500" /> Bengaluru, Karnataka, India
+                            </div>
+                            <div className="flex items-center gap-2 text-sm font-semibold text-slate-600">
+                                <Mail size={16} className="text-blue-500" /> saqeebalimk@gmail.com
+                            </div>
+                            <div className="flex items-center gap-2 text-sm font-semibold text-slate-600">
+                                <Clock size={16} className="text-blue-500" /> Open to Opportunities
+                            </div>
+                        </div>
                     </motion.div>
 
-                    {/* Right Column: Mini Info Cards */}
+                    {/* Right Column: Core Strengths (5 cols) */}
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="lg:col-span-5 grid sm:grid-cols-2 gap-4"
+                        className="lg:col-span-5"
                     >
-                        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
-                            <div className="p-2.5 bg-blue-50 text-blue-600 rounded-lg"><User size={20} /></div>
-                            <div>
-                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Name</p>
-                                <p className="text-sm font-semibold text-slate-800">Mohammed Saqeeb</p>
-                            </div>
-                        </div>
-                        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
-                            <div className="p-2.5 bg-violet-50 text-violet-600 rounded-lg"><MapPin size={20} /></div>
-                            <div>
-                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Location</p>
-                                <p className="text-sm font-semibold text-slate-800">Bengaluru, Karnataka, India</p>
-                            </div>
-                        </div>
-                        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
-                            <div className="p-2.5 bg-emerald-50 text-emerald-600 rounded-lg"><Clock size={20} /></div>
-                            <div>
-                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Experience</p>
-                                <p className="text-sm font-semibold text-slate-800">4+ Years</p>
-                            </div>
-                        </div>
-                        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
-                            <div className="p-2.5 bg-orange-50 text-orange-600 rounded-lg"><CheckCircle2 size={20} /></div>
-                            <div>
-                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Status</p>
-                                <p className="text-sm font-semibold text-slate-800">Open to Opportunities</p>
-                            </div>
-                        </div>
-                        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4 sm:col-span-2">
-                            <div className="p-2.5 bg-slate-50 text-slate-600 rounded-lg"><Mail size={20} /></div>
-                            <div>
-                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Email</p>
-                                <a href="mailto:saqeebalimk@gmail.com" className="text-sm font-semibold text-primary hover:underline">saqeebalimk@gmail.com</a>
-                            </div>
+                        <h3 className="text-2xl font-bold text-slate-900 mb-8 tracking-tight">Core Strengths</h3>
+                        <div className="grid grid-cols-2 gap-4">
+                            <Card className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                                <LayoutTemplate className="text-blue-500 mb-3" size={24} />
+                                <h4 className="font-bold text-slate-900 text-sm">Full Stack <br/> Development</h4>
+                            </Card>
+                            <Card className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                                <Sparkles className="text-violet-500 mb-3" size={24} />
+                                <h4 className="font-bold text-slate-900 text-sm">AI-Assisted <br/> Engineering</h4>
+                            </Card>
+                            <Card className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                                <Lightbulb className="text-teal-500 mb-3" size={24} />
+                                <h4 className="font-bold text-slate-900 text-sm">Problem <br/> Solving</h4>
+                            </Card>
+                            <Card className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                                <Code2 className="text-blue-600 mb-3" size={24} />
+                                <h4 className="font-bold text-slate-900 text-sm">Clean & Scalable <br/> Code</h4>
+                            </Card>
+                            <Card className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                                <Rocket className="text-orange-500 mb-3" size={24} />
+                                <h4 className="font-bold text-slate-900 text-sm">Product <br/> Mindset</h4>
+                            </Card>
+                            <Card className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                                <BookOpen className="text-emerald-500 mb-3" size={24} />
+                                <h4 className="font-bold text-slate-900 text-sm">Continuous <br/> Learning</h4>
+                            </Card>
                         </div>
                     </motion.div>
                 </div>
-
-                {/* Skills Section — Badge Grid Rewrite */}
-                <motion.div id="skills" className="mb-32 scroll-mt-24">
-                    <div className="text-center mb-12">
-                        <h3 className="text-3xl font-bold text-slate-900 mb-4">Technical <span className="text-secondary">Skills</span></h3>
-                        <p className="text-slate-500 max-w-2xl mx-auto">Categorized overview of my core competencies across the stack.</p>
-                    </div>
+                
+                {/* ---------------- ROW 2: EXPERIENCE & SKILLS ---------------- */}
+                <div id="experience" className="grid lg:grid-cols-12 gap-16 lg:gap-12 items-start scroll-mt-24">
                     
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {skillCategories.map((category, catIndex) => (
-                            <motion.div
-                                key={catIndex}
-                                initial={{ opacity: 0, y: 15 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: catIndex * 0.1 }}
-                            >
-                                <Card className="bg-white border-slate-200 h-full !p-6 shadow-sm hover:shadow-md transition-shadow">
-                                    <h4 className="text-lg font-bold text-slate-800 mb-5">{category.title}</h4>
-                                    <div className="flex flex-wrap gap-2">
-                                        {category.skills.map((skill, skillIndex) => (
-                                            <span
-                                                key={skillIndex}
-                                                className={`px-3 py-1.5 text-xs font-semibold rounded-lg border transition-colors duration-200 ${category.badgeStyle}`}
-                                            >
-                                                {skill}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </Card>
-                            </motion.div>
-                        ))}
-                    </div>
-                </motion.div>
-
-                {/* Experience Section — Left-Aligned Styled Timeline */}
-                <motion.div id="experience" className="scroll-mt-24">
-                    <div className="mb-12 text-left">
-                        <div className="inline-block px-3 py-1 bg-blue-50 text-blue-600 font-bold text-[10px] uppercase tracking-widest rounded-full mb-3 border border-blue-100">
-                            EXPERIENCE
+                    {/* Left Column: My Professional Journey (7 cols) */}
+                    <div className="lg:col-span-7 space-y-6">
+                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                            <div>
+                                <div className="inline-block px-3 py-1 bg-blue-50 text-blue-600 font-bold text-[10px] uppercase tracking-widest rounded-full mb-3 border border-blue-100">
+                                    EXPERIENCE
+                                </div>
+                                <h3 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-2 tracking-tight">My Professional Journey</h3>
+                            </div>
+                            <p className="text-slate-500 text-sm font-medium pb-1 hidden sm:block">A journey of continuous learning, building and creating impact.</p>
                         </div>
-                        <h3 className="text-3xl font-bold text-slate-900 mb-2">My Professional Journey</h3>
-                        <p className="text-slate-500 max-w-2xl text-[15px]">A journey of continuous learning, building and creating impact.</p>
-                    </div>
 
-                    <div className="relative max-w-5xl mx-auto pb-10 ml-2 sm:ml-0">
-                        {/* Continuous Vertical Line */}
-                        <div className="absolute left-2.5 top-8 bottom-0 w-px bg-slate-200/80 z-0"></div>
+                        <div className="relative pb-10 ml-2 sm:ml-0">
+                            {/* Continuous Vertical Line */}
+                            <div className="absolute left-2.5 sm:left-[108px] top-8 bottom-0 w-px bg-slate-200 z-0"></div>
 
-                        <div className="space-y-8">
-                            {experiences.map((exp, index) => (
+                            <div className="space-y-12">
+                                {/* Experience 1: ARN */}
                                 <motion.div
-                                    key={index}
                                     initial={{ opacity: 0, x: -20 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ duration: 0.5, delay: index * 0.15 }}
-                                    className="relative pl-12 sm:pl-14 pt-2 group"
+                                    className="relative flex flex-col sm:flex-row gap-6 sm:gap-12 pt-2 group"
                                 >
+                                    {/* Date Container (Left side on desktop) */}
+                                    <div className="sm:w-24 flex-shrink-0 sm:text-right hidden sm:block pt-3">
+                                        <p className="text-[12px] font-bold text-slate-500 leading-tight">Dec 2024</p>
+                                        <p className="text-[12px] font-semibold text-slate-400 my-1">↓</p>
+                                        <p className="text-[12px] font-bold text-slate-500 leading-tight">31 Aug 2026</p>
+                                    </div>
+                                    
                                     {/* Timeline Node */}
-                                    <div className="absolute left-1 top-9 w-3.5 h-3.5 bg-blue-500 rounded-full border-[3px] border-white shadow-sm z-10 group-hover:scale-125 transition-transform duration-300" />
+                                    <div className="hidden sm:block absolute left-[103px] top-6 w-3.5 h-3.5 bg-blue-500 rounded-full border-[3px] border-white shadow-sm z-10 group-hover:scale-125 transition-transform duration-300" />
+                                    <div className="sm:hidden absolute left-1 top-10 w-3.5 h-3.5 bg-blue-500 rounded-full border-[3px] border-white z-10" />
 
-                                    {/* White Experience Card */}
-                                    <div className="relative bg-white rounded-[1rem] border border-slate-100 p-6 sm:p-7 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_20px_-4px_rgba(0,0,0,0.08)] transition-all duration-300">
-                                        {exp.isLatest && (
-                                            <div className="absolute -top-3 right-6 bg-emerald-50 text-emerald-600 px-3 py-1 rounded-full text-[11px] font-bold flex items-center gap-1 border border-emerald-100 shadow-sm">
-                                                <span className="text-emerald-500 text-[10px]">✦</span> Latest
-                                            </div>
-                                        )}
+                                    {/* White Content Card */}
+                                    <div className="flex-grow relative bg-white pl-10 sm:pl-0">
                                         
-                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
+                                        {/* Mobile Date */}
+                                        <p className="text-[11px] font-bold text-slate-500 mb-2 sm:hidden flex items-center gap-2">
+                                            <Calendar size={12}/> Dec 2024 – 31 Aug 2026
+                                        </p>
+
+                                        <div className="flex items-start justify-between mb-4">
                                             <div className="flex items-center gap-4">
                                                 {/* Logo Emulator */}
-                                                <div className="w-12 h-12 rounded-full border border-slate-100 shadow-sm flex items-center justify-center bg-white flex-shrink-0 overflow-hidden">
-                                                    {exp.logoContent}
+                                                <div className="w-12 h-12 rounded-full border border-slate-100 shadow-sm flex items-center justify-center bg-white flex-shrink-0 overflow-hidden relative">
+                                                    <div className="flex items-center justify-center font-black italic text-[#E53935] tracking-tighter text-[1rem] leading-none z-10">
+                                                        ARN
+                                                    </div>
                                                 </div>
                                                 <div>
-                                                    <h4 className="text-[17px] font-bold text-slate-900 leading-tight mb-0.5">{exp.company}</h4>
-                                                    <p className="text-blue-500 font-semibold text-[13px]">{exp.role}</p>
+                                                    <h4 className="text-[18px] font-bold text-slate-900 leading-tight mb-1">ARN Systems Pvt Ltd</h4>
+                                                    <p className="text-blue-600 font-semibold text-[14px]">Software Developer</p>
                                                 </div>
                                             </div>
-                                            <div className="text-sm font-medium text-slate-500 self-start sm:self-center">
-                                                {exp.period}
+                                            <div className="hidden md:flex bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-wider items-center gap-1.5 border border-emerald-100/50">
+                                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Project Completed
                                             </div>
                                         </div>
                                         
-                                        <ul className="space-y-2 mt-4 sm:pl-[4rem]">
-                                            {exp.description.map((item, i) => (
-                                                <li key={i} className="flex items-start gap-3 text-[14px] text-slate-600 hover:text-slate-800 transition-colors">
-                                                    <div className="w-1 h-1 rounded-full bg-slate-400 mt-2.5 flex-shrink-0" />
-                                                    <span className="leading-relaxed">{item}</span>
-                                                </li>
+                                        <ul className="space-y-3 mt-5 mb-6 pl-1 pr-4">
+                                            <li className="flex items-start gap-3 text-[14.5px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
+                                                <span>Worked on full-stack development using React.js, Python, Go and PostgreSQL.</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-[14.5px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
+                                                <span>Leveraged AI-assisted development workflows for faster delivery and code optimization.</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-[14.5px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
+                                                <span>Integrated modern services with existing enterprise architecture.</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-[14.5px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
+                                                <span>Contributed to scalable, production-ready applications.</span>
+                                            </li>
+                                        </ul>
+
+                                        <div className="flex flex-wrap gap-2 pt-2">
+                                            {['React.js', 'Python', 'Go', 'PostgreSQL', 'REST APIs', 'AI Tools'].map((tech) => (
+                                                <span key={tech} className="px-3 py-1 bg-slate-50 text-slate-600 text-xs font-semibold rounded-lg border border-slate-100">
+                                                    {tech}
+                                                </span>
                                             ))}
+                                        </div>
+                                    </div>
+                                </motion.div>
+
+                                {/* Experience 2: SevenChats */}
+                                <motion.div
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    className="relative flex flex-col sm:flex-row gap-6 sm:gap-12 pt-2 group"
+                                >
+                                    <div className="sm:w-24 flex-shrink-0 sm:text-right hidden sm:block pt-3">
+                                        <p className="text-[12px] font-bold text-slate-500 leading-tight">Oct 2022</p>
+                                        <p className="text-[12px] font-semibold text-slate-400 my-1">↓</p>
+                                        <p className="text-[12px] font-bold text-slate-500 leading-tight">Nov 2024</p>
+                                    </div>
+                                    
+                                    <div className="hidden sm:block absolute left-[103px] top-6 w-3.5 h-3.5 bg-slate-300 rounded-full border-[3px] border-white z-10 transition-colors group-hover:bg-blue-400" />
+                                    <div className="sm:hidden absolute left-1 top-10 w-3.5 h-3.5 bg-slate-300 rounded-full border-[3px] border-white z-10" />
+
+                                    <div className="flex-grow bg-white pl-10 sm:pl-0">
+                                        <p className="text-[11px] font-bold text-slate-500 mb-2 sm:hidden flex items-center gap-2">
+                                            <Calendar size={12}/> Oct 2022 – Nov 2024
+                                        </p>
+
+                                        <div className="flex items-start justify-between mb-4">
+                                            <div className="flex items-center gap-4">
+                                                <div className="w-12 h-12 rounded-full border border-slate-100 shadow-sm flex items-center justify-center bg-white flex-shrink-0 overflow-hidden">
+                                                    <div className="flex items-center justify-center font-black text-[1.2rem] leading-none">
+                                                        <span className="text-black">7</span><span className="text-[#00BCD4]">C</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h4 className="text-[18px] font-bold text-slate-900 leading-tight mb-1">SevenChats Private Limited</h4>
+                                                    <p className="text-slate-600 font-semibold text-[14px]">Software Developer (Front End)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <ul className="space-y-3 mt-5 mb-6 pl-1 pr-4">
+                                            <li className="flex items-start gap-3 text-[14.5px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
+                                                <span>Developed high-performance web applications using React.js and Redux.</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-[14.5px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
+                                                <span>Integrated LLM/AI features for real-time chatbot and messaging functionality.</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-[14.5px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
+                                                <span>Managed state, API integrations and performance optimizations.</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-[14.5px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
+                                                <span>Automated testing and deployment workflows.</span>
+                                            </li>
                                         </ul>
                                     </div>
                                 </motion.div>
-                            ))}
+                            </div>
                         </div>
                     </div>
-                </motion.div>
+
+                    {/* Right Column: Technical Skills (5 cols) */}
+                    <div id="skills" className="lg:col-span-5 scroll-mt-24 pt-2">
+                        <div className="inline-block px-3 py-1 bg-slate-100 text-slate-600 font-bold text-[10px] uppercase tracking-widest rounded-full mb-3 border border-slate-200">
+                            SKILLS
+                        </div>
+                        <h3 className="text-2xl font-bold text-slate-900 mb-8 tracking-tight">Technical Skills</h3>
+                        
+                        <div className="space-y-8 p-8 bg-white border border-slate-100 rounded-3xl shadow-sm">
+                            
+                            {/* Languages */}
+                            <div>
+                                <h4 className="text-sm font-bold text-blue-600 mb-3 uppercase tracking-wider">Languages</h4>
+                                <div className="flex flex-wrap gap-2">
+                                    {['JavaScript', 'TypeScript', 'Python', 'Go', 'Java', 'SQL', 'HTML5', 'CSS3'].map(skill => (
+                                        <span key={skill} className="px-3 py-1.5 text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-200 rounded-lg">{skill}</span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Frontend Development */}
+                            <div>
+                                <h4 className="text-sm font-bold text-sky-600 mb-3 uppercase tracking-wider">Frontend Development</h4>
+                                <div className="flex flex-wrap gap-2">
+                                    {['React', 'Next.js', 'Redux', 'Tailwind CSS', 'Material UI', 'SCSS', 'Bootstrap', 'Framer Motion'].map(skill => (
+                                        <span key={skill} className="px-3 py-1.5 text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-200 rounded-lg">{skill}</span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Backend Development */}
+                            <div>
+                                <h4 className="text-sm font-bold text-teal-600 mb-3 uppercase tracking-wider">Backend Development</h4>
+                                <div className="flex flex-wrap gap-2">
+                                    {['Node.js', 'Express.js', 'Django', 'Django REST Framework', 'Go REST APIs', 'Spring Boot', 'Spring MVC', 'RESTful APIs'].map(skill => (
+                                        <span key={skill} className="px-3 py-1.5 text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-200 rounded-lg">{skill}</span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Databases & DevOps */}
+                            <div>
+                                <h4 className="text-sm font-bold text-emerald-600 mb-3 uppercase tracking-wider">Databases & DevOps</h4>
+                                <div className="flex flex-wrap gap-2">
+                                    {['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Docker', 'AWS', 'Azure', 'Linux', 'Nginx', 'CI/CD'].map(skill => (
+                                        <span key={skill} className="px-3 py-1.5 text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-200 rounded-lg">{skill}</span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* AI & Modern Engineering */}
+                            <div>
+                                <h4 className="text-sm font-bold text-violet-600 mb-3 uppercase tracking-wider">AI & Modern Engineering</h4>
+                                <div className="flex flex-wrap gap-2">
+                                    {['AI Pair Programming', 'LLMs', 'RAG', 'Prompt Engineering', 'OpenAI API', 'Gemini API', 'AI Automation', 'Agentic Workflows'].map(skill => (
+                                        <span key={skill} className="px-3 py-1.5 text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-200 rounded-lg">{skill}</span>
+                                    ))}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
                 
             </div>
         </section>

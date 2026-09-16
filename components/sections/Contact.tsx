@@ -15,7 +15,7 @@ export function Contact() {
                     viewport={{ once: true }}
                     className="text-center mb-20"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900">Get In <span className="text-primary">Touch</span></h2>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900">Let&apos;s Work <span className="text-primary">Together</span></h2>
                     <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
                 </motion.div>
 
@@ -28,9 +28,9 @@ export function Contact() {
                         className="space-y-8"
                     >
                         <div>
-                            <h3 className="text-2xl font-bold text-slate-900 mb-4">Let&apos;s talk about your project</h3>
-                            <p className="text-slate-500 leading-relaxed max-w-md">
-                                I&apos;m always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+                            <h3 className="text-2xl font-bold text-slate-900 mb-4">Let&apos;s Work Together</h3>
+                            <p className="text-[17px] text-slate-500 leading-relaxed max-w-md font-medium">
+                                I&apos;m always open to discussing new opportunities, interesting projects or collaborations.
                             </p>
                         </div>
 

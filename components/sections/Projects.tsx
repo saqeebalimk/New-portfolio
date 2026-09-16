@@ -2,97 +2,96 @@
 
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/Card";
-import { ExternalLink, Github, Eye, Globe } from "lucide-react";
-import projectsData from "@/data/projects.json";
+import { ExternalLink, Globe } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+
+const featuredProjects = [
+    {
+        id: "jynm",
+        title: "JYNM (Junkyards Near Me)",
+        description: "Automotive salvage marketplace platform with AI-powered part matching and lead generation.",
+        tech: ["React", "Django", "PostgreSQL", "AI"],
+        live: "https://jynmautos.com",
+        image: "/images/projects/jynm-desktop.png"
+    },
+    {
+        id: "sevenchats",
+        title: "SevenChats",
+        description: "Real-time chat application with LLM integration and intelligent messaging features.",
+        tech: ["React", "Redux", "Node.js", "WebSockets"],
+        live: "https://sevenchats.com",
+        image: "/images/projects/7chats-dashboard.png"
+    },
+    {
+        id: "hms",
+        title: "Hospital Management System",
+        description: "Comprehensive hospital management dashboard for streamlined healthcare operations.",
+        tech: ["React", "Node.js", "MySQL", "Dashboard"],
+        live: "#",
+        image: "/images/projects/bsm-platform-main.png"
+    }
+];
 
 export function Projects() {
     return (
-        <section id="projects" className="py-24 relative px-4 sm:px-6 lg:px-8 bg-white">
+        <section id="projects" className="py-24 relative px-4 sm:px-6 lg:px-8 bg-slate-50/50">
             <div className="max-w-7xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-center mb-16"
-                >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900">
-                        Featured <span className="text-primary">Projects</span>
-                    </h2>
-                    <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6"></div>
-                    <p className="text-slate-500 max-w-2xl mx-auto">
-                        A selection of production applications and engineering case studies I&apos;ve built.
-                    </p>
-                </motion.div>
+                <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                    <div>
+                        <div className="inline-block px-3 py-1 bg-blue-50 text-blue-600 font-bold text-[10px] uppercase tracking-widest rounded-full mb-3 border border-blue-100">
+                            PROJECTS
+                        </div>
+                        <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-2 tracking-tight">Featured Projects</h2>
+                    </div>
+                    <div className="flex items-center gap-4">
+                        <p className="text-slate-500 font-medium pb-1 hidden sm:block">Real-world projects solving meaningful problems.</p>
+                        <Button variant="outline" className="text-primary font-bold border-blue-100 bg-blue-50 hover:bg-blue-100 h-9 hidden md:flex">View All Projects →</Button>
+                    </div>
+                </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projectsData.map((project, index) => (
-                        <Card key={project.id} className="group overflow-hidden relative border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full !p-0 rounded-2xl">
+                    {featuredProjects.map((project) => (
+                        <Card key={project.id} className="group overflow-hidden relative border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full !p-0 rounded-[1.5rem]">
                             {/* Project Image */}
-                            <div className="relative h-56 w-full overflow-hidden border-b border-slate-100 bg-slate-50">
+                            <div className="relative h-52 w-full overflow-hidden border-b border-slate-100 bg-slate-100">
                                 <Image
                                     src={project.image}
                                     alt={project.title}
                                     fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                                    className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.05]"
                                 />
-                                <div className="absolute inset-0 bg-slate-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                                    {project.live && (
-                                        <a href={project.live} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/90 rounded-full hover:bg-white shadow-lg transition-transform hover:scale-110 text-primary">
-                                            <Globe size={20} />
-                                        </a>
-                                    )}
-                                </div>
-                                {/* Optional Feature Badge */}
-                                {project.title === 'JYNM' && (
-                                    <div className="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-sm uppercase tracking-wider">
-                                        Featured Case Study
-                                    </div>
-                                )}
                             </div>
 
                             <div className="relative z-10 p-6 flex flex-col flex-grow bg-white">
-                                <h3 className="text-xl font-bold text-slate-900 mb-2 line-clamp-1 group-hover:text-primary transition-colors">
+                                <h3 className="text-[17px] font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
                                     {project.title}
                                 </h3>
 
-                                <p className="text-slate-500 text-sm mb-6 line-clamp-3 flex-grow leading-relaxed">
-                                    {project.shortDescription || project.description}
+                                <p className="text-slate-500 text-[14px] mb-6 flex-grow leading-relaxed">
+                                    {project.description}
                                 </p>
 
                                 <div className="space-y-5 mt-auto">
                                     {/* Tech Stack */}
-                                    <div className="flex flex-wrap gap-1.5">
-                                        {project.tech.slice(0, 3).map((t, i) => (
-                                            <span key={i} className="px-2.5 py-1 bg-slate-50 rounded-lg text-[10px] font-bold text-slate-600 border border-slate-200">
+                                    <div className="flex flex-wrap gap-2">
+                                        {project.tech.map((t, i) => (
+                                            <span key={i} className="px-2.5 py-1 bg-blue-50/50 rounded-md text-[11px] font-bold text-blue-600 border border-blue-100/50">
                                                 {t}
                                             </span>
                                         ))}
-                                        {project.tech.length > 3 && (
-                                            <span className="px-2.5 py-1 bg-slate-50 rounded-lg text-[10px] font-bold text-slate-500 border border-slate-200">
-                                                +{project.tech.length - 3}
-                                            </span>
-                                        )}
                                     </div>
 
-                                    {/* Buttons */}
-                                    <div className="grid grid-cols-2 gap-3 pt-4 border-t border-slate-100">
-                                        <Link href={`/projects/${project.id}`} className="w-full">
-                                            <Button variant="outline" size="sm" className="w-full text-xs h-10 font-semibold bg-white hover:bg-slate-50 border-slate-200 text-slate-700">
-                                                Case Study
-                                            </Button>
-                                        </Link>
-
-                                        {project.live ? (
-                                            <a href={project.live} target="_blank" rel="noopener noreferrer" className="w-full">
-                                                <Button size="sm" className="w-full text-xs h-10 gap-1.5 font-semibold bg-slate-900 hover:bg-slate-800 text-white">
-                                                    Live Site <ArrowExternal size={12} />
-                                                </Button>
+                                    {/* Link aligned far right */}
+                                    <div className="pt-4 border-t border-slate-100 flex justify-end">
+                                        {project.live !== "#" ? (
+                                            <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-xs font-bold text-slate-800 hover:text-primary transition-colors">
+                                                Live Demo <ExternalLink size={14} className="mb-0.5" />
                                             </a>
                                         ) : (
-                                            <div className="w-full h-10"></div>
+                                            <span className="flex items-center gap-1.5 text-xs font-bold text-slate-400 cursor-not-allowed">
+                                                Live Demo <ExternalLink size={14} className="mb-0.5" />
+                                            </span>
                                         )}
                                     </div>
                                 </div>

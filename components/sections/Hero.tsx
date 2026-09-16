@@ -93,7 +93,7 @@ export function Hero() {
                         </div>
 
                         {/* Floating Code Widget */}
-                        <div className="absolute top-10 -right-12 z-20 shadow-2xl rounded-xl bg-slate-900 border border-slate-800 p-4 transform rotate-3 hover:-rotate-1 transition-transform duration-500 hidden xl:block w-64">
+                        <div className="absolute -top-4 -right-16 z-20 shadow-2xl rounded-xl bg-slate-900 border border-slate-800 p-4 transform rotate-3 hover:-rotate-1 transition-transform duration-500 hidden xl:block w-64">
                             <div className="font-mono text-[11px] leading-relaxed text-slate-300">
                                 <span className="text-purple-400">const</span> <span className="text-blue-400">developer</span> = {'{'}
                                 <br />
@@ -119,8 +119,13 @@ export function Hero() {
                         </div>
 
                         {/* Signature Element */}
-                        <div className="absolute -bottom-16 -right-10 z-20 transform -rotate-[5deg] w-64 opacity-80 mix-blend-multiply">
-                            <img src="/signature.png" alt="Signature" className="w-full h-auto" />
+                        <div className="absolute bottom-10 -right-8 z-20 transform -rotate-[10deg] opacity-60">
+                            <div className="font-serif italic text-3xl leading-snug text-slate-600 font-bold whitespace-nowrap">
+                                Good<br/>
+                                <span className="ml-4">Software</span><br/>
+                                <span className="ml-8">Better</span><br/>
+                                <span className="ml-12">Tomorrow</span>
+                            </div>
                         </div>
                     </motion.div>
                 </div>

@@ -20,8 +20,9 @@ export function Footer() {
                     </div>
                 </div>
 
-                <div className="border-t border-slate-200 mt-8 pt-6 text-center text-slate-500 text-sm font-medium">
-                    <p>© {new Date().getFullYear()} {config.name}. All rights reserved.</p>
+                <div className="border-t border-slate-200 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center text-slate-500 text-[13px] font-semibold">
+                    <p>© 2026 Mohammed Saqeeb. All rights reserved.</p>
+                    <p className="mt-4 md:mt-0 text-slate-400">Building a better tomorrow, one commit at a time. ✨</p>
                 </div>
             </div>
         </footer>

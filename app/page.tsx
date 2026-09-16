@@ -1,9 +1,7 @@
 import { Hero } from "@/components/sections/Hero";
-import { TechnicalAreas } from "@/components/sections/TechnicalAreas";
 import { About } from "@/components/sections/About";
 import { AIEngineering } from "@/components/sections/AIEngineering";
 import { Projects } from "@/components/sections/Projects";
-import { Education } from "@/components/sections/Education";
 import { Contact } from "@/components/sections/Contact";
 
 export default function Home() {
@@ -11,10 +9,8 @@ export default function Home() {
     <div className="flex flex-col gap-0">
       <Hero />
       <About />
-      <TechnicalAreas />
       <AIEngineering />
       <Projects />
-      <Education />
       <Contact />
     </div>
   );

@@ -40,8 +40,13 @@ export function Navbar() {
                 <div className="flex justify-between items-center">
                     
                     {/* Brand Logo */}
-                    <Link href="/" className="text-2xl font-bold text-slate-900 tracking-tight">
-                        Mohammed<span className="text-primary">.dev</span>
+                    <Link href="/" className="flex flex-col items-start leading-tight">
+                        <span className="text-2xl font-bold text-slate-900 tracking-tight">
+                            Mohammed <span className="text-primary">Saqeeb</span>
+                        </span>
+                        <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest mt-0.5">
+                            Software Engineer
+                        </span>
                     </Link>
 
                     {/* Desktop Navigation Links */}
