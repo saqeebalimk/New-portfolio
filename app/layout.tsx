@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { MobileNav } from "@/components/layout/MobileNav";
 
 const inter = Inter({ subsets: ["latin"] });
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const _dancingScript = Dancing_Script({ subsets: ["latin"], variable: "--font-dancing", display: "swap" });
 
 import config from "@/data/config.json";
 
