@@ -29,7 +29,7 @@ export function Footer() {
                         {/* ── Column 1: Branding ── */}
                         <div className="text-center md:text-left">
                             <h2 className="text-2xl font-bold text-slate-900 mb-1">
-                                Mohammed <span className="text-primary">Saqeeb</span>
+                                Mohammed
                             </h2>
                             <p className="text-slate-500 text-sm font-medium mb-4">
                                 Software Engineer • 4 Years of Professional Experience

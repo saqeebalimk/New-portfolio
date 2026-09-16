@@ -9,9 +9,8 @@ import config from "@/data/config.json";
 const navLinks = [
     { name: "Home", href: "#hero" },
     { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
+    { name: "Experience & Skills", href: "#experience" },
     { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
     { name: "AI Engineering", href: "#ai-engineering" },
     { name: "Contact", href: "#contact" },
 ];
@@ -98,13 +97,13 @@ export function Navbar() {
 
             {/* Mobile Dropdown */}
             {isOpen && (
-                <div className="lg:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg py-4 px-4 flex flex-col space-y-4">
+                <div className="lg:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xl py-6 px-6 flex flex-col space-y-3 rounded-b-3xl transform transition-all duration-300">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
                             href={link.href}
                             onClick={() => setIsOpen(false)}
-                            className="text-slate-600 hover:text-primary font-semibold text-base px-2 py-1 rounded hover:bg-slate-50 transition-colors"
+                            className="text-slate-700 hover:text-primary font-bold text-[15px] px-4 py-3 rounded-xl hover:bg-blue-50 transition-all border border-transparent hover:border-blue-100"
                         >
                             {link.name}
                         </Link>

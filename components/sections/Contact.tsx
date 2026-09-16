@@ -251,7 +251,21 @@ export function Contact() {
                                 {/* Contact info cards */}
                                 <div className="space-y-3">
                                     <a
-                                        href={`mailto:saqeebalimk@gmail.com`}
+                                        href="tel:+918792248396"
+                                        className="flex items-center gap-4 p-4 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-green-50/50 hover:border-green-100 transition-all group"
+                                    >
+                                        <div className="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center text-green-600 flex-shrink-0 group-hover:scale-110 transition-transform">
+                                            <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                        </div>
+                                        <div className="flex-grow min-w-0">
+                                            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5">Call me</p>
+                                            <p className="text-slate-800 font-semibold text-[14px] truncate">+91 8792248396</p>
+                                        </div>
+                                        <CopyButton value="+918792248396" />
+                                    </a>
+
+                                    <a
+                                        href={`mailto:alikhanmohammed342@gmail.com`}
                                         className="flex items-center gap-4 p-4 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-blue-50/50 hover:border-blue-100 transition-all group"
                                     >
                                         <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -259,9 +273,9 @@ export function Contact() {
                                         </div>
                                         <div className="flex-grow min-w-0">
                                             <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5">Email</p>
-                                            <p className="text-slate-800 font-semibold text-[14px] truncate">saqeebalimk@gmail.com</p>
+                                            <p className="text-slate-800 font-semibold text-[14px] truncate">alikhanmohammed342@gmail.com</p>
                                         </div>
-                                        <CopyButton value="saqeebalimk@gmail.com" />
+                                        <CopyButton value="alikhanmohammed342@gmail.com" />
                                     </a>
 
                                     <div className="flex items-center gap-4 p-4 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-purple-50/30 hover:border-purple-100 transition-all">
@@ -313,7 +327,7 @@ export function Contact() {
                                         </a>
                                         {/* Decorative handwritten note */}
                                         <p
-                                            className="text-[13px] text-slate-400 ml-2 leading-snug italic"
+                                            className="text-lg text-primary ml-3 leading-snug italic font-bold tracking-wide"
                                             style={{ fontFamily: "'Dancing Script', cursive" }}
                                         >
                                             Let&apos;s connect<br />
