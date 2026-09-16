@@ -41,7 +41,7 @@ export function Navbar() {
                     
                     {/* Brand Logo */}
                     <Link href="/" className="text-2xl font-bold text-slate-900 tracking-tight">
-                        Saqeeb<span className="text-primary">.dev</span>
+                        Mohammed<span className="text-primary">.dev</span>
                     </Link>
 
                     {/* Desktop Navigation Links */}

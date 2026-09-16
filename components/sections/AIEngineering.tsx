@@ -98,7 +98,7 @@ export function AIEngineering() {
                     viewport={{ once: true }}
                     className="mt-16 text-center"
                 >
-                    <div className="inline-block px-6 py-4 rounded-2xl bg-white border border-slate-200 shadow-sm text-slate-600 text-sm max-w-3xl leading-relaxed">
+                    <div className="inline-block px-6 py-4 rounded-2xl bg-blue-50/80 border border-blue-200 shadow-sm text-slate-700 text-sm max-w-3xl leading-relaxed relative">
                         <strong className="text-slate-900 font-bold mr-1">My Approach:</strong> 
                         I use these tools to move faster, understand unfamiliar systems, investigate bugs, and handle repetitive work — so I can focus pure engineering effort on robust architecture, complex problem-solving, and delivering reliable software.
                     </div>

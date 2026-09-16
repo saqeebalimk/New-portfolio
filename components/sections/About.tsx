@@ -41,29 +41,36 @@ const experiences = [
     {
         company: "ARN Systems Pvt Ltd",
         role: "Software Developer",
-        period: "Dec 2024 — 31 Aug 2026",
-        statusBadge: "PROJECT / CONTRACT COMPLETED",
+        period: "Dec 2024 – 31 Aug 2026",
+        isLatest: true,
+        logoContent: (
+            <div className="flex items-center justify-center font-black italic text-[#E53935] tracking-tighter text-[1.1rem] leading-none w-full h-full relative">
+                <span className="z-10">ARN</span>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full border-t border-l border-red-500 rotate-45 opacity-20"></div>
+            </div>
+        ),
         description: [
-            "Architected and delivered JYNM — a full-stack automotive salvage marketplace (React + Vite + Django + PostgreSQL + Redis) deployed on Linux/Nginx with Gunicorn, serving lead generation for vendors across multiple locations.",
-            "Engineered a technical SEO strategy including 301 redirect architecture, canonical URLs, and structured data markup, improving organic search visibility for automotive salvage queries.",
-            "Built AHA Technologies — an AI-powered service platform integrating OpenAI APIs and WhatsApp Business for electronics diagnosis workflows and conversational lead capture.",
-            "Used AI pair-programming and agentic development workflows as part of day-to-day engineering — applying prompt engineering and context management across large codebases.",
-            "Managed production DevOps on Linux/Nginx with Docker: VPS provisioning, deployment pipelines, and production environment stability.",
-            "Worked across legacy system integration and modern service architecture, using AI-assisted codebase analysis to understand and refactor existing systems.",
+            "Worked on full-stack development using React.js, Python, Go and PostgreSQL.",
+            "Leveraged AI-assisted development workflows for faster delivery and code optimization.",
+            "Integrated modern services with existing enterprise architecture.",
+            "Contributed to scalable, production-ready applications.",
         ],
     },
     {
         company: "SevenChats Private Limited",
-        role: "Software Developer / Front End Developer",
+        role: "Software Developer (Front End)",
         period: "Oct 2022 – Nov 2024",
-        statusBadge: null,
+        isLatest: false,
+        logoContent: (
+            <div className="flex items-center justify-center font-black text-[1.4rem] leading-none w-full h-full">
+                <span className="text-black">7</span><span className="text-[#00BCD4]">C</span>
+            </div>
+        ),
         description: [
-            "Developed and maintained core product features for a social networking and real-time chat platform serving an active user base.",
-            "Built and managed reusable React component libraries with Redux for application state, improving consistency and maintainability across the product.",
-            "Integrated RESTful APIs and implemented JWT-based authentication and user session management.",
-            "Worked on real-time communication features using WebSocket-based architecture (Socket.io).",
-            "Contributed to UI performance improvements, responsive design implementation, and reduction of unnecessary re-renders.",
-            "Delivered production-ready features consistently in an Agile cross-functional team environment across multiple release cycles.",
+            "Developed high-performance web applications using React.js and Redux.",
+            "Integrated LLM/AI features for real-time chatbot and messaging functionality.",
+            "Managed state, API integrations and performance optimizations.",
+            "Automated testing and deployment workflows.",
         ],
     },
 ];
@@ -175,65 +182,65 @@ export function About() {
                     </div>
                 </motion.div>
 
-                {/* Experience Section — Redesigned Timeline */}
+                {/* Experience Section — Left-Aligned Styled Timeline */}
                 <motion.div id="experience" className="scroll-mt-24">
-                    <div className="text-center mb-16">
-                        <h3 className="text-3xl font-bold text-slate-900 mb-4">My Professional <span className="text-primary">Journey</span></h3>
-                        <p className="text-slate-500 max-w-2xl mx-auto text-lg">A journey of continuous learning, building and creating impact.</p>
+                    <div className="mb-12 text-left">
+                        <div className="inline-block px-3 py-1 bg-blue-50 text-blue-600 font-bold text-[10px] uppercase tracking-widest rounded-full mb-3 border border-blue-100">
+                            EXPERIENCE
+                        </div>
+                        <h3 className="text-3xl font-bold text-slate-900 mb-2">My Professional Journey</h3>
+                        <p className="text-slate-500 max-w-2xl text-[15px]">A journey of continuous learning, building and creating impact.</p>
                     </div>
 
-                    <div className="relative max-w-4xl mx-auto pb-10">
-                        {/* Elegant Vertical Line */}
-                        <div className="absolute left-8 md:left-1/2 top-4 bottom-0 w-px bg-slate-200 transform md:-translate-x-1/2 z-0"></div>
+                    <div className="relative pb-10 ml-2 sm:ml-0">
+                        {/* Continuous Vertical Line */}
+                        <div className="absolute left-2.5 top-8 bottom-0 w-px bg-slate-200/80 z-0"></div>
 
-                        <div className="space-y-16">
+                        <div className="space-y-8">
                             {experiences.map((exp, index) => (
                                 <motion.div
                                     key={index}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5, delay: index * 0.15 }}
-                                    className={`relative flex flex-col md:flex-row items-start ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
+                                    className="relative pl-12 sm:pl-14 pt-2 group"
                                 >
                                     {/* Timeline Node */}
-                                    <div className="absolute md:relative left-8 md:left-auto md:w-1/2 flex justify-center z-10 transform -translate-x-1/2 md:translate-x-0 mt-[1.125rem]">
-                                        <div className="w-4 h-4 bg-white border-2 border-primary rounded-full shadow-[0_0_0_4px_rgba(255,255,255,1)] md:shadow-none"></div>
-                                    </div>
+                                    <div className="absolute left-1 top-9 w-3.5 h-3.5 bg-blue-500 rounded-full border-[3px] border-white shadow-sm z-10 group-hover:scale-125 transition-transform duration-300" />
 
-                                    {/* Content Wrapping Area */}
-                                    <div className="w-full md:w-1/2 pl-16 md:pl-0">
-                                        <div className={`md:px-12 ${index % 2 === 0 ? "md:text-left" : "md:text-right"}`}>
-                                            
-                                            {/* Job Header */}
-                                            <div className="mb-4">
-                                                {exp.statusBadge && (
-                                                    <div className={`inline-block px-3 py-1 mb-3 text-[10px] font-bold tracking-wider rounded-md uppercase bg-emerald-50 text-emerald-700 border border-emerald-200 ${index % 2 !== 0 && "md:float-right"} clear-both`}>
-                                                        {exp.statusBadge}
-                                                    </div>
-                                                )}
-                                                <h4 className="text-xl font-bold text-slate-900 mb-1">{exp.role}</h4>
-                                                <div className="flex flex-col md:flex-row items-baseline gap-2 mb-2 justify-start md:justify-end">
-                                                    <p className={`font-semibold text-primary ${index % 2 === 0 && "md:order-1"}`}>{exp.company}</p>
-                                                    <span className={`text-sm text-slate-500 flex items-center gap-1 ${index % 2 === 0 && "md:order-2"}`}>
-                                                        <Calendar size={14} className="md:hidden" />
-                                                        {exp.period}
-                                                    </span>
+                                    {/* White Experience Card */}
+                                    <div className="relative bg-white rounded-[1rem] border border-slate-100 p-6 sm:p-7 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_20px_-4px_rgba(0,0,0,0.08)] transition-all duration-300">
+                                        {exp.isLatest && (
+                                            <div className="absolute -top-3 right-6 bg-emerald-50 text-emerald-600 px-3 py-1 rounded-full text-[11px] font-bold flex items-center gap-1 border border-emerald-100 shadow-sm">
+                                                <span className="text-emerald-500 text-[10px]">✦</span> Latest
+                                            </div>
+                                        )}
+                                        
+                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
+                                            <div className="flex items-center gap-4">
+                                                {/* Logo Emulator */}
+                                                <div className="w-12 h-12 rounded-full border border-slate-100 shadow-sm flex items-center justify-center bg-white flex-shrink-0 overflow-hidden">
+                                                    {exp.logoContent}
+                                                </div>
+                                                <div>
+                                                    <h4 className="text-[17px] font-bold text-slate-900 leading-tight mb-0.5">{exp.company}</h4>
+                                                    <p className="text-blue-500 font-semibold text-[13px]">{exp.role}</p>
                                                 </div>
                                             </div>
-
-                                            {/* White Experience Card */}
-                                            <Card className="!p-6 bg-white border border-slate-100 shadow-sm hover:shadow-md text-left mt-4 text-slate-600">
-                                                <ul className="space-y-3">
-                                                    {exp.description.map((item, i) => (
-                                                        <li key={i} className="flex items-start gap-3 text-sm">
-                                                            <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1.5 flex-shrink-0" />
-                                                            <span className="leading-relaxed">{item}</span>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </Card>
+                                            <div className="text-sm font-medium text-slate-500 self-start sm:self-center">
+                                                {exp.period}
+                                            </div>
                                         </div>
+                                        
+                                        <ul className="space-y-2 mt-4 sm:pl-[4rem]">
+                                            {exp.description.map((item, i) => (
+                                                <li key={i} className="flex items-start gap-3 text-[14px] text-slate-600 hover:text-slate-800 transition-colors">
+                                                    <div className="w-1 h-1 rounded-full bg-slate-400 mt-2.5 flex-shrink-0" />
+                                                    <span className="leading-relaxed">{item}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
                                     </div>
                                 </motion.div>
                             ))}
