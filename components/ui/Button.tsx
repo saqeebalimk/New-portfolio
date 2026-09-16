@@ -15,10 +15,10 @@ interface ButtonProps extends HTMLMotionProps<"button"> {
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ({ className, variant = "primary", size = "md", children, ...props }, ref) => {
         const variants = {
-            primary: "bg-primary text-black hover:bg-primary/80 shadow-[0_0_15px_rgba(0,240,255,0.5)] hover:shadow-[0_0_25px_rgba(0,240,255,0.7)]",
-            secondary: "bg-secondary text-white hover:bg-secondary/80 shadow-[0_0_15px_rgba(112,0,255,0.5)] hover:shadow-[0_0_25px_rgba(112,0,255,0.7)]",
-            outline: "border border-primary text-primary hover:bg-primary/10 shadow-[0_0_10px_rgba(0,240,255,0.2)]",
-            ghost: "hover:bg-white/10 text-white",
+            primary: "bg-primary text-white hover:bg-blue-700 shadow-sm hover:shadow-md border border-transparent",
+            secondary: "bg-secondary text-white hover:bg-teal-700 shadow-sm hover:shadow-md border border-transparent",
+            outline: "border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-colors",
+            ghost: "hover:bg-slate-100 text-slate-600",
         };
 
         const sizes = {

@@ -12,16 +12,19 @@ const config: Config = {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
                 primary: {
-                    DEFAULT: "#00f0ff", // Neon Cyan
-                    hover: "#00d6e6",
+                    DEFAULT: "#2563EB", // Trust Blue
+                    hover: "#1D4ED8",
                 },
                 secondary: {
-                    DEFAULT: "#7000ff", // Neon Purple
-                    hover: "#5e00d6",
+                    DEFAULT: "#0D9488", // Growth Teal
+                    hover: "#0F766E",
+                },
+                accent: {
+                    DEFAULT: "#8B5CF6", // Innovation Violet
                 },
                 card: {
-                    DEFAULT: "rgba(255, 255, 255, 0.05)",
-                    hover: "rgba(255, 255, 255, 0.1)",
+                    DEFAULT: "#FFFFFF",
+                    hover: "#F8FAFC",
                 }
             },
             backgroundImage: {

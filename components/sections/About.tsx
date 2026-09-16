@@ -2,346 +2,237 @@
 
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/Card";
-import { ProgressBar } from "@/components/ui/ProgressBar";
-import { Code, Database, Layout, Server, Briefcase, Calendar } from "lucide-react";
+import { Briefcase, Calendar, MapPin, Mail, User, Clock, CheckCircle2 } from "lucide-react";
+
+const skillCategories = [
+    {
+        title: "AI & Modern Engineering",
+        badgeStyle: "bg-violet-50 text-violet-700 border-violet-100 hover:bg-violet-100 hover:border-violet-200",
+        skills: ["AI Pair Programming", "Agentic AI Workflows", "LLM Integration", "Prompt Engineering", "RAG", "OpenAI API", "Gemini API", "AI Automation", "Claude Code"],
+    },
+    {
+        title: "Programming Languages",
+        badgeStyle: "bg-blue-50 text-blue-700 border-blue-100 hover:bg-blue-100 hover:border-blue-200",
+        skills: ["JavaScript", "TypeScript", "Python", "Go / Golang", "Java", "SQL", "HTML5", "CSS3"],
+    },
+    {
+        title: "Frontend Engineering",
+        badgeStyle: "bg-sky-50 text-sky-700 border-sky-100 hover:bg-sky-100 hover:border-sky-200",
+        skills: ["React.js", "Next.js", "Redux", "React Router", "Tailwind CSS", "Material UI", "SCSS", "Framer Motion", "GSAP"],
+    },
+    {
+        title: "Backend & Architecture",
+        badgeStyle: "bg-teal-50 text-teal-700 border-teal-100 hover:bg-teal-100 hover:border-teal-200",
+        skills: ["Node.js", "Express.js", "Django", "Django REST Framework", "Go REST APIs", "Spring Boot", "Spring MVC", "RESTful APIs", "Microservices"],
+    },
+    {
+        title: "Databases & Storage",
+        badgeStyle: "bg-emerald-50 text-emerald-700 border-emerald-100 hover:bg-emerald-100 hover:border-emerald-200",
+        skills: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "SQLite"],
+    },
+    {
+        title: "DevOps & Cloud",
+        badgeStyle: "bg-orange-50 text-orange-700 border-orange-100 hover:bg-orange-100 hover:border-orange-200",
+        skills: ["Git", "GitHub", "Docker", "Linux", "Nginx", "CI/CD", "AWS", "Azure"],
+    },
+];
+
+const experiences = [
+    {
+        company: "ARN Systems Pvt Ltd",
+        role: "Software Developer",
+        period: "Dec 2024 — 31 Aug 2026",
+        statusBadge: "PROJECT / CONTRACT COMPLETED",
+        description: [
+            "Architected and delivered JYNM — a full-stack automotive salvage marketplace (React + Vite + Django + PostgreSQL + Redis) deployed on Linux/Nginx with Gunicorn, serving lead generation for vendors across multiple locations.",
+            "Engineered a technical SEO strategy including 301 redirect architecture, canonical URLs, and structured data markup, improving organic search visibility for automotive salvage queries.",
+            "Built AHA Technologies — an AI-powered service platform integrating OpenAI APIs and WhatsApp Business for electronics diagnosis workflows and conversational lead capture.",
+            "Used AI pair-programming and agentic development workflows as part of day-to-day engineering — applying prompt engineering and context management across large codebases.",
+            "Managed production DevOps on Linux/Nginx with Docker: VPS provisioning, deployment pipelines, and production environment stability.",
+            "Worked across legacy system integration and modern service architecture, using AI-assisted codebase analysis to understand and refactor existing systems.",
+        ],
+    },
+    {
+        company: "SevenChats Private Limited",
+        role: "Software Developer / Front End Developer",
+        period: "Oct 2022 – Nov 2024",
+        statusBadge: null,
+        description: [
+            "Developed and maintained core product features for a social networking and real-time chat platform serving an active user base.",
+            "Built and managed reusable React component libraries with Redux for application state, improving consistency and maintainability across the product.",
+            "Integrated RESTful APIs and implemented JWT-based authentication and user session management.",
+            "Worked on real-time communication features using WebSocket-based architecture (Socket.io).",
+            "Contributed to UI performance improvements, responsive design implementation, and reduction of unnecessary re-renders.",
+            "Delivered production-ready features consistently in an Agile cross-functional team environment across multiple release cycles.",
+        ],
+    },
+];
 
 export function About() {
-    const skillCategories = [
-        {
-            title: "Languages",
-            color: "border-purple-500/30",
-            progressColor: "bg-gradient-to-r from-purple-500 to-pink-500",
-            skills: [
-                { name: "JavaScript", level: 95 },
-                { name: "TypeScript", level: 90 },
-                { name: "Python", level: 90 },
-                { name: "Java", level: 80 },
-                { name: "J2EE", level: 78 },
-                { name: "SQL", level: 85 },
-                { name: "HTML5", level: 95 },
-                { name: "CSS3", level: 95 },
-            ]
-        },
-        {
-            title: "Frontend",
-            color: "border-blue-500/30",
-            progressColor: "bg-gradient-to-r from-blue-500 to-cyan-400",
-            skills: [
-                { name: "React.js", level: 95 },
-                { name: "Next.js", level: 90 },
-                { name: "Angular 7/8+", level: 80 },
-                { name: "Redux", level: 90 },
-                { name: "Tailwind CSS", level: 95 },
-                { name: "Bootstrap", level: 90 },
-                { name: "Material UI", level: 85 },
-                { name: "SCSS", level: 85 },
-                { name: "Responsive Design", level: 95 },
-                { name: "Framer Motion", level: 80 },
-                { name: "React Router", level: 90 },
-                { name: "GSAP", level: 75 },
-            ]
-        },
-        {
-            title: "Backend",
-            color: "border-cyan-500/30",
-            progressColor: "bg-gradient-to-r from-cyan-500 to-teal-400",
-            skills: [
-                { name: "Node.js", level: 90 },
-                { name: "Express.js", level: 90 },
-                { name: "Django", level: 90 },
-                { name: "Django REST Framework", level: 85 },
-                { name: "Spring Boot", level: 80 },
-                { name: "Spring MVC", level: 78 },
-                { name: "Hibernate", level: 78 },
-                { name: "JSP", level: 75 },
-                { name: "Servlets", level: 75 },
-                { name: "RESTful Web Services", level: 95 },
-                { name: "SOAP Web Services", level: 78 },
-                { name: "WS-Security", level: 75 },
-                { name: "JWT", level: 90 },
-                { name: "Authentication", level: 95 },
-                { name: "Role Based Access", level: 90 },
-                { name: "Microservices", level: 85 },
-            ]
-        },
-        {
-            title: "Database",
-            color: "border-green-500/30",
-            progressColor: "bg-gradient-to-r from-green-500 to-emerald-400",
-            skills: [
-                { name: "PostgreSQL", level: 95 },
-                { name: "MongoDB", level: 90 },
-                { name: "MySQL", level: 90 },
-                { name: "Redis", level: 85 },
-                { name: "SQLite", level: 80 },
-            ]
-        },
-        {
-            title: "DevOps & Cloud",
-            color: "border-purple-500/30",
-            progressColor: "bg-gradient-to-r from-violet-500 to-purple-400",
-            skills: [
-                { name: "Git", level: 95 },
-                { name: "GitHub", level: 95 },
-                { name: "Docker", level: 85 },
-                { name: "Linux", level: 90 },
-                { name: "Nginx", level: 85 },
-                { name: "CI/CD", level: 85 },
-                { name: "Hostinger VPS", level: 80 },
-                { name: "Cloud Deployment", level: 85 },
-                { name: "WebLogic", level: 75 },
-                { name: "Tomcat", level: 80 },
-                { name: "JBoss", level: 75 },
-            ]
-        },
-        {
-            title: "AI & Automation",
-            color: "border-pink-500/30",
-            progressColor: "bg-gradient-to-r from-pink-500 to-rose-400",
-            skills: [
-                { name: "OpenAI API", level: 90 },
-                { name: "Google Gemini", level: 85 },
-                { name: "Gemini API", level: 85 },
-                { name: "LLMs", level: 90 },
-                { name: "Prompt Engineering", level: 95 },
-                { name: "RAG", level: 85 },
-                { name: "LangChain", level: 80 },
-                { name: "Vector Databases", level: 85 },
-                { name: "Automation", level: 90 },
-            ]
-        },
-    ];
-
-    const experiences = [
-        {
-            company: "ARN Systems",
-            role: "Full Stack Software Engineer",
-            period: "Dec 2024 – July 31 2026",
-            description: [
-                "Architected and delivered the JYNM automotive marketplace (React + Django + PostgreSQL), driving lead generation for 100+ vendor locations.",
-                "Engineered technical SEO strategy with 301 redirects, canonical URLs, and structured data, boosting organic search visibility.",
-                "Built AI-powered service platform (AHA Technologies) integrating OpenAI APIs and WhatsApp Business for electronics diagnosis workflows.",
-                "Optimized database query execution time by 30% through indexing strategies and query refactoring.",
-                "Led DevOps setup on Linux/Nginx with Docker, ensuring 99.9% uptime in production environments.",
-                "Integrated AI-driven automation reducing manual intervention by 32% in enterprise data processing pipelines."
-            ]
-        },
-        {
-            company: "SevenChats Pvt Ltd",
-            role: "Software Engineer",
-            period: "Oct 2022 – Nov 2024",
-            description: [
-                "Developed and maintained core product features for a social networking platform serving thousands of active users.",
-                "Optimized RESTful API response times by 40% through payload compression and caching strategies.",
-                "Engineered reusable component library reducing UI development time by 25% across the product team.",
-                "Drove 20% improvement in user engagement by rearchitecting key interaction flows.",
-                "Delivered production-ready features consistently in an Agile cross-functional environment."
-            ]
-        }
-    ];
-
     return (
-        <section id="about" className="py-20 relative">
+        <section id="about" className="py-24 relative bg-slate-50/50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* About Me Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-center mb-16"
-                >
-                    <h2 className="text-2xl md:text-5xl font-bold mb-6">About <span className="text-primary">Me</span></h2>
-                    <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
-                </motion.div>
-
-                {/* Bio Section */}
-                <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+                
+                {/* About Me Section: Two Column Layout */}
+                <div className="grid lg:grid-cols-12 gap-12 items-start mb-32">
+                    {/* Left Column: Bio */}
                     <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="space-y-6 text-lg text-gray-300 leading-relaxed"
+                        className="lg:col-span-7 space-y-6"
                     >
-                        <p>
-                            <strong className="text-white">Full Stack Software Engineer</strong> with 4 years of professional experience in agile software development. I specialize in building highly scalable web applications, REST APIs, and full stack development utilizing modern technologies to deliver robust production-ready products.
+                        <h2 className="text-3xl font-bold text-slate-900 mb-6">About <span className="text-primary">Me</span></h2>
+                        <div className="h-1 w-12 bg-primary rounded-full mb-8" />
+                        
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                            <strong className="text-slate-900 font-bold">Full Stack Software Engineer</strong> with 4 years of professional experience delivering complete, production-ready web applications. I combine strong software engineering fundamentals with modern full-stack development across React, Node.js, Django, Go and Java/Spring Boot.
                         </p>
-                        <p>
-                            Proficient in <span className="text-primary">React.js, Next.js, JavaScript, TypeScript, Tailwind CSS, Bootstrap,</span> and <span className="text-primary">Material UI</span> for building highly interactive UIs. On the backend, I leverage <span className="text-primary">Node.js, Express.js, Python, Django,</span> and <span className="text-primary">Django REST Framework</span> along with API integration, JWT Authentication, and databases like <span className="text-primary">PostgreSQL, MongoDB, MySQL,</span> and <span className="text-primary">Redis</span>.
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                            I have experience building frontend interfaces with <strong className="text-slate-800 font-semibold">React.js and Next.js</strong>, RESTful APIs and backend services with <strong className="text-slate-800 font-semibold">Node.js, Django and Go</strong>, database-driven applications using <strong className="text-slate-800 font-semibold">PostgreSQL, MongoDB and MySQL</strong>, authentication systems, and production deployments.
                         </p>
-                        <p>
-                            I have deep expertise in <span className="text-primary">AI Integration</span> (OpenAI API, Gemini API, LLM, LangChain, Prompt Engineering), and streamline my workflows using <span className="text-primary">Docker, Git, GitHub, Linux,</span> and <span className="text-primary">Nginx</span>. I enjoy solving real-world challenges through clean code and reliable deployments.
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                            I also use AI-assisted software engineering workflows — including AI pair programming, LLM integrations, prompt engineering and agentic development tools — to accelerate development, investigate complex codebases and improve engineering productivity. My focus is understanding architecture, validating implementations, debugging systems and delivering reliable, maintainable software.
                         </p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <Card className="flex flex-col items-center text-center space-y-4 border-primary/20 bg-primary/5">
-                            <div className="p-3 bg-primary/10 rounded-full text-primary">
-                                <Layout size={32} />
+                    {/* Right Column: Mini Info Cards */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="lg:col-span-5 grid sm:grid-cols-2 gap-4"
+                    >
+                        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
+                            <div className="p-2.5 bg-blue-50 text-blue-600 rounded-lg"><User size={20} /></div>
+                            <div>
+                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Name</p>
+                                <p className="text-sm font-semibold text-slate-800">Mohammed Saqeeb</p>
                             </div>
-                            <h3 className="text-xl font-bold text-white">Frontend</h3>
-                            <p className="text-gray-400 text-sm">React, Next.js, Tailwind, Redux</p>
-                        </Card>
-
-                        <Card className="flex flex-col items-center text-center space-y-4 border-secondary/20 bg-secondary/5">
-                            <div className="p-3 bg-secondary/10 rounded-full text-secondary">
-                                <Server size={32} />
+                        </div>
+                        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
+                            <div className="p-2.5 bg-violet-50 text-violet-600 rounded-lg"><MapPin size={20} /></div>
+                            <div>
+                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Location</p>
+                                <p className="text-sm font-semibold text-slate-800">Bengaluru, Karnataka, India</p>
                             </div>
-                            <h3 className="text-xl font-bold text-white">Backend</h3>
-                            <p className="text-gray-400 text-sm">Node.js, Express, Django, Python</p>
-                        </Card>
-
-                        <Card className="flex flex-col items-center text-center space-y-4 border-green-500/20 bg-green-500/5">
-                            <div className="p-3 bg-green-500/10 rounded-full text-green-500">
-                                <Database size={32} />
+                        </div>
+                        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
+                            <div className="p-2.5 bg-emerald-50 text-emerald-600 rounded-lg"><Clock size={20} /></div>
+                            <div>
+                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Experience</p>
+                                <p className="text-sm font-semibold text-slate-800">4+ Years</p>
                             </div>
-                            <h3 className="text-xl font-bold text-white">Database</h3>
-                            <p className="text-gray-400 text-sm">PostgreSQL, MySQL, Supabase</p>
-                        </Card>
-
-                        <Card className="flex flex-col items-center text-center space-y-4 border-yellow-500/20 bg-yellow-500/5">
-                            <div className="p-3 bg-yellow-500/10 rounded-full text-yellow-500">
-                                <Code size={32} />
+                        </div>
+                        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
+                            <div className="p-2.5 bg-orange-50 text-orange-600 rounded-lg"><CheckCircle2 size={20} /></div>
+                            <div>
+                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Status</p>
+                                <p className="text-sm font-semibold text-slate-800">Open to Opportunities</p>
                             </div>
-                            <h3 className="text-xl font-bold text-white">Languages</h3>
-                            <p className="text-gray-400 text-sm">JavaScript, TypeScript, Python, SQL</p>
-                        </Card>
-                    </div>
+                        </div>
+                        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4 sm:col-span-2">
+                            <div className="p-2.5 bg-slate-50 text-slate-600 rounded-lg"><Mail size={20} /></div>
+                            <div>
+                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Email</p>
+                                <a href="mailto:saqeebalimk@gmail.com" className="text-sm font-semibold text-primary hover:underline">saqeebalimk@gmail.com</a>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
 
-                {/* Skills Section */}
-                <motion.div
-                    id="skills"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="mb-20 scroll-mt-24"
-                >
-                    <h3 className="text-2xl md:text-4xl font-bold mb-12 text-center">
-                        Technical <span className="text-secondary">Skills</span>
-                    </h3>
+                {/* Skills Section — Badge Grid Rewrite */}
+                <motion.div id="skills" className="mb-32 scroll-mt-24">
+                    <div className="text-center mb-12">
+                        <h3 className="text-3xl font-bold text-slate-900 mb-4">Technical <span className="text-secondary">Skills</span></h3>
+                        <p className="text-slate-500 max-w-2xl mx-auto">Categorized overview of my core competencies across the stack.</p>
+                    </div>
+                    
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {skillCategories.map((category, catIndex) => (
-                            <Card key={catIndex} className={`border ${category.color} bg-gray-900/50 p-6`}>
-                                <h4 className="text-xl font-bold text-white mb-6">{category.title}</h4>
-                                <div className="space-y-4">
-                                    {category.skills.map((skill, skillIndex) => (
-                                        <ProgressBar
-                                            key={skillIndex}
-                                            label={skill.name}
-                                            percentage={skill.level}
-                                            color={category.progressColor}
-                                        />
-                                    ))}
-                                </div>
-                            </Card>
+                            <motion.div
+                                key={catIndex}
+                                initial={{ opacity: 0, y: 15 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: catIndex * 0.1 }}
+                            >
+                                <Card className="bg-white border-slate-200 h-full !p-6 shadow-sm hover:shadow-md transition-shadow">
+                                    <h4 className="text-lg font-bold text-slate-800 mb-5">{category.title}</h4>
+                                    <div className="flex flex-wrap gap-2">
+                                        {category.skills.map((skill, skillIndex) => (
+                                            <span
+                                                key={skillIndex}
+                                                className={`px-3 py-1.5 text-xs font-semibold rounded-lg border transition-colors duration-200 ${category.badgeStyle}`}
+                                            >
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </Card>
+                            </motion.div>
                         ))}
                     </div>
                 </motion.div>
 
-                {/* Experience Section */}
-                <motion.div
-                    id="experience"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="scroll-mt-24"
-                >
-                    <h3 className="text-2xl md:text-4xl font-bold mb-12 text-center">
-                        Work <span className="text-primary">Experience</span>
-                    </h3>
-                    <div className="relative max-w-4xl mx-auto">
-                        {/* Vertical Timeline Line */}
-                        <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-primary transform -translate-x-1/2"></div>
+                {/* Experience Section — Redesigned Timeline */}
+                <motion.div id="experience" className="scroll-mt-24">
+                    <div className="text-center mb-16">
+                        <h3 className="text-3xl font-bold text-slate-900 mb-4">My Professional <span className="text-primary">Journey</span></h3>
+                        <p className="text-slate-500 max-w-2xl mx-auto text-lg">A journey of continuous learning, building and creating impact.</p>
+                    </div>
 
-                        <div className="space-y-12">
+                    <div className="relative max-w-4xl mx-auto pb-10">
+                        {/* Elegant Vertical Line */}
+                        <div className="absolute left-8 md:left-1/2 top-4 bottom-0 w-px bg-slate-200 transform md:-translate-x-1/2 z-0"></div>
+
+                        <div className="space-y-16">
                             {experiences.map((exp, index) => (
                                 <motion.div
                                     key={index}
-                                    initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ duration: 0.5, delay: index * 0.2 }}
-                                    className="relative"
+                                    transition={{ duration: 0.5, delay: index * 0.15 }}
+                                    className={`relative flex flex-col md:flex-row items-start ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
                                 >
-                                    {/* Timeline Dot with Pulse Animation */}
-                                    <div className="hidden md:block absolute left-1/2 top-8 w-4 h-4 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                                        <div className="absolute inset-0 bg-primary rounded-full animate-ping opacity-75"></div>
-                                        <div className="relative w-4 h-4 bg-primary rounded-full border-4 border-gray-900 shadow-[0_0_15px_rgba(0,240,255,0.5)]"></div>
+                                    {/* Timeline Node */}
+                                    <div className="absolute md:relative left-8 md:left-auto md:w-1/2 flex justify-center z-10 transform -translate-x-1/2 md:translate-x-0 mt-[1.125rem]">
+                                        <div className="w-4 h-4 bg-white border-2 border-primary rounded-full shadow-[0_0_0_4px_rgba(255,255,255,1)] md:shadow-none"></div>
                                     </div>
 
-                                    {/* Experience Card */}
-                                    <div className={`md:flex ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} items-center`}>
-                                        {/* Spacer for alternating layout */}
-                                        <div className="hidden md:block md:w-1/2"></div>
-
-                                        {/* Card Content */}
-                                        <div className="md:w-1/2 md:px-8">
-                                            <motion.div
-                                                whileHover={{ scale: 1.03, y: -5 }}
-                                                transition={{ type: "spring", stiffness: 300 }}
-                                            >
-                                                <Card className={`relative overflow-hidden border-l-4 ${index % 2 === 0 ? 'border-l-primary' : 'border-l-secondary'
-                                                    } bg-gradient-to-br from-gray-900/90 to-gray-800/50 backdrop-blur-xl hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300`}>
-                                                    {/* Animated Gradient Background */}
-                                                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                                                    <div className="relative flex items-start gap-4 p-6">
-                                                        {/* Icon with Animation */}
-                                                        <motion.div
-                                                            className={`flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br ${index % 2 === 0 ? 'from-primary/20 to-primary/5' : 'from-secondary/20 to-secondary/5'
-                                                                } flex-shrink-0`}
-                                                            whileHover={{ rotate: 360 }}
-                                                            transition={{ duration: 0.6 }}
-                                                        >
-                                                            <Briefcase size={24} className={index % 2 === 0 ? 'text-primary' : 'text-secondary'} />
-                                                        </motion.div>
-
-                                                        <div className="flex-1">
-                                                            {/* Header */}
-                                                            <div className="mb-4">
-                                                                <h4 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                                                                    {exp.role}
-                                                                    <span className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
-                                                                        {index === 0 ? 'Current' : 'Past'}
-                                                                    </span>
-                                                                </h4>
-                                                                <p className={`font-semibold mb-2 ${index % 2 === 0 ? 'text-primary' : 'text-secondary'
-                                                                    }`}>
-                                                                    {exp.company}
-                                                                </p>
-                                                                <div className="flex items-center gap-2 text-sm text-gray-400">
-                                                                    <Calendar size={14} />
-                                                                    <span>{exp.period}</span>
-                                                                </div>
-                                                            </div>
-
-                                                            {/* Achievements List */}
-                                                            <ul className="space-y-3">
-                                                                {exp.description.map((item, i) => (
-                                                                    <motion.li
-                                                                        key={i}
-                                                                        initial={{ opacity: 0, x: -10 }}
-                                                                        whileInView={{ opacity: 1, x: 0 }}
-                                                                        viewport={{ once: true }}
-                                                                        transition={{ delay: i * 0.1 }}
-                                                                        className="flex items-start gap-3 text-gray-300 group/item"
-                                                                    >
-                                                                        <div className={`mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 ${index % 2 === 0 ? 'bg-primary' : 'bg-secondary'
-                                                                            } group-hover/item:scale-150 transition-transform duration-200`}></div>
-                                                                        <span className="group-hover/item:text-white transition-colors duration-200">
-                                                                            {item}
-                                                                        </span>
-                                                                    </motion.li>
-                                                                ))}
-                                                            </ul>
-                                                        </div>
+                                    {/* Content Wrapping Area */}
+                                    <div className="w-full md:w-1/2 pl-16 md:pl-0">
+                                        <div className={`md:px-12 ${index % 2 === 0 ? "md:text-left" : "md:text-right"}`}>
+                                            
+                                            {/* Job Header */}
+                                            <div className="mb-4">
+                                                {exp.statusBadge && (
+                                                    <div className={`inline-block px-3 py-1 mb-3 text-[10px] font-bold tracking-wider rounded-md uppercase bg-emerald-50 text-emerald-700 border border-emerald-200 ${index % 2 !== 0 && "md:float-right"} clear-both`}>
+                                                        {exp.statusBadge}
                                                     </div>
+                                                )}
+                                                <h4 className="text-xl font-bold text-slate-900 mb-1">{exp.role}</h4>
+                                                <div className="flex flex-col md:flex-row items-baseline gap-2 mb-2 justify-start md:justify-end">
+                                                    <p className={`font-semibold text-primary ${index % 2 === 0 && "md:order-1"}`}>{exp.company}</p>
+                                                    <span className={`text-sm text-slate-500 flex items-center gap-1 ${index % 2 === 0 && "md:order-2"}`}>
+                                                        <Calendar size={14} className="md:hidden" />
+                                                        {exp.period}
+                                                    </span>
+                                                </div>
+                                            </div>
 
-                                                    {/* Decorative Corner Accent */}
-                                                    <div className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl ${index % 2 === 0 ? 'from-primary/10' : 'from-secondary/10'
-                                                        } to-transparent rounded-bl-full opacity-50`}></div>
-                                                </Card>
-                                            </motion.div>
+                                            {/* White Experience Card */}
+                                            <Card className="!p-6 bg-white border border-slate-100 shadow-sm hover:shadow-md text-left mt-4 text-slate-600">
+                                                <ul className="space-y-3">
+                                                    {exp.description.map((item, i) => (
+                                                        <li key={i} className="flex items-start gap-3 text-sm">
+                                                            <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1.5 flex-shrink-0" />
+                                                            <span className="leading-relaxed">{item}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </Card>
                                         </div>
                                     </div>
                                 </motion.div>
@@ -349,6 +240,7 @@ export function About() {
                         </div>
                     </div>
                 </motion.div>
+                
             </div>
         </section>
     );

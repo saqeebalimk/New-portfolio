@@ -10,8 +10,31 @@ const inter = Inter({ subsets: ["latin"] });
 import config from "@/data/config.json";
 
 export const metadata: Metadata = {
-  title: "Mohammed Saqeeb Khan | Full Stack Software Engineer | React, Node.js, Django & Python",
-  description: "Mohammed Saqeeb Khan is a Full Stack Software Engineer with 4 years of experience building scalable web applications using React.js, Node.js, Django, Python, TypeScript, PostgreSQL and AI integrations.",
+  title: "Mohammed Saqeeb | Software Engineer",
+  description: "Mohammed Saqeeb is a Software Engineer specializing in full-stack web development with React, Node.js, Python, Go, Java and modern AI-assisted engineering workflows.",
+  keywords: [
+    "Mohammed Saqeeb",
+    "Software Engineer",
+    "Mohammed Saqeeb Software Engineer",
+    "Mohammed Saqeeb React Developer",
+    "Mohammed Saqeeb Full Stack Developer",
+    "Python Developer",
+    "Go Developer",
+    "Java Developer",
+    "React Developer"
+  ],
+  openGraph: {
+    title: "Mohammed Saqeeb | Software Engineer",
+    description: "Mohammed Saqeeb is a Software Engineer specializing in full-stack web development with React, Node.js, Python, Go, Java and modern AI-assisted engineering workflows.",
+    url: config.portfolio,
+    siteName: "Mohammed Saqeeb — Portfolio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mohammed Saqeeb | Software Engineer",
+    description: "Software Engineer specializing in full-stack web development with React, Node.js, Python, Go, Java and modern AI-assisted engineering workflows.",
+  },
 };
 
 export default function RootLayout({
@@ -34,10 +57,11 @@ export default function RootLayout({
                 config.linkedin,
                 config.github
               ],
-              "jobTitle": config.title,
+              "jobTitle": "Software Engineer",
+              "description": "Software Engineer specializing in full-stack web development with React, Node.js, Python, Go, Java and modern AI-assisted engineering workflows.",
               "worksFor": {
                 "@type": "Organization",
-                "name": "Self-Employed"
+                "name": "ARN Systems Pvt Ltd"
               }
             })
           }}

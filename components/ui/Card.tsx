@@ -10,7 +10,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
         return (
             <motion.div
                 ref={ref}
-                whileHover={hoverEffect ? { y: -5, boxShadow: "0 10px 30px -10px rgba(0,240,255,0.15)" } : {}}
+                whileHover={hoverEffect ? { y: -4, boxShadow: "0 10px 25px -5px rgba(0,0,0,0.05)" } : {}}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #F8FAFC; /* Light slate background */
+  --foreground: #0F172A; /* Deep slate text */
 }
 
 body {
@@ -12,18 +12,19 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Glassmorphism Utilities */
+/* Glassmorphism Utilities (Light Theme) */
 .glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
 }
 
 .glass-card {
-  @apply glass rounded-xl transition-all duration-300 hover:border-primary/50;
+  @apply bg-white rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md border border-slate-200;
 }
 
 /* Custom Scrollbar */
@@ -32,23 +33,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #F1F5F9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/* Neon Text Glow */
-.text-glow {
-  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
-}
-
-.text-glow-purple {
-  text-shadow: 0 0 10px rgba(112, 0, 255, 0.5);
+  background: #94A3B8;
 }

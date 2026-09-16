@@ -3,26 +3,26 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Github, Linkedin, Download } from "lucide-react";
-import { motion } from "framer-motion";
+import { Github, Linkedin, Download, Menu, X } from "lucide-react";
 import config from "@/data/config.json";
 
 const navLinks = [
+    { name: "Home", href: "#hero" },
     { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
+    { name: "Skills", href: "#skills" },
+    { name: "AI Engineering", href: "#ai-engineering" },
     { name: "Contact", href: "#contact" },
 ];
 
 export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-
     const pathname = usePathname();
 
     useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
-        };
+        const handleScroll = () => setScrolled(window.scrollY > 50);
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
@@ -31,69 +31,99 @@ export function Navbar() {
 
     return (
         <nav
-            className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "glass shadow-lg py-2" : "bg-transparent py-4"
+            className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
+                    ? "bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-200 py-3"
+                    : "bg-transparent py-5"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
-                    {/* Logo */}
-                    <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                        Saqeeb<span className="text-white">.dev</span>
+                    
+                    {/* Brand Logo */}
+                    <Link href="/" className="text-2xl font-bold text-slate-900 tracking-tight">
+                        Saqeeb<span className="text-primary">.dev</span>
                     </Link>
 
-                    {/* Desktop Nav */}
-                    <div className="hidden md:flex items-center space-x-8">
+                    {/* Desktop Navigation Links */}
+                    <div className="hidden lg:flex items-center space-x-6">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="text-gray-300 hover:text-primary transition-colors font-medium text-sm uppercase tracking-wider relative group"
+                                className="text-slate-600 hover:text-primary transition-colors font-semibold text-sm relative group"
                             >
                                 {link.name}
-                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all group-hover:w-full"></span>
                             </Link>
                         ))}
+                    </div>
 
-                        {/* Divider */}
-                        <div className="w-px h-5 bg-white/20" />
-
-                        {/* Social Icons */}
-                        <a
-                            href={config.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-400 hover:text-primary transition-colors"
-                            aria-label="GitHub"
-                        >
-                            <Github size={18} />
+                    {/* Right side icons & CTA */}
+                    <div className="hidden lg:flex items-center space-x-5">
+                        <div className="w-px h-5 bg-slate-200 mx-2" />
+                        <a href={config.github} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-slate-900 transition-colors">
+                            <Github size={20} />
                         </a>
-                        <a
-                            href={config.linkedin}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-400 hover:text-secondary transition-colors"
-                            aria-label="LinkedIn"
-                        >
-                            <Linkedin size={18} />
+                        <a href={config.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-600 transition-colors">
+                            <Linkedin size={20} />
                         </a>
-
-                        {/* Resume Button */}
+                        
                         <a
-                            href={config.resume}
-                            download
+                            href="https://drive.google.com/file/d/1e_rzX-uPoTYwcgX0vE0Kb1hYcqVeN9M8/view?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg bg-primary/10 border border-primary/30 text-primary hover:bg-primary/20 hover:border-primary/60 transition-all duration-200"
+                            className="flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl bg-primary text-white hover:bg-blue-700 shadow-sm hover:shadow-md transition-all duration-200"
                         >
-                            <Download size={14} />
-                            Resume
+                            <Download size={16} />
+                            Download Resume
                         </a>
                     </div>
 
+                    {/* Mobile Menu Button */}
+                    <div className="lg:hidden flex items-center">
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="text-slate-600 hover:text-slate-900 focus:outline-none"
+                        >
+                            {isOpen ? <X size={28} /> : <Menu size={28} />}
+                        </button>
+                    </div>
                 </div>
             </div>
 
-
+            {/* Mobile Dropdown */}
+            {isOpen && (
+                <div className="lg:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg py-4 px-4 flex flex-col space-y-4">
+                    {navLinks.map((link) => (
+                        <Link
+                            key={link.name}
+                            href={link.href}
+                            onClick={() => setIsOpen(false)}
+                            className="text-slate-600 hover:text-primary font-semibold text-base px-2 py-1 rounded hover:bg-slate-50 transition-colors"
+                        >
+                            {link.name}
+                        </Link>
+                    ))}
+                    <div className="h-px w-full bg-slate-100 my-2" />
+                    <div className="flex gap-4 px-2">
+                        <a href={config.github} target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-50 rounded-lg text-slate-600 hover:text-slate-900">
+                            <Github size={20} />
+                        </a>
+                        <a href={config.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-50 rounded-lg text-slate-600 hover:text-blue-600">
+                            <Linkedin size={20} />
+                        </a>
+                    </div>
+                    <a
+                        href="https://drive.google.com/file/d/1e_rzX-uPoTYwcgX0vE0Kb1hYcqVeN9M8/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex justify-center items-center gap-2 px-4 py-3 font-semibold rounded-xl bg-primary text-white hover:bg-blue-700 w-full"
+                    >
+                        <Download size={18} />
+                        Download Resume
+                    </a>
+                </div>
+            )}
         </nav>
     );
 }
