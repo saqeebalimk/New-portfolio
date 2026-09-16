@@ -86,7 +86,9 @@ export function Hero() {
                                 <img
                                     src="/profile.jpg"
                                     alt="Mohammed Saqeeb"
-                                    className="w-full h-full object-cover object-top"
+                                    className="w-full h-full object-cover object-top pointer-events-none select-none"
+                                    draggable={false}
+                                    onContextMenu={(e) => e.preventDefault()}
                                 />
                             </div>
                         </div>
