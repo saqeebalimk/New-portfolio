@@ -1,37 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Card } from "@/components/ui/Card";
-import { ExternalLink, Globe } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
-
-const featuredProjects = [
-    {
-        id: "jynm",
-        title: "JYNM (Junkyards Near Me)",
-        description: "Automotive salvage marketplace platform with AI-powered part matching and lead generation.",
-        tech: ["React", "Django", "PostgreSQL", "AI"],
-        live: "https://jynmautos.com",
-        image: "/images/projects/jynm-desktop.png"
-    },
-    {
-        id: "sevenchats",
-        title: "SevenChats",
-        description: "Real-time chat application with LLM integration and intelligent messaging features.",
-        tech: ["React", "Redux", "Node.js", "WebSockets"],
-        live: "https://sevenchats.com",
-        image: "/images/projects/7chats-dashboard.png"
-    },
-    {
-        id: "hms",
-        title: "Hospital Management System",
-        description: "Comprehensive hospital management dashboard for streamlined healthcare operations.",
-        tech: ["React", "Node.js", "MySQL", "Dashboard"],
-        live: "#",
-        image: "/images/projects/bsm-platform-main.png"
-    }
-];
+import projectsData from "@/data/projects.json";
 
 export function Projects() {
     return (
@@ -44,14 +17,11 @@ export function Projects() {
                         </div>
                         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-2 tracking-tight">Featured Projects</h2>
                     </div>
-                    <div className="flex items-center gap-4">
-                        <p className="text-slate-500 font-medium pb-1 hidden sm:block">Real-world projects solving meaningful problems.</p>
-                        <Button variant="outline" className="text-primary font-bold border-blue-100 bg-blue-50 hover:bg-blue-100 h-9 hidden md:flex">View All Projects →</Button>
-                    </div>
+                    <p className="text-slate-500 font-medium pb-1 hidden sm:block">Real-world projects solving meaningful problems.</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {featuredProjects.map((project) => (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {projectsData.map((project) => (
                         <Card key={project.id} className="group overflow-hidden relative border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full !p-0 rounded-[1.5rem]">
                             {/* Project Image */}
                             <div className="relative h-52 w-full overflow-hidden border-b border-slate-100 bg-slate-100">
@@ -61,36 +31,47 @@ export function Projects() {
                                     fill
                                     className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.05]"
                                 />
+                                {/* JYNM Featured Badge */}
+                                {project.id === 'jynm' && (
+                                    <div className="absolute top-3 left-3 bg-primary text-white text-[9px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                                        Featured
+                                    </div>
+                                )}
                             </div>
 
                             <div className="relative z-10 p-6 flex flex-col flex-grow bg-white">
-                                <h3 className="text-[17px] font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
+                                <h3 className="text-[16px] font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
                                     {project.title}
                                 </h3>
 
-                                <p className="text-slate-500 text-[14px] mb-6 flex-grow leading-relaxed">
-                                    {project.description}
+                                <p className="text-slate-500 text-[13.5px] mb-5 flex-grow leading-relaxed line-clamp-2">
+                                    {project.shortDescription || project.description}
                                 </p>
 
-                                <div className="space-y-5 mt-auto">
+                                <div className="space-y-4 mt-auto">
                                     {/* Tech Stack */}
-                                    <div className="flex flex-wrap gap-2">
-                                        {project.tech.map((t, i) => (
-                                            <span key={i} className="px-2.5 py-1 bg-blue-50/50 rounded-md text-[11px] font-bold text-blue-600 border border-blue-100/50">
+                                    <div className="flex flex-wrap gap-1.5">
+                                        {project.tech.slice(0, 4).map((t, i) => (
+                                            <span key={i} className="px-2.5 py-1 bg-blue-50/50 rounded-md text-[10px] font-bold text-blue-600 border border-blue-100/50">
                                                 {t}
                                             </span>
                                         ))}
+                                        {project.tech.length > 4 && (
+                                            <span className="px-2.5 py-1 bg-slate-50 rounded-md text-[10px] font-bold text-slate-500 border border-slate-200">
+                                                +{project.tech.length - 4}
+                                            </span>
+                                        )}
                                     </div>
 
-                                    {/* Link aligned far right */}
-                                    <div className="pt-4 border-t border-slate-100 flex justify-end">
-                                        {project.live !== "#" ? (
-                                            <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-xs font-bold text-slate-800 hover:text-primary transition-colors">
-                                                Live Demo <ExternalLink size={14} className="mb-0.5" />
+                                    {/* Link */}
+                                    <div className="pt-3 border-t border-slate-100 flex justify-end">
+                                        {project.live ? (
+                                            <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-primary transition-colors">
+                                                Live Demo <ExternalLink size={13} />
                                             </a>
                                         ) : (
-                                            <span className="flex items-center gap-1.5 text-xs font-bold text-slate-400 cursor-not-allowed">
-                                                Live Demo <ExternalLink size={14} className="mb-0.5" />
+                                            <span className="flex items-center gap-1.5 text-xs font-semibold text-slate-400 cursor-not-allowed">
+                                                Live Demo <ExternalLink size={13} />
                                             </span>
                                         )}
                                     </div>
@@ -102,25 +83,4 @@ export function Projects() {
             </div>
         </section>
     );
-}
-
-function ArrowExternal({ size = 16, className = "" }: { size?: number, className?: string }) {
-    return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width={size}
-            height={size}
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className={className}
-        >
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-            <polyline points="15 3 21 3 21 9"></polyline>
-            <line x1="10" y1="14" x2="21" y2="3"></line>
-        </svg>
-    )
 }

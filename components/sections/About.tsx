@@ -36,18 +36,7 @@ export function About() {
                             </p>
                         </div>
                         
-                        {/* Compact Info Badges */}
-                        <div className="flex flex-wrap gap-4 pt-4 mt-8 border-t border-slate-200/60">
-                            <div className="flex items-center gap-2 text-sm font-semibold text-slate-600">
-                                <MapPin size={16} className="text-blue-500" /> Bengaluru, Karnataka, India
-                            </div>
-                            <div className="flex items-center gap-2 text-sm font-semibold text-slate-600">
-                                <Mail size={16} className="text-blue-500" /> saqeebalimk@gmail.com
-                            </div>
-                            <div className="flex items-center gap-2 text-sm font-semibold text-slate-600">
-                                <Clock size={16} className="text-blue-500" /> Open to Opportunities
-                            </div>
-                        </div>
+
                     </motion.div>
 
                     {/* Right Column: Core Strengths (5 cols) */}
@@ -152,21 +141,41 @@ export function About() {
                                         </div>
                                         
                                         <ul className="space-y-3 mt-5 mb-6 pl-1 pr-4">
-                                            <li className="flex items-start gap-3 text-[14.5px] text-slate-600 leading-relaxed">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
-                                                <span>Worked on full-stack development using React.js, Python, Go and PostgreSQL.</span>
+                                            <li className="flex items-start gap-3 text-[14px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0" />
+                                                <span>Pioneered the adoption of AI pair-programming and Agentic AI workflows, including GitHub Copilot and LLM-assisted development, reducing boilerplate code generation and accelerating feature delivery timelines by 40%.</span>
                                             </li>
-                                            <li className="flex items-start gap-3 text-[14.5px] text-slate-600 leading-relaxed">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
-                                                <span>Leveraged AI-assisted development workflows for faster delivery and code optimization.</span>
+                                            <li className="flex items-start gap-3 text-[14px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0" />
+                                                <span>Delivered end-to-end product features spanning React.js frontends, Go/Golang and Python backend services, REST APIs and PostgreSQL data flows, integrating modern services with legacy enterprise architecture.</span>
                                             </li>
-                                            <li className="flex items-start gap-3 text-[14.5px] text-slate-600 leading-relaxed">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
-                                                <span>Integrated modern services with existing enterprise architecture.</span>
+                                            <li className="flex items-start gap-3 text-[14px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0" />
+                                                <span>Utilized advanced Prompt Engineering and LLM context management to rapidly refactor, optimize and translate legacy Java/Spring codebases into high-performance Go and Django microservices.</span>
                                             </li>
-                                            <li className="flex items-start gap-3 text-[14.5px] text-slate-600 leading-relaxed">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
-                                                <span>Contributed to scalable, production-ready applications.</span>
+                                            <li className="flex items-start gap-3 text-[14px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0" />
+                                                <span>Designed and integrated REST APIs with JWT authentication and role-based access control across Go/Golang, Node.js, Django and supporting Java/Spring Boot services.</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-[14px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0" />
+                                                <span>Connected React.js interfaces to backend services, databases and third-party integrations, owning the complete request-to-response lifecycle.</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-[14px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0" />
+                                                <span>Optimized algorithms, queries and legacy code paths, improving application performance by 30%.</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-[14px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0" />
+                                                <span>Leveraged AI-driven automation tools to streamline data processing workflows, reducing manual intervention by 32%.</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-[14px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0" />
+                                                <span>Implemented intelligent monitoring and alerting systems for predictive maintenance, preventing system downtime in production.</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-[14px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0" />
+                                                <span>Deployed and supported production services on Linux servers with Nginx, managing environment configuration and release readiness.</span>
                                             </li>
                                         </ul>
 
@@ -216,21 +225,29 @@ export function About() {
                                         </div>
                                         
                                         <ul className="space-y-3 mt-5 mb-6 pl-1 pr-4">
-                                            <li className="flex items-start gap-3 text-[14.5px] text-slate-600 leading-relaxed">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
-                                                <span>Developed high-performance web applications using React.js and Redux.</span>
+                                            <li className="flex items-start gap-3 text-[14px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0" />
+                                                <span>Developed core web applications using React.js and Redux, boosting user engagement by 25% across the social platform.</span>
                                             </li>
-                                            <li className="flex items-start gap-3 text-[14.5px] text-slate-600 leading-relaxed">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
-                                                <span>Integrated LLM/AI features for real-time chatbot and messaging functionality.</span>
+                                            <li className="flex items-start gap-3 text-[14px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0" />
+                                                <span>Integrated backend services and optimized RESTful API calls, reducing response time by 30%.</span>
                                             </li>
-                                            <li className="flex items-start gap-3 text-[14.5px] text-slate-600 leading-relaxed">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
-                                                <span>Managed state, API integrations and performance optimizations.</span>
+                                            <li className="flex items-start gap-3 text-[14px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0" />
+                                                <span>Built production features for posts, articles, polls, events and media galleries with file storage and responsive UI.</span>
                                             </li>
-                                            <li className="flex items-start gap-3 text-[14.5px] text-slate-600 leading-relaxed">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
-                                                <span>Automated testing and deployment workflows.</span>
+                                            <li className="flex items-start gap-3 text-[14px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0" />
+                                                <span>Implemented AI-powered chatbot features for the 7Chats platform, enabling intelligent message handling and context-aware responses.</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-[14px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0" />
+                                                <span>Designed and optimized LLM integration pipelines for real-time data processing and natural language understanding.</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-[14px] text-slate-600 leading-relaxed">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0" />
+                                                <span>Automated repetitive tasks using scripting, reducing manual effort by 25% and accelerating delivery cycles.</span>
                                             </li>
                                         </ul>
                                     </div>

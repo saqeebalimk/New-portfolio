@@ -30,7 +30,7 @@ export function Hero() {
 
                             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-4 leading-[1.1]">
                                 Hi, I&apos;m <br className="hidden lg:block" />
-                                <span className="text-slate-800">Mohammed Saqeeb</span>
+                                <span className="text-slate-800">Mohammed</span>
                             </h1>
 
                             <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-6 text-primary tracking-tight">
@@ -74,13 +74,12 @@ export function Hero() {
                         </motion.div>
                     </div>
 
-                    {/* Right Column: Code Widget Decoration */}
                     {/* Right Column: User Portrait */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="hidden lg:flex flex-col items-end flex-shrink-0 w-full max-w-[420px] relative z-10"
+                        className="flex flex-col items-center lg:items-end flex-shrink-0 w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[420px] relative z-10 mt-8 lg:mt-0"
                     >
                         <div className="w-full relative shadow-2xl rounded-[2.5rem] bg-white border border-slate-200 p-2.5 transform lg:-rotate-1 hover:rotate-0 transition-transform duration-500 overflow-hidden">
                             <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden bg-slate-100 shadow-inner flex items-end justify-center">
@@ -93,7 +92,7 @@ export function Hero() {
                         </div>
 
                         {/* Floating Code Widget */}
-                        <div className="absolute -top-4 -right-16 z-20 shadow-2xl rounded-xl bg-slate-900 border border-slate-800 p-4 transform rotate-3 hover:-rotate-1 transition-transform duration-500 hidden xl:block w-64">
+                        <div className="absolute -top-4 -right-20 z-20 shadow-2xl rounded-xl bg-slate-900 border border-slate-800 p-4 transform rotate-3 hover:-rotate-1 transition-transform duration-500 hidden xl:block w-64">
                             <div className="font-mono text-[11px] leading-relaxed text-slate-300">
                                 <span className="text-purple-400">const</span> <span className="text-blue-400">developer</span> = {'{'}
                                 <br />
