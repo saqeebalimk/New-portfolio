@@ -41,7 +41,7 @@ export function Navbar() {
                     {/* Brand Logo */}
                     <Link href="/" className="flex flex-col items-start leading-tight">
                         <span className="text-2xl font-bold text-slate-900 tracking-tight">
-                            Mohammed <span className="text-primary">Saqeeb</span>
+                            Mohammed 
                         </span>
                         <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest mt-0.5">
                             Software Engineer

@@ -110,6 +110,7 @@ export function Contact() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [showSuccess, setShowSuccess] = useState(false);
     const [submitError, setSubmitError] = useState("");
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const validate = useCallback(() => {
         const newErrors: Record<string, string> = {};
@@ -410,27 +411,47 @@ export function Contact() {
                                             Opportunity Type <span className="text-red-400">*</span>
                                         </label>
                                         <div className="relative">
-                                            <select
-                                                id="contact-opportunity"
-                                                name="opportunityType"
-                                                value={formData.opportunityType}
-                                                onChange={handleChange}
-                                                className={`${inputClass("opportunityType")} appearance-none pr-10`}
-                                                aria-required="true"
-                                                aria-describedby={errors.opportunityType ? "error-opportunity" : undefined}
+                                            <div 
+                                                className={`w-full bg-white border rounded-xl p-3.5 text-[15px] cursor-pointer flex items-center justify-between transition-all shadow-sm ${
+                                                    errors.opportunityType
+                                                        ? "border-red-300 ring-2 ring-red-200"
+                                                        : (isDropdownOpen ? "border-primary ring-2 ring-primary/20" : "border-slate-200 hover:border-slate-300")
+                                                }`}
+                                                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                                             >
-                                                <option value="" disabled>Select an option...</option>
-                                                <option value="Freelancing">Freelancing</option>
-                                                <option value="Collaborate">Collaborate</option>
-                                                <option value="Part Time">Part Time</option>
-                                                <option value="Full Time">Full Time</option>
-                                                <option value="Open Opportunities">Open Opportunities</option>
-                                            </select>
-                                            <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none text-slate-400">
-                                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <span className={formData.opportunityType ? "text-slate-900 font-medium" : "text-slate-400"}>
+                                                    {formData.opportunityType || "Select an option..."}
+                                                </span>
+                                                <svg className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                                                 </svg>
                                             </div>
+
+                                            <AnimatePresence>
+                                                {isDropdownOpen && (
+                                                    <motion.div 
+                                                        initial={{ opacity: 0, scale: 0.95, y: -10 }}
+                                                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                                                        exit={{ opacity: 0, scale: 0.95, y: -10 }}
+                                                        transition={{ duration: 0.15, ease: "easeOut" }}
+                                                        className="absolute z-10 w-full mt-2 bg-white border border-slate-100 rounded-xl shadow-xl overflow-hidden py-2"
+                                                    >
+                                                        {["Freelancing", "Collaborate", "Part Time", "Full Time", "Open Opportunities"].map((option) => (
+                                                            <div 
+                                                                key={option}
+                                                                onClick={() => {
+                                                                    setFormData(prev => ({ ...prev, opportunityType: option }));
+                                                                    if (errors.opportunityType) setErrors(prev => ({ ...prev, opportunityType: "" }));
+                                                                    setIsDropdownOpen(false);
+                                                                }}
+                                                                className={`px-5 py-3 text-[14px] cursor-pointer transition-colors ${formData.opportunityType === option ? 'bg-blue-50 text-primary font-bold' : 'text-slate-700 hover:bg-slate-50 hover:text-slate-900'}`}
+                                                            >
+                                                                {option}
+                                                            </div>
+                                                        ))}
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
                                         </div>
                                         {errors.opportunityType && (
                                             <p id="error-opportunity" className="flex items-center gap-1 text-red-500 text-[12px] font-medium mt-1" role="alert">

@@ -84,7 +84,7 @@ export function Footer() {
                 {/* ── Bottom Bar ── */}
                 <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-6 px-2">
                     <p className="text-slate-400 text-[12.5px] font-medium">
-                        © 2026 Mohammed Saqeeb. All rights reserved.
+                        © 2026 Mohammed. All rights reserved.
                     </p>
                     <div className="flex items-center gap-4 text-[12.5px] text-slate-400 font-medium">
                         <a href="/sitemap.xml" className="hover:text-primary transition-colors">Sitemap</a>
