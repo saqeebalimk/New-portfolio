@@ -93,13 +93,13 @@ export function About() {
                         <div className="h-1 w-12 bg-primary rounded-full mb-8" />
                         
                         <p className="text-lg text-slate-600 leading-relaxed">
-                            <strong className="text-slate-900 font-bold">Full Stack Software Engineer</strong> with 4 years of professional experience delivering complete, production-ready web applications. I combine strong software engineering fundamentals with modern full-stack development across React, Node.js, Django, Go and Java/Spring Boot.
+                            <strong className="text-slate-900 font-bold">Full Stack Software Engineer</strong> with 4 years of professional experience delivering complete, production-ready web applications. I bridge the gap between traditional enterprise architecture (Java/J2EE, Go, Spring Boot) and modern full-stack development (React, Node.js, Django).
                         </p>
                         <p className="text-lg text-slate-600 leading-relaxed">
-                            I have experience building frontend interfaces with <strong className="text-slate-800 font-semibold">React.js and Next.js</strong>, RESTful APIs and backend services with <strong className="text-slate-800 font-semibold">Node.js, Django and Go</strong>, database-driven applications using <strong className="text-slate-800 font-semibold">PostgreSQL, MongoDB and MySQL</strong>, authentication systems, and production deployments.
+                            For the past 3 years, I have extensively integrated AI Pair-Programming and Agentic AI workflows into my daily engineering process. I use AI-assisted and agentic engineering workflows to accelerate development while maintaining strong architectural, testing and code-quality practices, enabling me to write scalable code and deliver reliable, intelligent products. 
                         </p>
                         <p className="text-lg text-slate-600 leading-relaxed">
-                            I also use AI-assisted software engineering workflows — including AI pair programming, LLM integrations, prompt engineering and agentic development tools — to accelerate development, investigate complex codebases and improve engineering productivity. My focus is understanding architecture, validating implementations, debugging systems and delivering reliable, maintainable software.
+                            My core strength lies in combining deep foundational language expertise with modern tooling to execute end-to-end solutions efficiently.
                         </p>
                     </motion.div>
 
@@ -192,7 +192,7 @@ export function About() {
                         <p className="text-slate-500 max-w-2xl text-[15px]">A journey of continuous learning, building and creating impact.</p>
                     </div>
 
-                    <div className="relative pb-10 ml-2 sm:ml-0">
+                    <div className="relative max-w-5xl mx-auto pb-10 ml-2 sm:ml-0">
                         {/* Continuous Vertical Line */}
                         <div className="absolute left-2.5 top-8 bottom-0 w-px bg-slate-200/80 z-0"></div>
 

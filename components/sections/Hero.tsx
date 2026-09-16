@@ -80,10 +80,10 @@ export function Hero() {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="hidden lg:flex flex-col items-end flex-shrink-0 w-full max-w-[420px] relative"
+                        className="hidden lg:flex flex-col items-end flex-shrink-0 w-full max-w-[420px] relative z-10"
                     >
-                        <div className="w-full relative shadow-2xl rounded-[2rem] bg-white border border-slate-200 p-2 transform lg:-rotate-1 hover:rotate-0 transition-transform duration-500 overflow-hidden">
-                            <div className="relative w-full aspect-square rounded-[1.5rem] overflow-hidden bg-slate-100 shadow-inner">
+                        <div className="w-full relative shadow-2xl rounded-[2.5rem] bg-white border border-slate-200 p-2.5 transform lg:-rotate-1 hover:rotate-0 transition-transform duration-500 overflow-hidden">
+                            <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden bg-slate-100 shadow-inner flex items-end justify-center">
                                 <img
                                     src="/profile.jpg"
                                     alt="Mohammed Saqeeb"

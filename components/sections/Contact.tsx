@@ -35,15 +35,7 @@ export function Contact() {
                         </div>
 
                         <div className="space-y-5">
-                            <Card className="flex items-center space-x-5 bg-white border border-slate-200 shadow-sm hover:shadow-md cursor-pointer !pr-8 min-h-[5rem]">
-                                <div className="p-3.5 bg-blue-50 rounded-xl text-primary flex-shrink-0">
-                                    <Mail size={22} />
-                                </div>
-                                <div className="overflow-hidden">
-                                    <h4 className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-1">Mail me</h4>
-                                    <a href="mailto:alikhanmohammed342@gmail.com" className="text-slate-800 font-semibold truncate hover:text-primary transition-colors">alikhanmohammed342@gmail.com</a>
-                                </div>
-                            </Card>
+                            {/* Mail Me card removed per user request */}
 
                             <Card className="flex items-center space-x-5 bg-white border border-slate-200 shadow-sm hover:shadow-md cursor-pointer !pr-8 min-h-[5rem]">
                                 <div className="p-3.5 bg-teal-50 rounded-xl text-secondary flex-shrink-0">
@@ -102,6 +94,28 @@ export function Contact() {
                                         className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all shadow-sm"
                                         placeholder="john@example.com"
                                     />
+                                </div>
+                            </div>
+                            
+                            <div className="space-y-2 mb-5">
+                                <label className="text-xs font-bold text-slate-500 uppercase tracking-widest">Opportunity Type</label>
+                                <div className="relative">
+                                    <select
+                                        name="subject"
+                                        required
+                                        className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all shadow-sm appearance-none font-medium"
+                                        defaultValue=""
+                                    >
+                                        <option value="" disabled>Select an option...</option>
+                                        <option value="Freelancing">Freelancing</option>
+                                        <option value="Collaborate">Collaborate</option>
+                                        <option value="Part Time">Part Time</option>
+                                        <option value="Full Time">Full Time</option>
+                                        <option value="Open Opportunities">Open Opportunities</option>
+                                    </select>
+                                    <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none">
+                                        <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                                    </div>
                                 </div>
                             </div>
 
