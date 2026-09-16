@@ -41,7 +41,7 @@ export function Contact() {
                                 </div>
                                 <div className="overflow-hidden">
                                     <h4 className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-1">Mail me</h4>
-                                    <p className="text-slate-800 font-semibold truncate hover:text-primary transition-colors">saqeebalimk@gmail.com</p>
+                                    <a href="mailto:alikhanmohammed342@gmail.com" className="text-slate-800 font-semibold truncate hover:text-primary transition-colors">alikhanmohammed342@gmail.com</a>
                                 </div>
                             </Card>
 
@@ -51,7 +51,7 @@ export function Contact() {
                                 </div>
                                 <div>
                                     <h4 className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-1">Call me</h4>
-                                    <p className="text-slate-800 font-semibold">+91 8792248396</p>
+                                    <a href="tel:+918792248396" className="text-slate-800 font-semibold hover:text-primary transition-colors">+91 8792248396</a>
                                 </div>
                             </Card>
 
@@ -74,7 +74,7 @@ export function Contact() {
                         viewport={{ once: true }}
                     >
                         <form
-                            action="https://formsubmit.co/saqeebalimk@gmail.com"
+                            action="https://formsubmit.co/alikhanmohammed342@gmail.com"
                             method="POST"
                             className="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-inner"
                         >

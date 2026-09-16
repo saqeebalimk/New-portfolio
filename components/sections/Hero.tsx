@@ -37,7 +37,7 @@ export function Hero() {
                                 Software Engineer
                             </h2>
                             
-                            <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mb-4 leading-relaxed mx-auto lg:mx-0 font-medium">
+                            <p className="text-lg sm:text-xl text-slate-900 max-w-2xl mb-4 leading-relaxed mx-auto lg:mx-0 font-bold">
                                 Full Stack Software Engineer building scalable web applications with React, Node.js, Python, Go, Java and modern AI-assisted engineering workflows.
                             </p>
 
@@ -46,28 +46,7 @@ export function Hero() {
                             </p>
                         </motion.div>
 
-                        <motion.div
-                            initial={{ opacity: 0, y: 15 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.15 }}
-                            className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
-                        >
-                            <Link href="#projects">
-                                <Button size="lg" className="w-full sm:w-auto font-semibold">
-                                    View My Work
-                                </Button>
-                            </Link>
-                            <a href="https://drive.google.com/file/d/1e_rzX-uPoTYwcgX0vE0Kb1hYcqVeN9M8/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                                <Button variant="outline" size="lg" className="w-full sm:w-auto font-semibold bg-white">
-                                    <Download size={18} className="mr-1" /> Download Resume
-                                </Button>
-                            </a>
-                            <Link href="#contact">
-                                <Button variant="ghost" size="lg" className="w-full sm:w-auto font-semibold text-slate-700 hover:bg-slate-200">
-                                    Let&apos;s Connect
-                                </Button>
-                            </Link>
-                        </motion.div>
+                        {/* Buttons Block Removed per request */}
 
                         {/* Statistic Metrics row */}
                         <motion.div
@@ -96,40 +75,21 @@ export function Hero() {
                     </div>
 
                     {/* Right Column: Code Widget Decoration */}
+                    {/* Right Column: User Portrait */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="hidden lg:flex flex-col items-end flex-shrink-0 w-full max-w-[450px]"
                     >
-                        {/* Premium Floating Card */}
-                        <div className="w-full relative shadow-2xl rounded-2xl bg-white border border-slate-200 p-6 overflow-hidden transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                            {/* Decorative Top Mac UI Dots */}
-                            <div className="flex items-center gap-2 mb-6">
-                                <div className="w-3 h-3 rounded-full bg-red-400" />
-                                <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                                <div className="w-3 h-3 rounded-full bg-green-400" />
+                        <div className="w-full relative shadow-2xl rounded-[2rem] bg-white border border-slate-200 p-2 transform lg:-rotate-2 hover:rotate-0 transition-transform duration-500 overflow-hidden">
+                            <div className="relative w-full aspect-square rounded-[1.5rem] overflow-hidden bg-slate-100 shadow-inner">
+                                <img
+                                    src="/profile.jpg"
+                                    alt="Mohammed Saqeeb"
+                                    className="w-full h-full object-cover object-top"
+                                />
                             </div>
-                            
-                            <div className="font-mono text-sm leading-relaxed p-4 bg-slate-50 rounded-lg text-slate-700 shadow-inner">
-                                <span className="text-purple-600">const</span> <span className="text-blue-600">developer</span> = {'{'}
-                                <br />
-                                &nbsp;&nbsp;<span className="text-slate-500">passion:</span> <span className="text-amber-600">&quot;Building&quot;</span>,
-                                <br />
-                                &nbsp;&nbsp;<span className="text-slate-500">focus:</span> <span className="text-amber-600">&quot;Impact&quot;</span>,
-                                <br />
-                                &nbsp;&nbsp;<span className="text-slate-500">mindset:</span> <span className="text-amber-600">&quot;Always Learning&quot;</span>
-                                <br />
-                                {'}'};
-                            </div>
-                            
-                            <div className="mt-6 flex items-center justify-between text-slate-500 text-xs font-semibold px-2">
-                                <span className="flex items-center gap-1"><CheckCircle2 size={14} className="text-green-500"/> Types Checked</span>
-                                <span className="flex items-center gap-1"><Zap size={14} className="text-amber-500"/> Production Ready</span>
-                            </div>
-                            
-                            {/* Soft overlay gradient */}
-                            <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-blue-50/20 pointer-events-none" />
                         </div>
                     </motion.div>
                 </div>
