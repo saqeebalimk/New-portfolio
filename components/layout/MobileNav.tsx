@@ -35,16 +35,16 @@ export function MobileNav() {
     }, []);
 
     const navItems = [
-        { name: "Home", href: "/", icon: <Home size={20} />, id: "home" },
-        { name: "About", href: "#about", icon: <User size={20} />, id: "about" },
-        { name: "Experience", href: "#experience", icon: <Briefcase size={20} />, id: "experience" },
-        { name: "Skills", href: "#skills", icon: <Code size={20} />, id: "skills" },
-        { name: "Projects", href: "#projects", icon: <Folder size={20} />, id: "projects" },
-        { name: "Contact", href: "#contact", icon: <Mail size={20} />, id: "contact" },
+        { name: "Home", href: "/", icon: <Home size={22} strokeWidth={2} />, id: "home" },
+        { name: "About", href: "#about", icon: <User size={22} strokeWidth={2} />, id: "about" },
+        { name: "Experience", href: "#experience", icon: <Briefcase size={22} strokeWidth={2} />, id: "experience" },
+        { name: "Skills", href: "#skills", icon: <Code size={22} strokeWidth={2} />, id: "skills" },
+        { name: "Projects", href: "#projects", icon: <Folder size={22} strokeWidth={2} />, id: "projects" },
+        { name: "Contact", href: "#contact", icon: <Mail size={22} strokeWidth={2} />, id: "contact" },
     ];
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-black/90 backdrop-blur-xl border-t border-white/10 pb-safe pt-2">
+        <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-white/95 backdrop-blur-xl border-t border-slate-200 pb-safe pt-2">
             <div className="flex justify-around items-end pb-2">
                 {navItems.map((item) => (
                     <Link
@@ -53,7 +53,7 @@ export function MobileNav() {
                         onClick={() => setActiveSection(item.id)}
                         className={`flex flex-col items-center p-2 min-w-[3.5rem] transition-all duration-300 group ${activeSection === item.id
                                 ? "text-primary -translate-y-1"
-                                : "text-gray-500 hover:text-gray-300"
+                                : "text-slate-500 hover:text-slate-800"
                             }`}
                     >
                         <div className={`mb-1 transition-transform duration-300 ${activeSection === item.id ? "scale-110" : "group-hover:scale-110"}`}>
