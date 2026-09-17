@@ -53,7 +53,7 @@ export async function POST(request: Request) {
             );
         }
 
-        const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             return NextResponse.json(
                 { success: false, message: 'Invalid email address.' },
