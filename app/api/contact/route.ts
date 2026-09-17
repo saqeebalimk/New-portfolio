@@ -8,18 +8,18 @@ const TO_EMAIL = 'alikhanmohammed342@gmail.com';
 
 // Helper function to generate tailored response bodies based on opportunity type
 function getPreFilledReplyBody(name: string, opportunityType: string): string {
-    const boldName = name ? `**${name}**` : 'there';
+    const clientFirstName = name ? name.trim().split(' ')[0] : 'there';
     const signature = `Best regards,
 
-**Mohammed Saqeeb**
+Mohammed
 Full Stack Software Engineer
-Phone: **+91 8792248396**
-Email: **alikhanmohammed342@gmail.com**
+Phone: +91 8792248396
+Email: alikhanmohammed342@gmail.com
 Portfolio: https://saqeebkhan.vercel.app/`;
 
     switch (opportunityType) {
         case "Freelancing":
-            return `Hi ${boldName},
+            return `Hi ${clientFirstName},
 
 Thank you for reaching out regarding your project! I would love to learn more about the scope, tech stack, and timeline you have in mind.
 
@@ -28,7 +28,7 @@ Could we schedule a brief call or connect via email to discuss the details?
 ${signature}`;
 
         case "Collaborate":
-            return `Hi ${boldName},
+            return `Hi ${clientFirstName},
 
 Thank you for contacting me about collaborating! I am always excited to work on innovative full-stack, AI, or open-source engineering projects.
 
@@ -37,7 +37,7 @@ Let's connect to discuss how we can partner up to build something great together
 ${signature}`;
 
         case "Part Time":
-            return `Hi ${boldName},
+            return `Hi ${clientFirstName},
 
 Thank you for considering me for a part-time engineering opportunity! With 4 years of experience delivering production web applications and AI workflows, I would be happy to contribute to your team's goals.
 
@@ -46,7 +46,7 @@ Please let me know a convenient time for us to discuss the role and requirements
 ${signature}`;
 
         case "Full Time":
-            return `Hi ${boldName},
+            return `Hi ${clientFirstName},
 
 Thank you for reaching out regarding a full-time software engineering opportunity! I am actively open to impactful Full Stack and AI Engineering roles.
 
@@ -55,7 +55,7 @@ I would welcome the opportunity to discuss my background, architecture experienc
 ${signature}`;
 
         default:
-            return `Hi ${boldName},
+            return `Hi ${clientFirstName},
 
 Thank you for connecting with me through my portfolio! I would love to learn more about the opportunity you have in mind.
 
