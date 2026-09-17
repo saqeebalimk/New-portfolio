@@ -25,13 +25,13 @@ export function About() {
                         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 tracking-tight">About Me</h2>
                         
                         <div className="space-y-5">
-                            <p className="text-lg md:text-[19px] font-medium text-slate-800 leading-relaxed">
+                            <p className="text-[16px] sm:text-[17px] md:text-[18px] font-medium text-slate-800 leading-relaxed lg:max-w-[75ch]">
                                 Full Stack Software Engineer with 4 years of professional experience delivering complete, production-ready web applications. I bridge the gap between traditional enterprise architecture (Java/J2EE, Go, Spring Boot) and modern full-stack development (React, Node.js, Django).
                             </p>
-                            <p className="text-lg md:text-[19px] font-medium text-slate-800 leading-relaxed">
+                            <p className="text-[16px] sm:text-[17px] md:text-[18px] font-medium text-slate-800 leading-relaxed lg:max-w-[75ch]">
                                 For the past 3 years, I have extensively integrated AI Pair-Programming and Agentic AI workflows into my daily engineering process. I use AI-assisted and agentic engineering workflows to accelerate development while maintaining strong architectural, testing and code-quality practices, enabling me to write scalable code and deliver reliable, intelligent products.
                             </p>
-                            <p className="text-lg md:text-[19px] font-medium text-slate-800 leading-relaxed">
+                            <p className="text-[16px] sm:text-[17px] md:text-[18px] font-medium text-slate-800 leading-relaxed lg:max-w-[75ch]">
                                 My core strength lies in combining deep foundational language knowledge with modern full-stack and AI capabilities to build real-world solutions.
                             </p>
                         </div>
@@ -123,16 +123,16 @@ export function About() {
                                         </p>
 
                                         <div className="flex items-start justify-between mb-4">
-                                            <div className="flex items-center gap-4">
+                                            <div className="flex items-center gap-3 sm:gap-4">
                                                 {/* Logo Emulator */}
-                                                <div className="w-12 h-12 rounded-full border border-slate-100 shadow-sm flex items-center justify-center bg-white flex-shrink-0 overflow-hidden relative">
-                                                    <div className="flex items-center justify-center font-black italic text-[#E53935] tracking-tighter text-[1rem] leading-none z-10">
+                                                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full border border-slate-100 shadow-sm flex items-center justify-center bg-white flex-shrink-0 overflow-hidden relative">
+                                                    <div className="flex items-center justify-center font-black italic text-[#E53935] tracking-tighter text-[12px] sm:text-[1rem] leading-none z-10">
                                                         ARN
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <h4 className="text-[18px] font-bold text-slate-900 leading-tight mb-1">ARN Systems Pvt Ltd</h4>
-                                                    <p className="text-blue-600 font-semibold text-[14px]">Software Developer</p>
+                                                    <h4 className="text-[16px] sm:text-[18px] font-bold text-slate-900 leading-tight mb-1">ARN Systems Pvt Ltd</h4>
+                                                    <p className="text-blue-600 font-semibold text-[13px] sm:text-[14px]">Software Developer</p>
                                                 </div>
                                             </div>
                                             <div className="hidden md:flex bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-wider items-center gap-1.5 border border-emerald-100/50">
@@ -211,15 +211,15 @@ export function About() {
                                         </p>
 
                                         <div className="flex items-start justify-between mb-4">
-                                            <div className="flex items-center gap-4">
-                                                <div className="w-12 h-12 rounded-full border border-slate-100 shadow-sm flex items-center justify-center bg-white flex-shrink-0 overflow-hidden">
-                                                    <div className="flex items-center justify-center font-black text-[1.2rem] leading-none">
+                                            <div className="flex items-center gap-3 sm:gap-4">
+                                                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full border border-slate-100 shadow-sm flex items-center justify-center bg-white flex-shrink-0 overflow-hidden">
+                                                    <div className="flex items-center justify-center font-black text-[12px] sm:text-[1.2rem] leading-none">
                                                         <span className="text-black">7</span><span className="text-[#00BCD4]">C</span>
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <h4 className="text-[18px] font-bold text-slate-900 leading-tight mb-1">SevenChats Private Limited</h4>
-                                                    <p className="text-slate-600 font-semibold text-[14px]">Software Developer (Front End)</p>
+                                                    <h4 className="text-[16px] sm:text-[18px] font-bold text-slate-900 leading-tight mb-1">SevenChats Private Limited</h4>
+                                                    <p className="text-slate-600 font-semibold text-[13px] sm:text-[14px]">Software Developer (Front End)</p>
                                                 </div>
                                             </div>
                                         </div>

@@ -143,19 +143,13 @@ export function Contact() {
         setSubmitError("");
 
         try {
-            const payload = new FormData();
-            payload.append("name", formData.name);
-            payload.append("email", formData.email);
-            payload.append("subject", formData.opportunityType);
-            payload.append("message", formData.message);
-            payload.append("_subject", `New Portfolio Contact: ${formData.opportunityType}`);
-            payload.append("_captcha", "false");
-            payload.append("_template", "table");
-
-            const response = await fetch("https://formsubmit.co/ajax/alikhanmohammed342@gmail.com", {
+            const response = await fetch("/api/contact", {
                 method: "POST",
-                headers: { Accept: "application/json" },
-                body: payload,
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                },
+                body: JSON.stringify(formData),
             });
 
             const result = await response.json();
@@ -222,7 +216,7 @@ export function Contact() {
                     </motion.div>
 
                     {/* Two-column layout */}
-                    <div className="grid lg:grid-cols-[45%_55%] gap-12 lg:gap-10 items-start">
+                    <div className="grid lg:grid-cols-[45%_55%] gap-8 lg:gap-10 items-start w-full max-w-full">
 
                         {/* ── LEFT CARD ── */}
                         <motion.div
@@ -230,9 +224,9 @@ export function Contact() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
-                            className="space-y-6"
+                            className="space-y-6 w-full max-w-full"
                         >
-                            <div className="bg-white rounded-3xl border border-slate-100 shadow-sm p-6 sm:p-8 space-y-8 flex flex-col justify-center items-center lg:items-start text-center lg:text-left text-center lg:text-left">
+                            <div className="bg-white rounded-3xl border border-slate-100 shadow-sm p-6 sm:p-8 space-y-7 sm:space-y-8 flex flex-col justify-center items-center lg:items-start text-center lg:text-left w-full max-w-full box-border">
 
                                 {/* Status badge */}
                                 <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-green-50 border border-green-100 text-green-700 rounded-full text-[11px] font-bold uppercase tracking-widest">
@@ -250,52 +244,52 @@ export function Contact() {
                                 </div>
 
                                 {/* Contact info cards */}
-                                <div className="space-y-3">
+                                <div className="space-y-3 w-full">
                                     <a
                                         href="tel:+918792248396"
-                                        className="flex items-center gap-4 p-4 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-green-50/50 hover:border-green-100 transition-all group"
+                                        className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-green-50/50 hover:border-green-100 transition-all group w-full box-border"
                                     >
                                         <div className="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center text-green-600 flex-shrink-0 group-hover:scale-110 transition-transform">
                                             <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                                         </div>
-                                        <div className="flex-grow min-w-0">
+                                        <div className="flex-grow min-w-0 text-left">
                                             <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5">Call me</p>
-                                            <p className="text-slate-800 font-semibold text-[14px] truncate">+91 8792248396</p>
+                                            <p className="text-slate-800 font-semibold text-[13px] sm:text-[14px] truncate">+91 8792248396</p>
                                         </div>
                                         <CopyButton value="+918792248396" />
                                     </a>
 
                                     <a
                                         href={`mailto:alikhanmohammed342@gmail.com`}
-                                        className="flex items-center gap-4 p-4 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-blue-50/50 hover:border-blue-100 transition-all group"
+                                        className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-blue-50/50 hover:border-blue-100 transition-all group w-full box-border"
                                     >
                                         <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0 group-hover:scale-110 transition-transform">
                                             <Mail size={18} />
                                         </div>
-                                        <div className="flex-grow min-w-0">
+                                        <div className="flex-grow min-w-0 text-left">
                                             <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5">Email</p>
-                                            <p className="text-slate-800 font-semibold text-[14px] truncate">alikhanmohammed342@gmail.com</p>
+                                            <p className="text-slate-800 font-semibold text-[13px] sm:text-[14px] break-all sm:break-normal line-clamp-2">alikhanmohammed342@gmail.com</p>
                                         </div>
                                         <CopyButton value="alikhanmohammed342@gmail.com" />
                                     </a>
 
-                                    <div className="flex items-center gap-4 p-4 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-purple-50/30 hover:border-purple-100 transition-all">
+                                    <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-purple-50/30 hover:border-purple-100 transition-all w-full box-border">
                                         <div className="w-10 h-10 rounded-xl bg-violet-50 flex items-center justify-center text-violet-600 flex-shrink-0">
                                             <MapPin size={18} />
                                         </div>
-                                        <div>
+                                        <div className="text-left w-full">
                                             <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5">Location</p>
-                                            <p className="text-slate-800 font-semibold text-[14px]">Bengaluru, Karnataka, India</p>
+                                            <p className="text-slate-800 font-semibold text-[13px] sm:text-[14px] truncate">Bengaluru, Karnataka, India</p>
                                         </div>
                                     </div>
 
-                                    <div className="flex items-center gap-4 p-4 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-teal-50/30 hover:border-teal-100 transition-all">
+                                    <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-teal-50/30 hover:border-teal-100 transition-all w-full box-border">
                                         <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center text-teal-600 flex-shrink-0">
                                             <Briefcase size={18} />
                                         </div>
-                                        <div>
+                                        <div className="text-left w-full">
                                             <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5">Availability</p>
-                                            <p className="text-slate-800 font-semibold text-[14px]">Open to Opportunities</p>
+                                            <p className="text-slate-800 font-semibold text-[13px] sm:text-[14px] truncate">Open to Opportunities</p>
                                         </div>
                                     </div>
                                 </div>
@@ -345,8 +339,9 @@ export function Contact() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.1 }}
+                            className="w-full max-w-full"
                         >
-                            <div className="bg-white rounded-3xl border border-slate-100 shadow-sm p-6 sm:p-8 flex flex-col justify-center text-center lg:text-left">
+                            <div className="bg-white rounded-3xl border border-slate-100 shadow-sm p-6 sm:p-8 flex flex-col justify-center text-center lg:text-left w-full max-w-full box-border">
                                 {/* Form header */}
                                 <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 mb-8">
                                     <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-primary flex-shrink-0">

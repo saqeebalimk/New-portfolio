@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { MobileNav } from "@/components/layout/MobileNav";
+import { VoiceAssistant } from "@/components/ui/VoiceAssistant";
 
 const inter = Inter({ subsets: ["latin"] });
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -82,6 +83,7 @@ export default function RootLayout({
         <div className="md:hidden pb-16">
           <Footer />
         </div>
+        <VoiceAssistant />
       </body>
     </html>
   );
