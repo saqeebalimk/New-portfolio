@@ -260,13 +260,40 @@ export function VoiceAssistant() {
             </AnimatePresence>
 
             {!isOpen && (
-                <button
-                    onClick={() => setIsOpen(true)}
-                    className="pointer-events-auto flex items-center gap-3 bg-slate-900 text-white px-5 py-3.5 rounded-full shadow-2xl hover:bg-blue-600 hover:scale-105 transition-all group"
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                    className="pointer-events-auto flex flex-col items-center gap-2"
                 >
-                    <MessageSquare size={20} className="group-hover:animate-bounce" />
-                    <span className="font-semibold text-[14px]">Ask AI Assistant</span>
-                </button>
+                    {/* Label above the orb */}
+                    <motion.div
+                        animate={{ y: [0, -4, 0] }}
+                        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                        className="bg-white border border-slate-200 text-slate-700 text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-md whitespace-nowrap"
+                    >
+                        Speak to me — Ask about Mohammed
+                    </motion.div>
+
+                    {/* Blooming orb button */}
+                    <button
+                        onClick={() => setIsOpen(true)}
+                        className="relative w-16 h-16 flex items-center justify-center group"
+                        aria-label="Open AI Assistant"
+                    >
+                        {/* Outermost bloom ring */}
+                        <span className="absolute inset-0 rounded-full bg-blue-400/20 animate-ping" style={{ animationDuration: "2s" }} />
+                        {/* Middle bloom ring */}
+                        <span className="absolute inset-2 rounded-full bg-blue-500/25 animate-ping" style={{ animationDuration: "2s", animationDelay: "0.4s" }} />
+                        {/* Inner glow ring */}
+                        <span className="absolute inset-3.5 rounded-full bg-blue-600/30 animate-ping" style={{ animationDuration: "2s", animationDelay: "0.8s" }} />
+
+                        {/* Core orb */}
+                        <span className="relative z-10 w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 shadow-[0_0_24px_6px_rgba(59,130,246,0.45)] flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                            <Mic size={26} className="text-white" />
+                        </span>
+                    </button>
+                </motion.div>
             )}
         </div>
     );

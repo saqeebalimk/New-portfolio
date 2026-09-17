@@ -25,14 +25,28 @@ export function About() {
                         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 tracking-tight">About Me</h2>
                         
                         <div className="space-y-5">
-                            <p className="text-[16px] sm:text-[17px] md:text-[18px] font-medium text-slate-800 leading-relaxed lg:max-w-[75ch]">
-                                Full Stack Software Engineer with 4 years of professional experience delivering complete, production-ready web applications. I bridge the gap between traditional enterprise architecture (Java/J2EE, Go, Spring Boot) and modern full-stack development (React, Node.js, Django).
+                            <p className="text-[16px] sm:text-[17px] md:text-[18px] font-medium text-slate-600 leading-[1.8] lg:max-w-[75ch]">
+                                Full Stack Software Engineer with{" "}
+                                <span className="text-blue-600 font-bold">4 years</span> of professional experience delivering complete,{" "}
+                                <span className="text-blue-600 font-semibold">production-ready web applications</span>. I bridge the gap between traditional enterprise architecture{" "}
+                                <span className="bg-blue-50 text-blue-700 font-semibold px-1.5 py-0.5 rounded-md text-[15px]">Java/J2EE · Go · Spring Boot</span>{" "}
+                                and modern full-stack development{" "}
+                                <span className="bg-sky-50 text-sky-700 font-semibold px-1.5 py-0.5 rounded-md text-[15px]">React · Node.js · Django</span>.
                             </p>
-                            <p className="text-[16px] sm:text-[17px] md:text-[18px] font-medium text-slate-800 leading-relaxed lg:max-w-[75ch]">
-                                For the past 3 years, I have extensively integrated AI Pair-Programming and Agentic AI workflows into my daily engineering process. I use AI-assisted and agentic engineering workflows to accelerate development while maintaining strong architectural, testing and code-quality practices, enabling me to write scalable code and deliver reliable, intelligent products.
+                            <p className="text-[16px] sm:text-[17px] md:text-[18px] font-medium text-slate-600 leading-[1.8] lg:max-w-[75ch]">
+                                For the past 3 years, I have extensively integrated{" "}
+                                <span className="text-violet-600 font-bold">AI Pair-Programming</span> and{" "}
+                                <span className="text-violet-600 font-bold">Agentic AI workflows</span> into my daily engineering process. I use AI-assisted workflows to{" "}
+                                <span className="italic font-semibold text-slate-800">accelerate development</span> while maintaining strong architectural, testing and code-quality practices — enabling me to write{" "}
+                                <span className="text-violet-600 font-semibold">scalable code</span> and deliver{" "}
+                                <span className="text-violet-600 font-semibold">reliable, intelligent products</span>.
                             </p>
-                            <p className="text-[16px] sm:text-[17px] md:text-[18px] font-medium text-slate-800 leading-relaxed lg:max-w-[75ch]">
-                                My core strength lies in combining deep foundational language knowledge with modern full-stack and AI capabilities to build real-world solutions.
+                            <p className="text-[16px] sm:text-[17px] md:text-[18px] font-medium text-slate-600 leading-[1.8] lg:max-w-[75ch]">
+                                My core strength lies in combining{" "}
+                                <span className="text-teal-600 font-bold">deep foundational language knowledge</span> with{" "}
+                                <span className="text-teal-600 font-semibold">modern full-stack</span> and{" "}
+                                <span className="bg-teal-50 text-teal-700 font-semibold px-1.5 py-0.5 rounded-md text-[15px]">AI capabilities</span>{" "}
+                                to build <span className="italic font-semibold text-slate-800">real-world solutions</span>.
                             </p>
                         </div>
                         
