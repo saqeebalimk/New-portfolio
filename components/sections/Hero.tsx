@@ -109,13 +109,13 @@ export function Hero() {
                         </div>
 
                         {/* Floating Stats Widget */}
-                        <div className="absolute top-1/2 -left-6 sm:bottom-12 sm:-left-12 z-20 shadow-xl rounded-xl bg-white border border-slate-200 p-2 sm:p-3 px-3 sm:px-5 flex items-center gap-2 sm:gap-3 transform -rotate-2 hover:rotate-1 transition-transform duration-500">
-                            <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-green-50 flex items-center justify-center text-green-500 shadow-sm">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="sm:w-[18px] sm:h-[18px]"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                        <div className="absolute top-1/2 -left-4 sm:bottom-12 sm:-left-10 z-20 shadow-xl rounded-2xl bg-white border border-slate-200/90 p-3 sm:p-4 flex items-center gap-3 transform -rotate-2 hover:rotate-0 transition-transform duration-300">
+                            <div className="w-9 h-9 rounded-xl bg-green-50 flex items-center justify-center text-green-600 flex-shrink-0 shadow-sm border border-green-100/60">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
                             </div>
-                            <div>
-                                <p className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">4+ Years</p>
-                                <p className="text-[9px] sm:text-[10px] text-slate-500 font-medium">Software Engineering</p>
+                            <div className="flex flex-col justify-center">
+                                <p className="text-sm font-extrabold text-slate-900 leading-none mb-1">4+ Years</p>
+                                <p className="text-[11px] font-semibold text-slate-500 leading-none whitespace-nowrap">Software Engineering</p>
                             </div>
                         </div>
 
