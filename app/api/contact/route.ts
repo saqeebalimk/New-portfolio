@@ -6,8 +6,70 @@ import { Resend } from 'resend';
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'Mohammed Saqeeb <onboarding@resend.dev>';
 const TO_EMAIL = 'alikhanmohammed342@gmail.com';
 
+// Helper function to generate tailored response bodies based on opportunity type
+function getPreFilledReplyBody(name: string, opportunityType: string): string {
+    const signature = `Best regards,
+Mohammed Saqeeb
+Full Stack Software Engineer
+Phone: +91 8792248396
+Email: alikhanmohammed342@gmail.com
+Portfolio: https://saqeebkhan.vercel.app/`;
+
+    switch (opportunityType) {
+        case "Freelancing":
+            return `Hi ${name},
+
+Thank you for reaching out regarding your project! I would love to learn more about the scope, tech stack, and timeline you have in mind.
+
+Could we schedule a brief call or connect via email to discuss the details?
+
+${signature}`;
+
+        case "Collaborate":
+            return `Hi ${name},
+
+Thank you for contacting me about collaborating! I am always excited to work on innovative full-stack, AI, or open-source engineering projects.
+
+Let's connect to discuss how we can partner up to build something great together.
+
+${signature}`;
+
+        case "Part Time":
+            return `Hi ${name},
+
+Thank you for considering me for a part-time engineering opportunity! With 4 years of experience delivering production web applications and AI workflows, I would be happy to contribute to your team's goals.
+
+Please let me know a convenient time for us to discuss the role and requirements.
+
+${signature}`;
+
+        case "Full Time":
+            return `Hi ${name},
+
+Thank you for reaching out regarding a full-time software engineering opportunity! I am actively open to impactful Full Stack and AI Engineering roles.
+
+I would welcome the opportunity to discuss my background, architecture experience, and how I can add value to your team. Please let me know when you are available for a brief conversation.
+
+${signature}`;
+
+        default:
+            return `Hi ${name},
+
+Thank you for connecting with me through my portfolio! I would love to learn more about the opportunity you have in mind.
+
+Please feel free to share additional details or let me know when you would like to schedule a call.
+
+${signature}`;
+    }
+}
+
 // ─── EMAIL 1: Beautiful HTML Notification for Saqeeb ─────────────────────────────
-const notificationHtmlTemplate = (name: string, email: string, opportunityType: string, message: string) => `
+const notificationHtmlTemplate = (name: string, email: string, opportunityType: string, message: string) => {
+    const replySubject = encodeURIComponent(`Re: ${opportunityType} Inquiry — Mohammed Saqeeb`);
+    const replyBody = encodeURIComponent(getPreFilledReplyBody(name, opportunityType));
+    const mailtoUrl = `mailto:${email}?subject=${replySubject}&body=${replyBody}`;
+
+    return `
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,9 +125,9 @@ const notificationHtmlTemplate = (name: string, email: string, opportunityType: 
         <!-- Message Content Box -->
         <div style="background-color: #F8FAFC; border-left: 4px solid #2563EB; border-radius: 0 12px 12px 0; padding: 18px 20px; font-size: 14px; line-height: 1.7; color: #334155; margin-bottom: 28px; white-space: pre-wrap;">${message}</div>
 
-        <!-- Reply Button -->
+        <!-- Reply Button with Auto-filled Body -->
         <div style="text-align: center; margin-bottom: 16px;">
-          <a href="mailto:${email}?subject=Re: ${encodeURIComponent(opportunityType)} Inquiry — Mohammed Saqeeb" style="display: inline-block; background-color: #2563EB; color: #ffffff; font-size: 14px; font-weight: 700; text-decoration: none; padding: 12px 28px; border-radius: 10px; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);">
+          <a href="${mailtoUrl}" style="display: inline-block; background-color: #2563EB; color: #ffffff; font-size: 14px; font-weight: 700; text-decoration: none; padding: 12px 28px; border-radius: 10px; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);">
             Reply Directly to ${name} →
           </a>
         </div>
@@ -82,6 +144,7 @@ const notificationHtmlTemplate = (name: string, email: string, opportunityType: 
 </body>
 </html>
 `;
+};
 
 // ─── EMAIL 2: Beautiful Ack Email for Visitor ────────────────────────────────────
 const emailHtmlTemplate = (name: string, opportunityType: string) => `
