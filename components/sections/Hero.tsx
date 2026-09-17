@@ -109,13 +109,13 @@ export function Hero() {
                         </div>
 
                         {/* Floating Stats Widget */}
-                        <div className="absolute top-1/2 -left-4 sm:bottom-12 sm:-left-10 z-20 shadow-xl rounded-2xl bg-white border border-slate-200/90 p-3 sm:p-4 flex items-center gap-3 transform -rotate-2 hover:rotate-0 transition-transform duration-300">
-                            <div className="w-9 h-9 rounded-xl bg-green-50 flex items-center justify-center text-green-600 flex-shrink-0 shadow-sm border border-green-100/60">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                        <div className="absolute top-[55%] -left-3 sm:bottom-10 sm:-left-8 z-20 shadow-lg rounded-2xl bg-white/95 backdrop-blur-sm border border-slate-200 py-2.5 px-3.5 sm:py-3 sm:px-4 inline-flex items-center gap-2.5 sm:gap-3 w-auto max-w-max h-auto transform -rotate-2 hover:rotate-0 transition-transform duration-300">
+                            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-green-50 flex items-center justify-center text-green-600 flex-shrink-0 shadow-sm border border-green-100">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="sm:w-[18px] sm:h-[18px]"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
                             </div>
-                            <div className="flex flex-col justify-center">
-                                <p className="text-sm font-extrabold text-slate-900 leading-none mb-1">4+ Years</p>
-                                <p className="text-[11px] font-semibold text-slate-500 leading-none whitespace-nowrap">Software Engineering</p>
+                            <div className="flex flex-col justify-center min-w-0">
+                                <p className="text-xs sm:text-sm font-extrabold text-slate-900 leading-tight mb-0.5">4+ Years</p>
+                                <p className="text-[10px] sm:text-[11px] font-semibold text-slate-500 leading-tight whitespace-nowrap">Software Engineering</p>
                             </div>
                         </div>
 
