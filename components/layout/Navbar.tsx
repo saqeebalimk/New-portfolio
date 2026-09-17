@@ -40,7 +40,7 @@ export function Navbar() {
                     
                     {/* Brand Logo */}
                     <Link href="/" className="flex flex-col items-start leading-tight">
-                        <span className="text-2xl font-bold text-slate-900 tracking-tight">
+                        <span className="text-[26px] font-black bg-gradient-to-r from-blue-600 via-violet-500 to-fuchsia-500 text-transparent bg-clip-text tracking-tighter hover:opacity-80 transition-opacity">
                             Mohammed 
                         </span>
                         <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest mt-0.5">

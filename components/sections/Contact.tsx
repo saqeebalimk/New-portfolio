@@ -232,7 +232,7 @@ export function Contact() {
                             transition={{ duration: 0.5 }}
                             className="space-y-6"
                         >
-                            <div className="bg-white rounded-3xl border border-slate-100 shadow-sm p-8 space-y-8">
+                            <div className="bg-white rounded-3xl border border-slate-100 shadow-sm p-6 sm:p-8 space-y-8 flex flex-col justify-center items-center lg:items-start text-center lg:text-left text-center lg:text-left">
 
                                 {/* Status badge */}
                                 <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-green-50 border border-green-100 text-green-700 rounded-full text-[11px] font-bold uppercase tracking-widest">
@@ -346,9 +346,9 @@ export function Contact() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.1 }}
                         >
-                            <div className="bg-white rounded-3xl border border-slate-100 shadow-sm p-8">
+                            <div className="bg-white rounded-3xl border border-slate-100 shadow-sm p-6 sm:p-8 flex flex-col justify-center text-center lg:text-left">
                                 {/* Form header */}
-                                <div className="flex items-start gap-4 mb-8">
+                                <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 mb-8">
                                     <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-primary flex-shrink-0">
                                         <Send size={20} />
                                     </div>

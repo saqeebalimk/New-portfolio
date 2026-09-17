@@ -24,14 +24,14 @@ export function About() {
                         </div>
                         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 tracking-tight">About Me</h2>
                         
-                        <div className="space-y-4">
-                            <p className="text-[17px] text-slate-600 leading-relaxed">
+                        <div className="space-y-5">
+                            <p className="text-lg md:text-[19px] font-medium text-slate-800 leading-relaxed">
                                 Full Stack Software Engineer with 4 years of professional experience delivering complete, production-ready web applications. I bridge the gap between traditional enterprise architecture (Java/J2EE, Go, Spring Boot) and modern full-stack development (React, Node.js, Django).
                             </p>
-                            <p className="text-[17px] text-slate-600 leading-relaxed">
+                            <p className="text-lg md:text-[19px] font-medium text-slate-800 leading-relaxed">
                                 For the past 3 years, I have extensively integrated AI Pair-Programming and Agentic AI workflows into my daily engineering process. I use AI-assisted and agentic engineering workflows to accelerate development while maintaining strong architectural, testing and code-quality practices, enabling me to write scalable code and deliver reliable, intelligent products.
                             </p>
-                            <p className="text-[17px] text-slate-600 leading-relaxed">
+                            <p className="text-lg md:text-[19px] font-medium text-slate-800 leading-relaxed">
                                 My core strength lies in combining deep foundational language knowledge with modern full-stack and AI capabilities to build real-world solutions.
                             </p>
                         </div>

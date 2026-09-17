@@ -69,7 +69,6 @@ export default function RootLayout({
           }}
         />
         <Navbar />
-        <MobileNav />
         <main className="min-h-screen relative overflow-hidden flex flex-col pb-20 md:pb-0">
           {/* Background Gradients */}
           <div className="fixed top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary/10 blur-[120px] -z-10 pointer-events-none" />
